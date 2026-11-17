@@ -15,7 +15,8 @@ jobs:
       - run: pip install build twine
       - run: python -m build
       - run: twine check dist/*
-      - name: install the wheel in a clean environment and import it
+      - name: install requirements in clean environment and import wheel
         run: |
-          python -m venv /tmp/venv && /tmp/venv/bin/pip install dist/*.whl
+          python -m venv /tmp/venv && /tmp/venv/bin/pip install -r requirements.txt
+          /tmp/venv/bin/pip install dist/*.whl
           /tmp/venv/bin/python -c "import federated_learning as f; print(f.__version__)"
