@@ -1,0 +1,130 @@
+{
+ "provenance": {
+  "experiment_id": "FL-SEC-001.1-287fe5268c",
+  "task_id": "FL-SEC-001.1",
+  "config": {
+   "P": 1442,
+   "m": 5,
+   "seed": 0
+  },
+  "config_sha256": "287fe5268c9bc50176f831a5c20c160819a0d6657968d33be5f815d01823ef0b",
+  "git_commit": null,
+  "dataset_id": "SYN-IDS-v1",
+  "environment": {
+   "python": "3.13.10",
+   "platform": "macOS-26.5.1-arm64-arm-64bit-Mach-O",
+   "cpu_count": 8,
+   "versions": {
+    "numpy": "2.4.2",
+    "scipy": "1.17.1",
+    "scikit-learn": "1.9.0",
+    "torch": "2.13.0",
+    "tenseal": "0.3.18",
+    "phe": "1.5.0",
+    "flwr": "1.43.0",
+    "mlflow": null,
+    "opacus": null,
+    "cryptography": "50.0.2",
+    "psutil": "7.2.2",
+    "matplotlib": "3.10.8",
+    "pandas": "3.0.2"
+   },
+   "timestamp_utc": "2026-11-17T12:31:05+00:00"
+  },
+  "execution_command": "python -m federated_learning.pipelines.experiments.run_all --task FL-SEC-001.1",
+  "result_labels": "MEASURED unless stated; clients are virtual (single machine)"
+ },
+ "he": [
+  {
+   "scheme": "CKKS",
+   "measured_vector_len": 1442,
+   "max_abs_error": 1.633396515612895e-08,
+   "ct_bytes_per_float32": 229.5873786407767,
+   "expansion_vs_float32": 57.396844660194176,
+   "enc_ms_per_client": 3.294199999072589,
+   "enc_us_per_element": 2.2844660187743338,
+   "agg_ms": 2.962707992992364,
+   "dec_ms": 1.051917002769187,
+   "arithmetic": "approximate over reals (additions and multiplications, rescaling)",
+   "plaintext_domain": "real/complex vectors, SIMD",
+   "security_basis": "RLWE (ring-LWE), post-quantum assumptions",
+   "fit": "best for real-valued updates; error ~1e-8 observed"
+  },
+  {
+   "scheme": "BFV",
+   "measured_vector_len": 1442,
+   "max_abs_error": 1.9024566307243584e-06,
+   "ct_bytes_per_float32": 299.9237170596394,
+   "expansion_vs_float32": 74.98092926490985,
+   "enc_ms_per_client": 2.3763668024912477,
+   "enc_us_per_element": 1.6479658824488541,
+   "agg_ms": 3.1146250112215057,
+   "dec_ms": 1.1405420082155615,
+   "arithmetic": "exact modular integer arithmetic, SIMD",
+   "plaintext_domain": "integers mod t (needs fixed-point encoding)",
+   "security_basis": "RLWE",
+   "fit": "exact but forces quantisation and a plaintext-modulus overflow bound"
+  },
+  {
+   "scheme": "Paillier",
+   "measured_vector_len": 32,
+   "max_abs_error": 3.1931059740752943e-09,
+   "ct_bytes_per_float32": 512.0,
+   "expansion_vs_float32": 128.0,
+   "enc_ms_per_client": 3419.6513917995617,
+   "enc_us_per_element": 106864.1059937363,
+   "agg_ms": 17.68274999631103,
+   "dec_ms": 924.55208300089,
+   "arithmetic": "additive only (plus scalar multiplication)",
+   "plaintext_domain": "integers mod n (float via exponent encoding)",
+   "security_basis": "decisional composite residuosity; broken by quantum (Shor)",
+   "fit": "no SIMD: one ciphertext per coordinate -> impractical for NN updates"
+  }
+ ],
+ "protocols": [
+  {
+   "approach": "Secure aggregation (pairwise masking)",
+   "computes": "sum of client vectors only",
+   "threat_model": "honest-but-curious server (+ colluding clients below threshold t); dropout tolerant",
+   "crypto": "ECDH, PRG masks, Shamir sharing",
+   "server_sees_individual_update": false,
+   "limits": "only linear aggregation; cannot run robust (median/Krum) rules; needs interaction rounds"
+  },
+  {
+   "approach": "HE (CKKS/BFV) aggregation",
+   "computes": "sums (and limited depth products) under encryption",
+   "threat_model": "honest-but-curious server; secret-key holder must be trusted/not colluding with server",
+   "crypto": "RLWE lattice encryption",
+   "server_sees_individual_update": false,
+   "limits": "ciphertext expansion, single secret key => key-holder is a single point of failure (no threshold HE here)"
+  },
+  {
+   "approach": "SMPC (SPDZ-style, m computing parties)",
+   "computes": "arbitrary arithmetic circuits (here: sum, squared norm)",
+   "threat_model": "dishonest majority among m servers (m-1 corrupted), MAC check detects active cheating (abort)",
+   "crypto": "additive sharing + information-theoretic MAC + Beaver triples",
+   "server_sees_individual_update": false,
+   "limits": "m servers must be non-colluding organisations; offline phase here = trusted dealer"
+  }
+ ],
+ "decision": [
+  {
+   "use": "Primary HE scheme for real-valued model-update aggregation",
+   "selected": "CKKS",
+   "why": "lowest ciphertext expansion and encryption cost among tested, approximate error far below SGD noise, no quantisation design needed",
+   "rejected": "BFV (exact but 1.3x larger ciphertext at tested params and needs fixed-point headroom); Paillier (no SIMD; ~2 orders of magnitude slower per element)"
+  },
+  {
+   "use": "Cheapest privacy-from-server for plain FedAvg",
+   "selected": "Secure aggregation",
+   "why": "no heavy public-key work per coordinate; tolerates dropout",
+   "rejected": "n/a (not exclusive with HE/SMPC; different threat model)"
+  },
+  {
+   "use": "Verified computation beyond sums (norm checks) / multi-institution compute servers",
+   "selected": "SMPC (SPDZ-style)",
+   "why": "supports multiplication (Beaver) so norm-bound checking is possible without revealing updates",
+   "rejected": "n/a"
+  }
+ ]
+}

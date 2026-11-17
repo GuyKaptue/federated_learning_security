@@ -1,0 +1,275 @@
+{
+ "provenance": {
+  "experiment_id": "FL-SEC-001.3-84445b08ad",
+  "task_id": "FL-SEC-001.3",
+  "config": {
+   "P": 1442,
+   "sizes": [
+    5,
+    10,
+    20,
+    50,
+    100
+   ],
+   "sparse_degree": 14,
+   "drops": [
+    0.0,
+    0.1,
+    0.2,
+    0.3,
+    0.4
+   ],
+   "n_drop": 20
+  },
+  "config_sha256": "84445b08ad315379dd2e55e5d5b01418b6d87cfc538989704bfb5c21cf5e558b",
+  "git_commit": null,
+  "dataset_id": "SYN-IDS-v1",
+  "environment": {
+   "python": "3.13.10",
+   "platform": "macOS-26.5.1-arm64-arm-64bit-Mach-O",
+   "cpu_count": 8,
+   "versions": {
+    "numpy": "2.4.2",
+    "scipy": "1.17.1",
+    "scikit-learn": "1.9.0",
+    "torch": "2.13.0",
+    "tenseal": "0.3.18",
+    "phe": "1.5.0",
+    "flwr": "1.43.0",
+    "mlflow": null,
+    "opacus": null,
+    "cryptography": "50.0.2",
+    "psutil": "7.2.2",
+    "matplotlib": "3.10.8",
+    "pandas": "3.0.2"
+   },
+   "timestamp_utc": "2026-11-17T12:33:06+00:00"
+  },
+  "execution_command": "python -m federated_learning.pipelines.experiments.run_all --task FL-SEC-001.3",
+  "result_labels": "MEASURED unless stated; clients are virtual (single machine)"
+ },
+ "cost": [
+  {
+   "n": 5,
+   "graph": "complete",
+   "total_s": 0.01017554200370796,
+   "up_kb_per_client": 12.32421875,
+   "plaintext_kb_per_client": 5.6328125,
+   "comm_overhead_x": 2.1879334257975036,
+   "max_abs_err": 6.506881644607887e-09,
+   "phase_r1_s": 0.0012744160048896447,
+   "phase_r2_s": 0.002081208993331529,
+   "phase_r4_s": 0.0001949580037035048,
+   "threshold_mean": 4.0
+  },
+  {
+   "n": 10,
+   "graph": "complete",
+   "total_s": 0.011210541997570544,
+   "up_kb_per_client": 13.4765625,
+   "plaintext_kb_per_client": 5.6328125,
+   "comm_overhead_x": 2.39251040221914,
+   "max_abs_err": 3.804942874663375e-09,
+   "phase_r1_s": 0.003318333998322487,
+   "phase_r2_s": 0.006945249988348223,
+   "phase_r4_s": 0.0004249580088071525,
+   "threshold_mean": 7.0
+  },
+  {
+   "n": 20,
+   "graph": "complete",
+   "total_s": 0.046690167000633664,
+   "up_kb_per_client": 15.78125,
+   "plaintext_kb_per_client": 5.6328125,
+   "comm_overhead_x": 2.8016643550624134,
+   "max_abs_err": 3.5664076830643765e-09,
+   "phase_r1_s": 0.014341375004732981,
+   "phase_r2_s": 0.028928874991834164,
+   "phase_r4_s": 0.0024110420054057613,
+   "threshold_mean": 14.0
+  },
+  {
+   "n": 20,
+   "graph": "sparse k=14",
+   "total_s": 0.034277665996341966,
+   "up_kb_per_client": 14.62890625,
+   "plaintext_kb_per_client": 5.6328125,
+   "comm_overhead_x": 2.5970873786407767,
+   "max_abs_err": 3.5664076830643765e-09,
+   "phase_r1_s": 0.01047745899995789,
+   "phase_r2_s": 0.021314125013304874,
+   "phase_r4_s": 0.0014551670028595254,
+   "threshold_mean": 11.0
+  },
+  {
+   "n": 50,
+   "graph": "complete",
+   "total_s": 0.32070050000038464,
+   "up_kb_per_client": 22.6953125,
+   "plaintext_kb_per_client": 5.6328125,
+   "comm_overhead_x": 4.029126213592233,
+   "max_abs_err": 1.837927754433366e-09,
+   "phase_r1_s": 0.10657820900087245,
+   "phase_r2_s": 0.1834222920006141,
+   "phase_r4_s": 0.028092458000173792,
+   "threshold_mean": 34.0
+  },
+  {
+   "n": 50,
+   "graph": "sparse k=14",
+   "total_s": 0.08542124999803491,
+   "up_kb_per_client": 14.62890625,
+   "plaintext_kb_per_client": 5.6328125,
+   "comm_overhead_x": 2.5970873786407767,
+   "max_abs_err": 1.837927754433366e-09,
+   "phase_r1_s": 0.02609587500046473,
+   "phase_r2_s": 0.052883583994116634,
+   "phase_r4_s": 0.003939040994737297,
+   "threshold_mean": 11.0
+  },
+  {
+   "n": 100,
+   "graph": "complete",
+   "total_s": 1.480891958999564,
+   "up_kb_per_client": 34.21875,
+   "plaintext_kb_per_client": 5.6328125,
+   "comm_overhead_x": 6.074895977808599,
+   "max_abs_err": 1.7846527380904753e-09,
+   "phase_r1_s": 0.5236495000135619,
+   "phase_r2_s": 0.7385429160058266,
+   "phase_r4_s": 0.21321854199049994,
+   "threshold_mean": 67.0
+  },
+  {
+   "n": 100,
+   "graph": "sparse k=14",
+   "total_s": 0.17290033398603555,
+   "up_kb_per_client": 14.62890625,
+   "plaintext_kb_per_client": 5.6328125,
+   "comm_overhead_x": 2.5970873786407767,
+   "max_abs_err": 1.7846527380904753e-09,
+   "phase_r1_s": 0.0522226250031963,
+   "phase_r2_s": 0.10654858300404157,
+   "phase_r4_s": 0.009026208994328044,
+   "threshold_mean": 11.0
+  }
+ ],
+ "dropout": [
+  {
+   "stage": "before_masking",
+   "drop_fraction": 0.0,
+   "trials": 5,
+   "completed": 5,
+   "aborted": 0,
+   "max_abs_err": 3.697243372569048e-09,
+   "threshold_frac": 0.67,
+   "n": 20
+  },
+  {
+   "stage": "before_masking",
+   "drop_fraction": 0.1,
+   "trials": 5,
+   "completed": 5,
+   "aborted": 0,
+   "max_abs_err": 3.762476885604826e-09,
+   "threshold_frac": 0.67,
+   "n": 20
+  },
+  {
+   "stage": "before_masking",
+   "drop_fraction": 0.2,
+   "trials": 5,
+   "completed": 5,
+   "aborted": 0,
+   "max_abs_err": 3.7224537896562993e-09,
+   "threshold_frac": 0.67,
+   "n": 20
+  },
+  {
+   "stage": "before_masking",
+   "drop_fraction": 0.3,
+   "trials": 5,
+   "completed": 5,
+   "aborted": 0,
+   "max_abs_err": 3.905180956387255e-09,
+   "threshold_frac": 0.67,
+   "n": 20
+  },
+  {
+   "stage": "before_masking",
+   "drop_fraction": 0.4,
+   "trials": 5,
+   "completed": 0,
+   "aborted": 5,
+   "max_abs_err": null,
+   "threshold_frac": 0.67,
+   "n": 20
+  },
+  {
+   "stage": "before_unmask",
+   "drop_fraction": 0.0,
+   "trials": 5,
+   "completed": 5,
+   "aborted": 0,
+   "max_abs_err": 3.697243372569048e-09,
+   "threshold_frac": 0.67,
+   "n": 20
+  },
+  {
+   "stage": "before_unmask",
+   "drop_fraction": 0.1,
+   "trials": 5,
+   "completed": 5,
+   "aborted": 0,
+   "max_abs_err": 3.697243372569048e-09,
+   "threshold_frac": 0.67,
+   "n": 20
+  },
+  {
+   "stage": "before_unmask",
+   "drop_fraction": 0.2,
+   "trials": 5,
+   "completed": 5,
+   "aborted": 0,
+   "max_abs_err": 3.697243372569048e-09,
+   "threshold_frac": 0.67,
+   "n": 20
+  },
+  {
+   "stage": "before_unmask",
+   "drop_fraction": 0.3,
+   "trials": 5,
+   "completed": 5,
+   "aborted": 0,
+   "max_abs_err": 3.697243372569048e-09,
+   "threshold_frac": 0.67,
+   "n": 20
+  },
+  {
+   "stage": "before_unmask",
+   "drop_fraction": 0.4,
+   "trials": 5,
+   "completed": 0,
+   "aborted": 5,
+   "max_abs_err": null,
+   "threshold_frac": 0.67,
+   "n": 20
+  }
+ ],
+ "security": {
+  "server_view_corr_with_plain": 0.010039652932196342,
+  "server_view_high_bit_fraction": 0.5072765072765073,
+  "shamir_t_shares_recover": true,
+  "shamir_t_minus_1_shares_recover": false,
+  "abort_below_threshold": "aborted as designed: client 0: only 3 shares available, need 7",
+  "tampered_share_detected": true,
+  "flower_version": "1.43.0",
+  "flower_secaggplus_mod_present": true,
+  "flower_end_to_end_run": "NOT_RUN (requires SuperLink/SuperNode runtime; this protocol is a from-scratch implementation of the same design)",
+  "fl_integration": {
+   "final_acc": 0.7644444444444445,
+   "max_agg_error": 1.862645149230957e-09,
+   "rounds": 8
+  }
+ }
+}

@@ -1,0 +1,32 @@
+{
+  "loso": [
+    {
+      "held_out_site": "cleveland",
+      "n_test": 303,
+      "acc": 0.759,
+      "auc": 0.858,
+      "test_positive_rate": 0.459
+    },
+    {
+      "held_out_site": "hungary",
+      "n_test": 294,
+      "acc": 0.789,
+      "auc": 0.885,
+      "test_positive_rate": 0.361
+    },
+    {
+      "held_out_site": "switzerland",
+      "n_test": 123,
+      "acc": 0.715,
+      "auc": 0.714,
+      "test_positive_rate": 0.935
+    },
+    {
+      "held_out_site": "va_long_beach",
+      "n_test": 200,
+      "acc": 0.73,
+      "auc": 0.733,
+      "test_positive_rate": 0.745
+    }
+  ]
+}

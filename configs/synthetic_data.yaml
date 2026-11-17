@@ -1,0 +1,11 @@
+# SYN-IDS-v1 generator parameters (keys map onto SynIDSConfig). FULLY SYNTHETIC data.
+version: 1
+dataset_id: SYN-IDS-v1
+n_samples: 12000
+n_features: 40
+seed: 0
+class_sep: 0.9
+test_frac: 0.3
+n_clusters_per_class: 3
+flip_y: 0.02
+weights: [0.6, 0.4]

@@ -1,0 +1,147 @@
+{
+ "provenance": {
+  "experiment_id": "FL-PERF-002.1-125ac7c13f",
+  "task_id": "FL-PERF-002.1",
+  "config": {
+   "busy_s": 1.0,
+   "alloc_mb": 300
+  },
+  "config_sha256": "125ac7c13f2da9f37da8b0a1da47e5c78b7e5a0c95c7e732e4d24896c8bee931",
+  "git_commit": null,
+  "dataset_id": "SYN-IDS-v1",
+  "environment": {
+   "python": "3.13.10",
+   "platform": "macOS-26.5.1-arm64-arm-64bit-Mach-O",
+   "cpu_count": 8,
+   "versions": {
+    "numpy": "2.4.2",
+    "scipy": "1.17.1",
+    "scikit-learn": "1.9.0",
+    "torch": "2.13.0",
+    "tenseal": "0.3.18",
+    "phe": "1.5.0",
+    "flwr": "1.43.0",
+    "mlflow": null,
+    "opacus": null,
+    "cryptography": "50.0.2",
+    "psutil": "7.2.2",
+    "matplotlib": "3.10.8",
+    "pandas": "3.0.2"
+   },
+   "timestamp_utc": "2026-11-17T12:34:02+00:00"
+  },
+  "execution_command": "python -m federated_learning.pipelines.experiments.run_all --task FL-PERF-002.1",
+  "result_labels": "MEASURED unless stated; clients are virtual (single machine)"
+ },
+ "cpu_check": {
+  "wall_s": 1.0006730829918524,
+  "cpu_time_s": 0.998430208000002,
+  "cpu_util_mean_pct": 99.7875,
+  "relative_gap": 0.0022413663662707384,
+  "expectation": "cpu_time ~ wall, util ~ 100% for 1 busy thread"
+ },
+ "memory_check": {
+  "allocated_mb": 300,
+  "rss_peak_delta_mb": 296.59375,
+  "rss_mean_mb": 553.4244791666666,
+  "peak_vs_mean_distinct": true,
+  "expectation": "peak delta ~ allocation"
+ },
+ "comm_check": {
+  "counted_payload_bytes": 5768,
+  "npy_serialised_bytes": 5896,
+  "framing_overhead_bytes": 128,
+  "note": "counter = payload only; protocol framing (TLS/gRPC) is not counted"
+ },
+ "monitor_overhead": {
+  "wall_without_s": 0.19947491667214004,
+  "wall_with_s": 0.19284501400155327,
+  "overhead_pct": -3.323677373172578
+ },
+ "round_timeline": [
+  {
+   "round": 1,
+   "round_s": 0.023247792007168755,
+   "client_s": 0.023201539981528185,
+   "agg_s": 3.2625001040287316e-05,
+   "up_bytes": 55120,
+   "down_bytes": 55120
+  },
+  {
+   "round": 2,
+   "round_s": 0.023368790993117727,
+   "client_s": 0.023318125007790513,
+   "agg_s": 3.458300489000976e-05,
+   "up_bytes": 55120,
+   "down_bytes": 55120
+  },
+  {
+   "round": 3,
+   "round_s": 0.02360895801393781,
+   "client_s": 0.023563500988529995,
+   "agg_s": 3.0499999411404133e-05,
+   "up_bytes": 55120,
+   "down_bytes": 55120
+  },
+  {
+   "round": 4,
+   "round_s": 0.023434666989487596,
+   "client_s": 0.023384748987155035,
+   "agg_s": 3.370799822732806e-05,
+   "up_bytes": 55120,
+   "down_bytes": 55120
+  },
+  {
+   "round": 5,
+   "round_s": 0.02934691599512007,
+   "client_s": 0.029218540963483974,
+   "agg_s": 6.320800457615405e-05,
+   "up_bytes": 55120,
+   "down_bytes": 55120
+  },
+  {
+   "round": 6,
+   "round_s": 0.02510758300195448,
+   "client_s": 0.024913623012253083,
+   "agg_s": 8.591701043769717e-05,
+   "up_bytes": 55120,
+   "down_bytes": 55120
+  },
+  {
+   "round": 7,
+   "round_s": 0.023823583993362263,
+   "client_s": 0.023758959010592662,
+   "agg_s": 4.333299875725061e-05,
+   "up_bytes": 55120,
+   "down_bytes": 55120
+  },
+  {
+   "round": 8,
+   "round_s": 0.023846540992963128,
+   "client_s": 0.023758914991049096,
+   "agg_s": 5.9457990573719144e-05,
+   "up_bytes": 55120,
+   "down_bytes": 55120
+  },
+  {
+   "round": 9,
+   "round_s": 0.02361045900033787,
+   "client_s": 0.02354862299398519,
+   "agg_s": 4.208400787319988e-05,
+   "up_bytes": 55120,
+   "down_bytes": 55120
+  },
+  {
+   "round": 10,
+   "round_s": 0.02355600000009872,
+   "client_s": 0.02350191598816309,
+   "agg_s": 3.662500239443034e-05,
+   "up_bytes": 55120,
+   "down_bytes": 55120
+  }
+ ],
+ "gpu": {
+  "gpu_available": false,
+  "note": "no NVIDIA tooling: GPU metrics unavailable (not estimated)"
+ }
+}

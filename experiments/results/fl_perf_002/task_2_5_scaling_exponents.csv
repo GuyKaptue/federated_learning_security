@@ -1,0 +1,5 @@
+config,loglog_slope,points,note
+plain,0.3035185929716515,4,"slope~1 linear in n; slope~2 quadratic (empirical, 3-4 points)"
+he_ckks,0.8380645151987589,4,"slope~1 linear in n; slope~2 quadratic (empirical, 3-4 points)"
+secagg_complete,1.4360585178719172,3,"slope~1 linear in n; slope~2 quadratic (empirical, 3-4 points)"
+smpc_3party,0.8802717119441963,4,"slope~1 linear in n; slope~2 quadratic (empirical, 3-4 points)"

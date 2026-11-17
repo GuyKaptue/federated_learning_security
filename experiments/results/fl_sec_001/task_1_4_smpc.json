@@ -1,0 +1,140 @@
+{
+ "provenance": {
+  "experiment_id": "FL-SEC-001.4-314389cf06",
+  "task_id": "FL-SEC-001.4",
+  "config": {
+   "P": 1442,
+   "n": 10,
+   "parties": [
+    2,
+    3,
+    5
+   ],
+   "clients": [
+    5,
+    10,
+    20
+   ]
+  },
+  "config_sha256": "314389cf06795b910f423863691a4903b047d8342e5648fc0958be647837f653",
+  "git_commit": null,
+  "dataset_id": "SYN-IDS-v1",
+  "environment": {
+   "python": "3.13.10",
+   "platform": "macOS-26.5.1-arm64-arm-64bit-Mach-O",
+   "cpu_count": 8,
+   "versions": {
+    "numpy": "2.4.2",
+    "scipy": "1.17.1",
+    "scikit-learn": "1.9.0",
+    "torch": "2.13.0",
+    "tenseal": "0.3.18",
+    "phe": "1.5.0",
+    "flwr": "1.43.0",
+    "mlflow": null,
+    "opacus": null,
+    "cryptography": "50.0.2",
+    "psutil": "7.2.2",
+    "matplotlib": "3.10.8",
+    "pandas": "3.0.2"
+   },
+   "timestamp_utc": "2026-11-17T12:33:11+00:00"
+  },
+  "execution_command": "python -m federated_learning.pipelines.experiments.run_all --task FL-SEC-001.4",
+  "result_labels": "MEASURED unless stated; clients are virtual (single machine)"
+ },
+ "parties": [
+  {
+   "parties_m": 2,
+   "clients": 10,
+   "collusion_threshold_parties": 1,
+   "time_s": 0.046011250000447035,
+   "max_abs_err": 3.241063298090041e-07,
+   "online_up_kb_per_client": 22.53125,
+   "offline_dealer_kb_total": 788.59375,
+   "party_to_party_kb": 22.5625,
+   "plaintext_kb_per_client": 5.6328125,
+   "online_overhead_x": 4.0
+  },
+  {
+   "parties_m": 3,
+   "clients": 10,
+   "collusion_threshold_parties": 2,
+   "time_s": 0.06978870900638867,
+   "max_abs_err": 3.1038010013008377e-07,
+   "online_up_kb_per_client": 33.796875,
+   "offline_dealer_kb_total": 1126.5625,
+   "party_to_party_kb": 67.640625,
+   "plaintext_kb_per_client": 5.6328125,
+   "online_overhead_x": 6.0
+  },
+  {
+   "parties_m": 5,
+   "clients": 10,
+   "collusion_threshold_parties": 4,
+   "time_s": 0.11811629100702703,
+   "max_abs_err": 3.1327410620479723e-07,
+   "online_up_kb_per_client": 56.328125,
+   "offline_dealer_kb_total": 1802.5,
+   "party_to_party_kb": 225.390625,
+   "plaintext_kb_per_client": 5.6328125,
+   "online_overhead_x": 10.0
+  }
+ ],
+ "scaling": [
+  {
+   "clients": 5,
+   "time_s": 0.03566849998605903
+  },
+  {
+   "clients": 10,
+   "time_s": 0.07099733300856315
+  },
+  {
+   "clients": 20,
+   "time_s": 0.14192212499619927
+  }
+ ],
+ "norm_filter": {
+  "true_norms": [
+   3.7699999809265137,
+   3.930000066757202,
+   3.859999895095825,
+   193.77999877929688,
+   3.7799999713897705,
+   3.7899999618530273,
+   3.6600000858306885,
+   3.8499999046325684,
+   3.7899999618530273,
+   3.819999933242798
+  ],
+  "rejected": [
+   3
+  ],
+  "err_vs_plain_of_kept": 3.528382096981697e-07,
+  "time_s": 0.3171710410097148,
+  "note": "the revealed value is ||delta_i||^2 per client (a deliberate, documented leakage)"
+ },
+ "tamper": {
+  "honest_open": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7
+  ],
+  "mac_detects_corrupted_party": true
+ },
+ "share_privacy": {
+  "single_party_share_chi2_p": 0.061916660473544306,
+  "note": "uniformity is necessary, not sufficient; the security argument is information-theoretic (docs)"
+ },
+ "mp_spdz": {
+  "status": "BLOCKED",
+  "reason": "MP-SPDZ release binaries/GitHub not reachable from this environment (HTTP 403) and no build toolchain/source",
+  "needed": "network access to github.com/data61/MP-SPDZ and a C++ toolchain to compile; then replace the trusted-dealer preprocessing with its offline phase"
+ }
+}

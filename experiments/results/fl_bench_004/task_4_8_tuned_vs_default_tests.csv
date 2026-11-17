@@ -1,0 +1,5 @@
+n,mean_diff,dz,wilcoxon_p,ttest_p,algo,metric,note
+10,0.0050315665453475435,0.21962872881121048,0.193359375,0.504884021198749,fedavg,f1,"tuned - default, paired by seed"
+10,0.018289448520596375,0.9900679161234444,0.005859375,0.012104729435506601,fedprox,f1,"tuned - default, paired by seed"
+10,0.0,0.0,1.0,1.0,scaffold,f1,"tuned - default, paired by seed"
+10,-0.00041395502176824197,-0.025599961829131854,0.921875,0.9372500461173553,fednova,f1,"tuned - default, paired by seed"

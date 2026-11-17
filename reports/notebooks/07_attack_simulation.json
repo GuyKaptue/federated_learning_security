@@ -1,0 +1,25 @@
+{
+  "byzantine": [
+    {
+      "malicious_fraction": 0.0,
+      "acc": 0.7844
+    },
+    {
+      "malicious_fraction": 0.1,
+      "acc": 0.6639
+    },
+    {
+      "malicious_fraction": 0.2,
+      "acc": 0.3872
+    },
+    {
+      "malicious_fraction": 0.3,
+      "acc": 0.4006
+    }
+  ],
+  "backdoor": {
+    "attacked_asr": 1.0,
+    "clean_asr": 0.42995839112343964,
+    "attacked_acc": 0.7
+  }
+}

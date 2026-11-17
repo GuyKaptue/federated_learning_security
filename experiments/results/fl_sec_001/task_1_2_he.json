@@ -1,0 +1,349 @@
+{
+ "provenance": {
+  "experiment_id": "FL-SEC-001.2-946ad0b88f",
+  "task_id": "FL-SEC-001.2",
+  "config": {
+   "sizes": [
+    128,
+    1442,
+    8192,
+    32768
+   ],
+   "paillier_sizes": [
+    16,
+    64
+   ],
+   "m": 5,
+   "seeds": 3,
+   "fl": {
+    "clients": 10,
+    "rounds": 10,
+    "hidden": 32
+   }
+  },
+  "config_sha256": "946ad0b88f54ee985212bdb1c1070baa6077e3f87dec2703ed65bf7d63f4ca55",
+  "git_commit": null,
+  "dataset_id": "SYN-IDS-v1",
+  "environment": {
+   "python": "3.13.10",
+   "platform": "macOS-26.5.1-arm64-arm-64bit-Mach-O",
+   "cpu_count": 8,
+   "versions": {
+    "numpy": "2.4.2",
+    "scipy": "1.17.1",
+    "scikit-learn": "1.9.0",
+    "torch": "2.13.0",
+    "tenseal": "0.3.18",
+    "phe": "1.5.0",
+    "flwr": "1.43.0",
+    "mlflow": null,
+    "opacus": null,
+    "cryptography": "50.0.2",
+    "psutil": "7.2.2",
+    "matplotlib": "3.10.8",
+    "pandas": "3.0.2"
+   },
+   "timestamp_utc": "2026-11-17T12:28:59+00:00"
+  },
+  "execution_command": "python -m federated_learning.pipelines.experiments.run_all --task FL-SEC-001.2",
+  "result_labels": "MEASURED unless stated; clients are virtual (single machine)"
+ },
+ "keyinfo": {
+  "ckks": {
+   "scheme": "CKKS",
+   "poly_degree": 8192,
+   "coeff_mod_bits": [
+    60,
+    40,
+    40,
+    60
+   ],
+   "scale_bits": 40,
+   "slots": 4096,
+   "public_context_bytes": 1858961,
+   "secret_in_server_ctx": false
+  },
+  "bfv": {
+   "scheme": "BFV",
+   "poly_degree": 8192,
+   "plain_modulus": 2147565569,
+   "frac_bits": 20,
+   "slots": 8192,
+   "public_context_bytes": 2708901,
+   "secret_in_server_ctx": false
+  },
+  "paillier": {
+   "scheme": "Paillier",
+   "key_bits": 2048
+  }
+ },
+ "micro": [
+  {
+   "scheme": "he_ckks",
+   "P": 128,
+   "max_abs_err": 1.403062416018471e-08,
+   "enc_ms_per_client": 2.7456527333318563,
+   "agg_ms": 2.7546943310881034,
+   "dec_ms": 0.960568999289535,
+   "ct_kb_per_client": 323.4459635416667,
+   "expansion": 646.8919270833334,
+   "plaintext_kb": 0.5,
+   "kind": "measured"
+  },
+  {
+   "scheme": "he_bfv",
+   "P": 128,
+   "max_abs_err": 1.4967085181719307e-06,
+   "enc_ms_per_client": 2.1798167338905237,
+   "agg_ms": 2.9599586656937995,
+   "dec_ms": 1.0199726675637066,
+   "ct_kb_per_client": 422.3333333333333,
+   "expansion": 844.6666666666666,
+   "plaintext_kb": 0.5,
+   "kind": "measured"
+  },
+  {
+   "scheme": "he_ckks",
+   "P": 1442,
+   "max_abs_err": 1.551918524187364e-08,
+   "enc_ms_per_client": 2.757897265837528,
+   "agg_ms": 2.484902332071215,
+   "dec_ms": 0.9650273326163491,
+   "ct_kb_per_client": 323.4098307291667,
+   "expansion": 57.41533749422099,
+   "plaintext_kb": 5.6328125,
+   "kind": "measured"
+  },
+  {
+   "scheme": "he_bfv",
+   "P": 1442,
+   "max_abs_err": 1.8660793775354678e-06,
+   "enc_ms_per_client": 2.2536611329996954,
+   "agg_ms": 2.8922499962694324,
+   "dec_ms": 1.0361943326036755,
+   "ct_kb_per_client": 422.2666015625,
+   "expansion": 74.96549930651872,
+   "plaintext_kb": 5.6328125,
+   "kind": "measured"
+  },
+  {
+   "scheme": "he_ckks",
+   "P": 8192,
+   "max_abs_err": 1.8014453442849465e-08,
+   "enc_ms_per_client": 5.8274666662327945,
+   "agg_ms": 4.937903000003037,
+   "dec_ms": 2.069735996580372,
+   "ct_kb_per_client": 647.5625,
+   "expansion": 20.236328125,
+   "plaintext_kb": 32.0,
+   "kind": "measured"
+  },
+  {
+   "scheme": "he_bfv",
+   "P": 8192,
+   "max_abs_err": 2.063866113196274e-06,
+   "enc_ms_per_client": 2.6376944675575946,
+   "agg_ms": 2.9837776673957705,
+   "dec_ms": 1.2084166664863005,
+   "ct_kb_per_client": 422.3268229166667,
+   "expansion": 13.197713216145834,
+   "plaintext_kb": 32.0,
+   "kind": "measured"
+  },
+  {
+   "scheme": "he_ckks",
+   "P": 32768,
+   "max_abs_err": 2.2584971879948308e-08,
+   "enc_ms_per_client": 23.46927219963012,
+   "agg_ms": 20.44280567012417,
+   "dec_ms": 8.16894433228299,
+   "ct_kb_per_client": 2589.4095052083335,
+   "expansion": 20.229761759440105,
+   "plaintext_kb": 128.0,
+   "kind": "measured"
+  },
+  {
+   "scheme": "he_bfv",
+   "P": 32768,
+   "max_abs_err": 2.254660419309662e-06,
+   "enc_ms_per_client": 10.620508400218872,
+   "agg_ms": 11.49466700250438,
+   "dec_ms": 4.742014003568329,
+   "ct_kb_per_client": 1689.3600260416667,
+   "expansion": 13.198125203450521,
+   "plaintext_kb": 128.0,
+   "kind": "measured"
+  },
+  {
+   "scheme": "he_paillier",
+   "P": 16,
+   "max_abs_err": 2.672490867494659e-09,
+   "enc_ms_per_client": 1590.8497583994176,
+   "agg_ms": 9.029875000123866,
+   "dec_ms": 445.91649998619687,
+   "ct_kb_per_client": 8.0,
+   "expansion": 128.0,
+   "plaintext_kb": 0.0625,
+   "kind": "measured"
+  },
+  {
+   "scheme": "he_paillier",
+   "P": 64,
+   "max_abs_err": 3.704192383380267e-09,
+   "enc_ms_per_client": 6420.984691599733,
+   "agg_ms": 34.124124998925254,
+   "dec_ms": 1762.0212500041816,
+   "ct_kb_per_client": 32.0,
+   "expansion": 128.0,
+   "plaintext_kb": 0.25,
+   "kind": "measured"
+  },
+  {
+   "scheme": "he_paillier",
+   "P": 1442,
+   "enc_ms_per_client": 144024.072904177,
+   "ct_kb_per_client": 721.0,
+   "expansion": 128.0,
+   "kind": "ESTIMATED (linear extrapolation of measured per-element rate)"
+  }
+ ],
+ "precision": [
+  {
+   "update_sd": 0.0001,
+   "ckks_rel_err": 6.0645676933593774e-05,
+   "bfv_rel_err": 0.012612050701522486
+  },
+  {
+   "update_sd": 0.01,
+   "ckks_rel_err": 5.662710805518261e-07,
+   "bfv_rel_err": 0.0001294158825520764
+  },
+  {
+   "update_sd": 0.1,
+   "ckks_rel_err": 5.942239328905008e-08,
+   "bfv_rel_err": 1.293380929271733e-05
+  },
+  {
+   "update_sd": 1.0,
+   "ckks_rel_err": 2.606658473681379e-08,
+   "bfv_rel_err": 1.2810530497755376e-06
+  },
+  {
+   "update_sd": 10.0,
+   "ckks_rel_err": 2.5765032646480377e-08,
+   "bfv_rel_err": 1.284170317386038e-07
+  }
+ ],
+ "wrong_key": {
+  "decrypted_garbage": true,
+  "rel_err_vs_truth": Infinity
+ },
+ "malformed": "rejected: ValueError",
+ "fl_utility": [
+  {
+   "seed": 0,
+   "scheme": "plaintext",
+   "acc": 0.7755555555555556,
+   "f1": 0.6996282527881041,
+   "loss": 0.4752006232738495,
+   "train_wall_s": 0.29023795800458174,
+   "comm_mb": 1.05133056640625,
+   "max_agg_err": 0.0
+  },
+  {
+   "seed": 0,
+   "scheme": "ckks",
+   "acc": 0.7755555555555556,
+   "f1": 0.6996282527881041,
+   "loss": 0.4752005934715271,
+   "train_wall_s": 0.699388666995219,
+   "comm_mb": 32.10895538330078,
+   "max_agg_err": 2.8005160856992006e-08
+  },
+  {
+   "seed": 0,
+   "scheme": "bfv",
+   "acc": 0.7755555555555556,
+   "f1": 0.6996282527881041,
+   "loss": 0.4752034544944763,
+   "train_wall_s": 0.5702134580060374,
+   "comm_mb": 41.766319274902344,
+   "max_agg_err": 3.437511622905731e-06
+  },
+  {
+   "seed": 1,
+   "scheme": "plaintext",
+   "acc": 0.7786111111111111,
+   "f1": 0.6954528085594192,
+   "loss": 0.4741668403148651,
+   "train_wall_s": 0.26655150001170114,
+   "comm_mb": 1.05133056640625,
+   "max_agg_err": 0.0
+  },
+  {
+   "seed": 1,
+   "scheme": "ckks",
+   "acc": 0.7786111111111111,
+   "f1": 0.6954528085594192,
+   "loss": 0.47416678071022034,
+   "train_wall_s": 0.6102836250065593,
+   "comm_mb": 32.13526725769043,
+   "max_agg_err": 3.9130100049078465e-08
+  },
+  {
+   "seed": 1,
+   "scheme": "bfv",
+   "acc": 0.7786111111111111,
+   "f1": 0.6954528085594192,
+   "loss": 0.4741646945476532,
+   "train_wall_s": 0.5622566670062952,
+   "comm_mb": 41.768436431884766,
+   "max_agg_err": 3.8906000554561615e-06
+  },
+  {
+   "seed": 2,
+   "scheme": "plaintext",
+   "acc": 0.775,
+   "f1": 0.7035139092240117,
+   "loss": 0.46615973114967346,
+   "train_wall_s": 0.263547958995332,
+   "comm_mb": 1.05133056640625,
+   "max_agg_err": 0.0
+  },
+  {
+   "seed": 2,
+   "scheme": "ckks",
+   "acc": 0.775,
+   "f1": 0.7035139092240117,
+   "loss": 0.46615976095199585,
+   "train_wall_s": 0.6246060830017086,
+   "comm_mb": 32.13484764099121,
+   "max_agg_err": 2.537854015827179e-08
+  },
+  {
+   "seed": 2,
+   "scheme": "bfv",
+   "acc": 0.7747222222222222,
+   "f1": 0.7030391797876235,
+   "loss": 0.4661628305912018,
+   "train_wall_s": 0.5757957090099808,
+   "comm_mb": 41.7652702331543,
+   "max_agg_err": 3.2678217394277453e-06
+  }
+ ],
+ "paillier_tiny": [
+  {
+   "scheme": "plaintext",
+   "acc": 0.7169444444444445,
+   "train_wall_s": 0.04449637499055825,
+   "comm_mb": 0.013275146484375
+  },
+  {
+   "scheme": "paillier2048",
+   "acc": 0.7169444444444445,
+   "train_wall_s": 196.55286895899917,
+   "comm_mb": 0.8562469482421875,
+   "note": "hidden=4 (174 params), 5 clients, 2 rounds"
+  }
+ ]
+}

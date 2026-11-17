@@ -1,0 +1,15 @@
+# Literature defences implemented from the papers (Stage 2)
+
+Module: `src/federated_learning/aggregators/literature_defenses.py`. The implementations were written from the algorithm descriptions of the
+papers (not from the authors' repositories) after reading each paper's text; bibliographic data were verified on the venue pages on 2026-11-12
+(`docs/references/references_master.md`). They run on a small MLP with virtual clients and are **not** guaranteed to reproduce the published numbers.
+
+| Defence | Paper | What we take from the paper | Our choices / deviations | Not implemented |
+|---|---|---|---|---|
+| FLAME | Nguyen et al., USENIX Security 2022, pp. 1415-1432 | cosine distance of client *models*, HDBSCAN with min_cluster_size = n//2+1, min_samples = 1; clip to median update norm S_t; noise sigma = lambda*S_t (lambda 0.001 images/NLP, 0.01 NIDS) | `allow_single_cluster=True`; no cluster found => admit all; largest cluster if several; lambda tested at 0 and 0.001 | the secure two-party computation of the filter step |
+| RLR | Ozdayi et al., AAAI 2021, 35(10):9268-9276 | per-coordinate lr = +eta if \|sum sign\| >= theta else -eta, applied to the FedAvg-weighted mean | theta = ceil(0.4 m) (our choice; the paper chose theta per data set and calls it non-trivial) | optional clipping/noise combination, delayed activation |
+| FoolsGold | Fung et al., arXiv 1808.04866 / RAID 2020, pp. 301-316 | history H_i, pairwise cosine, pardoning, 1-max cs, normalise by max, logit with kappa=1, clip to [0,1] | output = sum alpha_i p_i delta_i (FedAvg weights); alpha=1 set to 0.99 before the logit | indicative-feature weighting of the output layer (legacy class only; now available as `FoolsGoldIndicative` in `aggregators/foolsgold_indicative.py`, see `docs/research/adaptive_attacks/foolsgold_paper_method_verification.md`); also: ln(0) = -inf is set to 1.0 instead of clipped to 0 (reachable defect: identical-row colluders get full weight when their history cosine rounds to >= 1; left in the legacy class for reproducibility, fixed in the new class; see docs/research/adaptive_attacks/foolsgold_defect_and_manuscript_audit.md; the corrected all-feature variant is registered as `foolsgold_corrected` in `stage2.make_defence` and is not run by `make experiments`) |
+| SignGuard | Xu et al., ICDCS 2022, pp. 1223-1235 | norm filter L=0.1, R=3.0 around the median norm; sign statistics (pos/zero/neg fractions) on a random 10% of coordinates; Mean-Shift, largest cluster; intersection; clip to median norm and average | Mean-Shift bandwidth by `estimate_bandwidth(quantile=0.5)`; fallbacks when the trusted set is empty | SignGuard-Sim / SignGuard-Dist variants |
+
+Interface: `Aggregator.set_round_context(ids, w)` is called by the orchestrator and the network server (through `propagate_context`, which also reaches wrapped aggregators). FoolsGold needs the client ids (history), FLAME needs the global model.
+Caveat repeated from each paper: all four assume a malicious *minority*; none is a security guarantee.

@@ -1,0 +1,32 @@
+{
+  "final": [
+    {
+      "algo": "fedavg",
+      "acc": 0.8944,
+      "f1": 0.8586,
+      "auc": 0.9586,
+      "up_mb": null
+    },
+    {
+      "algo": "fedprox",
+      "acc": 0.8883,
+      "f1": 0.8508,
+      "auc": 0.9553,
+      "up_mb": null
+    },
+    {
+      "algo": "scaffold",
+      "acc": 0.9044,
+      "f1": 0.8827,
+      "auc": 0.9627,
+      "up_mb": null
+    },
+    {
+      "algo": "fednova",
+      "acc": 0.9033,
+      "f1": 0.879,
+      "auc": 0.9639,
+      "up_mb": null
+    }
+  ]
+}

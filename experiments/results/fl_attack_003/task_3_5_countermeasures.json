@@ -1,0 +1,531 @@
+{
+ "provenance": {
+  "experiment_id": "FL-ATTACK-003.5-59f16278e4",
+  "task_id": "FL-ATTACK-003.5",
+  "config": {
+   "K": 20,
+   "rounds": 20,
+   "seeds": 3
+  },
+  "config_sha256": "59f16278e428e58fce68eff7feed45424b48c0c47943c28e34127c8723ff0eb9",
+  "git_commit": null,
+  "dataset_id": "SYN-IDS-v1",
+  "environment": {
+   "python": "3.13.18",
+   "platform": "Linux-6.18.44-fc-v236-x86_64-with-glibc2.39",
+   "cpu_count": 2,
+   "versions": {
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "scikit-learn": "1.9.1",
+    "torch": "2.15.0",
+    "tenseal": "0.3.18",
+    "phe": "1.5.0",
+    "flwr": "1.43.0",
+    "mlflow": "3.18.0",
+    "opacus": "1.6.0",
+    "cryptography": "50.0.1",
+    "psutil": "7.2.2",
+    "matplotlib": "3.11.2",
+    "pandas": "3.0.5"
+   },
+   "timestamp_utc": "2026-11-05T13:07:15+00:00"
+  },
+  "execution_command": "python -m research_sprint.experiments.run_all --task FL-ATTACK-003.5",
+  "result_labels": "MEASURED unless stated; clients are virtual (single machine)"
+ },
+ "summary": [
+  {
+   "attack": "backdoor-high",
+   "defense": "anomaly_filter",
+   "metric": "asr",
+   "value": 0.053637200736648245,
+   "ci": "[-0.103, 0.210]",
+   "clean_acc": 0.7802777777777777
+  },
+  {
+   "attack": "backdoor-high",
+   "defense": "clip(C=median norm)",
+   "metric": "asr",
+   "value": 0.9843462246777164,
+   "ci": "[0.969, 1.000]",
+   "clean_acc": 0.7456481481481481
+  },
+  {
+   "attack": "backdoor-high",
+   "defense": "clip+noise(sigma=0.5)",
+   "metric": "asr",
+   "value": 0.9792817679558011,
+   "ci": "[0.949, 1.009]",
+   "clean_acc": 0.7425
+  },
+  {
+   "attack": "backdoor-high",
+   "defense": "he_ckks(mean)",
+   "metric": "asr",
+   "value": 0.9993093922651933,
+   "ci": "[0.998, 1.001]",
+   "clean_acc": 0.6901851851851851
+  },
+  {
+   "attack": "backdoor-high",
+   "defense": "median",
+   "metric": "asr",
+   "value": 0.29972375690607733,
+   "ci": "[-0.189, 0.788]",
+   "clean_acc": 0.7725925925925926
+  },
+  {
+   "attack": "backdoor-high",
+   "defense": "multi-krum",
+   "metric": "asr",
+   "value": 0.053637200736648245,
+   "ci": "[-0.103, 0.210]",
+   "clean_acc": 0.7802777777777777
+  },
+  {
+   "attack": "backdoor-high",
+   "defense": "none(mean)",
+   "metric": "asr",
+   "value": 0.9993093922651933,
+   "ci": "[0.998, 1.001]",
+   "clean_acc": 0.6901851851851851
+  },
+  {
+   "attack": "backdoor-high",
+   "defense": "secagg(mean)",
+   "metric": "asr",
+   "value": 0.9993093922651933,
+   "ci": "[0.998, 1.001]",
+   "clean_acc": 0.6901851851851851
+  },
+  {
+   "attack": "backdoor-high",
+   "defense": "smpc_norm_bound(2x median)",
+   "metric": "asr",
+   "value": 0.053867403314917135,
+   "ci": "[-0.104, 0.211]",
+   "clean_acc": 0.7801851851851852
+  },
+  {
+   "attack": "backdoor-high",
+   "defense": "trimmed_mean(0.3)",
+   "metric": "asr",
+   "value": 0.38098526703499075,
+   "ci": "[-0.158, 0.920]",
+   "clean_acc": 0.769537037037037
+  },
+  {
+   "attack": "backdoor-medium",
+   "defense": "anomaly_filter",
+   "metric": "asr",
+   "value": 0.04604051565377532,
+   "ci": "[-0.096, 0.188]",
+   "clean_acc": 0.7798148148148148
+  },
+  {
+   "attack": "backdoor-medium",
+   "defense": "clip(C=median norm)",
+   "metric": "asr",
+   "value": 0.8724677716390424,
+   "ci": "[0.689, 1.056]",
+   "clean_acc": 0.7612037037037037
+  },
+  {
+   "attack": "backdoor-medium",
+   "defense": "clip+noise(sigma=0.5)",
+   "metric": "asr",
+   "value": 0.8365561694290976,
+   "ci": "[0.595, 1.079]",
+   "clean_acc": 0.7591666666666667
+  },
+  {
+   "attack": "backdoor-medium",
+   "defense": "he_ckks(mean)",
+   "metric": "asr",
+   "value": 0.9972375690607734,
+   "ci": "[0.996, 0.999]",
+   "clean_acc": 0.7414814814814815
+  },
+  {
+   "attack": "backdoor-medium",
+   "defense": "median",
+   "metric": "asr",
+   "value": 0.13351749539594843,
+   "ci": "[-0.161, 0.428]",
+   "clean_acc": 0.7780555555555555
+  },
+  {
+   "attack": "backdoor-medium",
+   "defense": "multi-krum",
+   "metric": "asr",
+   "value": 0.04581031307550645,
+   "ci": "[-0.095, 0.186]",
+   "clean_acc": 0.7794444444444445
+  },
+  {
+   "attack": "backdoor-medium",
+   "defense": "none(mean)",
+   "metric": "asr",
+   "value": 0.9972375690607734,
+   "ci": "[0.996, 0.999]",
+   "clean_acc": 0.7414814814814815
+  },
+  {
+   "attack": "backdoor-medium",
+   "defense": "secagg(mean)",
+   "metric": "asr",
+   "value": 0.9972375690607734,
+   "ci": "[0.996, 0.999]",
+   "clean_acc": 0.7414814814814815
+  },
+  {
+   "attack": "backdoor-medium",
+   "defense": "smpc_norm_bound(2x median)",
+   "metric": "asr",
+   "value": 0.04581031307550645,
+   "ci": "[-0.095, 0.186]",
+   "clean_acc": 0.7794444444444445
+  },
+  {
+   "attack": "backdoor-medium",
+   "defense": "trimmed_mean(0.3)",
+   "metric": "asr",
+   "value": 0.1464088397790055,
+   "ci": "[-0.169, 0.461]",
+   "clean_acc": 0.7772222222222221
+  },
+  {
+   "attack": "byzantine-random-20%",
+   "defense": "anomaly_filter",
+   "metric": "acc",
+   "value": 0.7798148148148148,
+   "ci": "[0.778, 0.781]",
+   "clean_acc": 0.7798148148148148
+  },
+  {
+   "attack": "byzantine-random-20%",
+   "defense": "clip(C=median norm)",
+   "metric": "acc",
+   "value": 0.7667592592592593,
+   "ci": "[0.761, 0.772]",
+   "clean_acc": 0.7667592592592593
+  },
+  {
+   "attack": "byzantine-random-20%",
+   "defense": "he_ckks(mean)",
+   "metric": "acc",
+   "value": 0.7675000000000001,
+   "ci": "[0.762, 0.773]",
+   "clean_acc": 0.7675000000000001
+  },
+  {
+   "attack": "byzantine-random-20%",
+   "defense": "median",
+   "metric": "acc",
+   "value": 0.7777777777777778,
+   "ci": "[0.775, 0.781]",
+   "clean_acc": 0.7777777777777778
+  },
+  {
+   "attack": "byzantine-random-20%",
+   "defense": "multi-krum",
+   "metric": "acc",
+   "value": 0.7794444444444445,
+   "ci": "[0.779, 0.780]",
+   "clean_acc": 0.7794444444444445
+  },
+  {
+   "attack": "byzantine-random-20%",
+   "defense": "none(mean)",
+   "metric": "acc",
+   "value": 0.7675000000000001,
+   "ci": "[0.762, 0.773]",
+   "clean_acc": 0.7675000000000001
+  },
+  {
+   "attack": "byzantine-random-20%",
+   "defense": "secagg(mean)",
+   "metric": "acc",
+   "value": 0.7675000000000001,
+   "ci": "[0.762, 0.773]",
+   "clean_acc": 0.7675000000000001
+  },
+  {
+   "attack": "byzantine-random-20%",
+   "defense": "smpc_norm_bound(2x median)",
+   "metric": "acc",
+   "value": 0.7794444444444445,
+   "ci": "[0.779, 0.780]",
+   "clean_acc": 0.7794444444444445
+  },
+  {
+   "attack": "byzantine-random-20%",
+   "defense": "trimmed_mean(0.3)",
+   "metric": "acc",
+   "value": 0.7775925925925926,
+   "ci": "[0.774, 0.781]",
+   "clean_acc": 0.7775925925925926
+  },
+  {
+   "attack": "byzantine-scale-20%",
+   "defense": "anomaly_filter",
+   "metric": "acc",
+   "value": 0.7798148148148148,
+   "ci": "[0.778, 0.781]",
+   "clean_acc": 0.7798148148148148
+  },
+  {
+   "attack": "byzantine-scale-20%",
+   "defense": "clip(C=median norm)",
+   "metric": "acc",
+   "value": 0.7857407407407407,
+   "ci": "[0.778, 0.793]",
+   "clean_acc": 0.7857407407407407
+  },
+  {
+   "attack": "byzantine-scale-20%",
+   "defense": "he_ckks(mean)",
+   "metric": "acc",
+   "value": 0.8283333333333333,
+   "ci": "[0.824, 0.832]",
+   "clean_acc": 0.8283333333333333
+  },
+  {
+   "attack": "byzantine-scale-20%",
+   "defense": "median",
+   "metric": "acc",
+   "value": 0.7881481481481482,
+   "ci": "[0.781, 0.795]",
+   "clean_acc": 0.7881481481481482
+  },
+  {
+   "attack": "byzantine-scale-20%",
+   "defense": "multi-krum",
+   "metric": "acc",
+   "value": 0.7794444444444445,
+   "ci": "[0.779, 0.780]",
+   "clean_acc": 0.7794444444444445
+  },
+  {
+   "attack": "byzantine-scale-20%",
+   "defense": "none(mean)",
+   "metric": "acc",
+   "value": 0.8283333333333333,
+   "ci": "[0.824, 0.832]",
+   "clean_acc": 0.8283333333333333
+  },
+  {
+   "attack": "byzantine-scale-20%",
+   "defense": "secagg(mean)",
+   "metric": "acc",
+   "value": 0.8283333333333333,
+   "ci": "[0.824, 0.832]",
+   "clean_acc": 0.8283333333333333
+  },
+  {
+   "attack": "byzantine-scale-20%",
+   "defense": "smpc_norm_bound(2x median)",
+   "metric": "acc",
+   "value": 0.7794444444444445,
+   "ci": "[0.779, 0.780]",
+   "clean_acc": 0.7794444444444445
+  },
+  {
+   "attack": "byzantine-scale-20%",
+   "defense": "trimmed_mean(0.3)",
+   "metric": "acc",
+   "value": 0.7888888888888889,
+   "ci": "[0.781, 0.797]",
+   "clean_acc": 0.7888888888888889
+  },
+  {
+   "attack": "byzantine-sign_flip-20%",
+   "defense": "anomaly_filter",
+   "metric": "acc",
+   "value": 0.7798148148148148,
+   "ci": "[0.778, 0.781]",
+   "clean_acc": 0.7798148148148148
+  },
+  {
+   "attack": "byzantine-sign_flip-20%",
+   "defense": "clip(C=median norm)",
+   "metric": "acc",
+   "value": 0.7437962962962964,
+   "ci": "[0.724, 0.763]",
+   "clean_acc": 0.7437962962962964
+  },
+  {
+   "attack": "byzantine-sign_flip-20%",
+   "defense": "he_ckks(mean)",
+   "metric": "acc",
+   "value": 0.45157407407407407,
+   "ci": "[0.133, 0.771]",
+   "clean_acc": 0.45157407407407407
+  },
+  {
+   "attack": "byzantine-sign_flip-20%",
+   "defense": "median",
+   "metric": "acc",
+   "value": 0.7680555555555556,
+   "ci": "[0.760, 0.776]",
+   "clean_acc": 0.7680555555555556
+  },
+  {
+   "attack": "byzantine-sign_flip-20%",
+   "defense": "multi-krum",
+   "metric": "acc",
+   "value": 0.7794444444444445,
+   "ci": "[0.779, 0.780]",
+   "clean_acc": 0.7794444444444445
+  },
+  {
+   "attack": "byzantine-sign_flip-20%",
+   "defense": "none(mean)",
+   "metric": "acc",
+   "value": 0.45157407407407407,
+   "ci": "[0.133, 0.771]",
+   "clean_acc": 0.45157407407407407
+  },
+  {
+   "attack": "byzantine-sign_flip-20%",
+   "defense": "secagg(mean)",
+   "metric": "acc",
+   "value": 0.45157407407407407,
+   "ci": "[0.133, 0.771]",
+   "clean_acc": 0.45157407407407407
+  },
+  {
+   "attack": "byzantine-sign_flip-20%",
+   "defense": "smpc_norm_bound(2x median)",
+   "metric": "acc",
+   "value": 0.7794444444444445,
+   "ci": "[0.779, 0.780]",
+   "clean_acc": 0.7794444444444445
+  },
+  {
+   "attack": "byzantine-sign_flip-20%",
+   "defense": "trimmed_mean(0.3)",
+   "metric": "acc",
+   "value": 0.7662962962962964,
+   "ci": "[0.762, 0.771]",
+   "clean_acc": 0.7662962962962964
+  },
+  {
+   "attack": "membership-inference",
+   "defense": "none",
+   "metric": "auc",
+   "value": 0.5772304999999999,
+   "clean_acc": 0.841388888888889,
+   "eps": null
+  },
+  {
+   "attack": "membership-inference",
+   "defense": "clip_only(C=0.5)",
+   "metric": "auc",
+   "value": 0.5777631666666667,
+   "clean_acc": 0.841388888888889,
+   "eps": null
+  },
+  {
+   "attack": "membership-inference",
+   "defense": "dp_sigma=0.1",
+   "metric": "auc",
+   "value": 0.5808805,
+   "clean_acc": 0.8394444444444445,
+   "eps": 2311.77825757886
+  },
+  {
+   "attack": "membership-inference",
+   "defense": "dp_sigma=0.3",
+   "metric": "auc",
+   "value": 0.5641945,
+   "clean_acc": 0.8266666666666667,
+   "eps": 321.52792673832
+  },
+  {
+   "attack": "membership-inference",
+   "defense": "dp_sigma=1.0",
+   "metric": "auc",
+   "value": 0.5211203333333333,
+   "clean_acc": 0.7538888888888889,
+   "eps": 48.80169282486775
+  },
+  {
+   "attack": "gradient-leakage(B=2/client)",
+   "defense": "secure-aggregation K=1",
+   "metric": "success_rate",
+   "value": 0.9,
+   "clean_acc": 0.6183333333333333
+  },
+  {
+   "attack": "gradient-leakage(B=2/client)",
+   "defense": "secure-aggregation K=2",
+   "metric": "success_rate",
+   "value": 0.45,
+   "clean_acc": 0.6183333333333333
+  },
+  {
+   "attack": "gradient-leakage(B=2/client)",
+   "defense": "secure-aggregation K=5",
+   "metric": "success_rate",
+   "value": 0.02,
+   "clean_acc": 0.6183333333333333
+  },
+  {
+   "attack": "gradient-leakage(B=2/client)",
+   "defense": "secure-aggregation K=10",
+   "metric": "success_rate",
+   "value": 0.0,
+   "clean_acc": 0.6183333333333333
+  },
+  {
+   "attack": "gradient-leakage(B=2)",
+   "defense": "gradient-noise 0.0",
+   "metric": "success_rate",
+   "value": 0.9,
+   "clean_acc": 0.6183333333333333
+  },
+  {
+   "attack": "gradient-leakage(B=2)",
+   "defense": "gradient-noise 0.01",
+   "metric": "success_rate",
+   "value": 0.75,
+   "clean_acc": 0.6183333333333333
+  },
+  {
+   "attack": "gradient-leakage(B=2)",
+   "defense": "gradient-noise 0.1",
+   "metric": "success_rate",
+   "value": 0.0,
+   "clean_acc": 0.6183333333333333
+  },
+  {
+   "attack": "gradient-leakage(B=2)",
+   "defense": "gradient-noise 0.5",
+   "metric": "success_rate",
+   "value": 0.0,
+   "clean_acc": 0.6183333333333333
+  },
+  {
+   "attack": "gradient-leakage(B=2)",
+   "defense": "gradient-noise 1.0",
+   "metric": "success_rate",
+   "value": 0.0,
+   "clean_acc": 0.6183333333333333
+  }
+ ],
+ "median_honest_update_norm": 0.21257749199867249,
+ "trigger": [
+  [
+   0,
+   1
+  ],
+  6.0
+ ],
+ "scope_notes": [
+  "secagg/HE return the plain mean: they give NO protection against poisoning/Byzantine clients (the server cannot inspect individual updates)",
+  "robust aggregators need per-update access => incompatible with secagg/HE; SMPC norm-bound is the compatible alternative but only bounds norms",
+  "clipping/noise do not hide gradients from an honest-but-curious server that sees the individual update unless combined with secagg"
+ ]
+}

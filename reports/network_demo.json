@@ -1,0 +1,17 @@
+{
+ "transport": "mutual TLS",
+ "processes": 6,
+ "network_final_acc": 0.7366666666666667,
+ "simulation_final_acc": 0.7366666666666667,
+ "identical_weights": true,
+ "wire_bytes": {
+  "server_sent": 127525,
+  "server_received": 113496
+ },
+ "accounted_bytes_sim": {
+  "up": 110400,
+  "down": 110400
+ },
+ "wall_s_network": 0.20470202699999618,
+ "wall_s_simulation": 0.23242652499999394
+}

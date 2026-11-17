@@ -1,0 +1,29 @@
+{
+  "defences": [
+    {
+      "aggregator": "mean",
+      "clean_acc": 0.7844,
+      "attacked_acc": 0.3872
+    },
+    {
+      "aggregator": "median",
+      "clean_acc": 0.78,
+      "attacked_acc": 0.7739
+    },
+    {
+      "aggregator": "trimmed",
+      "clean_acc": 0.7822,
+      "attacked_acc": 0.7717
+    },
+    {
+      "aggregator": "krum",
+      "clean_acc": 0.7844,
+      "attacked_acc": 0.7767
+    },
+    {
+      "aggregator": "clipped",
+      "clean_acc": 0.7844,
+      "attacked_acc": 0.435
+    }
+  ]
+}

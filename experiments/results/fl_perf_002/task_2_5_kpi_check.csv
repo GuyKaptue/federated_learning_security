@@ -1,0 +1,14 @@
+config,n_clients,training_overhead_pct,target_lt_30,comm_overhead_pct,target_lt_40,accuracy_loss_pp,target_lt_1
+he_ckks,10,134.68002223543064,False,2956.1523040638604,False,0.0,True
+he_ckks,50,415.6781131909979,False,2955.823838896952,False,0.0,True
+he_ckks,100,751.3291941112104,False,2956.461901306241,False,0.0,True
+he_ckks,500,1747.659374308533,False,2955.432692307693,False,0.0,True
+secagg_complete,10,29.965899262307964,True,89.47750362844702,False,0.0,True
+secagg_complete,50,608.7939278757384,False,259.288824383164,False,0.0,True
+secagg_complete,100,2353.5754716981633,False,471.5529753265602,False,0.0,True
+smpc_3party,10,157.7517946880208,False,250.0,False,0.0,True
+smpc_3party,50,531.8126879158802,False,250.0,False,0.0,True
+smpc_3party,100,938.4610646197274,False,250.0,False,0.0,True
+smpc_3party,500,2296.000159975686,False,250.0,False,0.0,True
+secagg_sparse14,100,287.14579958768456,False,110.70391872278665,False,0.0,True
+secagg_sparse14,500,711.190702022523,False,110.70391872278667,False,0.0,True

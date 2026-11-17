@@ -1,0 +1,94 @@
+"""Row 5 diagnostic (read-only on the repository code): which candidate does the AGR-tailored attacker choose against the LEGACY FoolsGold,
+and does that choice make the legacy `a[~np.isfinite(a)] = 1.0` branch (literature_defenses.py, FoolsGold._alpha) fire?
+
+One seed (0), iid, S2-001 configuration (K=20, f=4, 20 rounds, E=1, lr=0.05, 12000 samples). No source file is modified: the script wraps
+FoolsGold._alpha and agr_tailored_choose at run time and restores nothing because the process ends afterwards.
+Usage: PYTHONPATH=src python3 foolsgold_attacker_log_diagnostic.py OUT.json
+"""
+import json, sys
+import numpy as np
+from federated_learning.aggregators import literature_defenses as LD
+from federated_learning.attacks import adaptive as AD
+from federated_learning.pipelines.experiments import stage2 as S2
+
+SEED = 0
+ROUNDS = 20
+MAL = [0, 1, 2, 3]
+names = [f"{dn}*{g}" for dn in ("inv_unit", "inv_std", "inv_sign") for g in AD.GAMMA_GRID] + ["alie", "minmax", "minsum", "fang"]
+assert len(names) == 34
+
+state = {"in_sim": False, "sim": [], "real": []}
+orig_alpha = LD.FoolsGold._alpha
+
+
+def fired(H, kappa):
+    """Replicates the lines of FoolsGold._alpha up to the log step and reports the indices where the result is not finite
+    (those entries receive weight 1.0 in the legacy code)."""
+    n = H.shape[0]
+    cs = LD._cos_matrix(H) - np.eye(n)
+    v = cs.max(1)
+    for i in range(n):
+        for j in range(n):
+            if i != j and v[j] > v[i]:
+                cs[i, j] *= v[i] / v[j]
+    a = np.clip(1.0 - cs.max(1), 0.0, 1.0)
+    mx = a.max()
+    a = a / mx if mx > 0 else np.ones(n)
+    a[a >= 1.0] = 0.99
+    with np.errstate(divide="ignore", invalid="ignore"):
+        a = kappa * (np.log(a / (1.0 - a)) + 0.5)
+    return np.where(~np.isfinite(a))[0].tolist()
+
+
+def alpha_wrapper(self, H):
+    out = orig_alpha(self, H)
+    nf = fired(H, self.kappa)
+    C = LD._cos_matrix(H)
+    mal_rows = [i for i, c in enumerate(self.ctx_ids) if c in MAL]
+    sub = C[np.ix_(mal_rows, mal_rows)]
+    rec = dict(nonfinite_rows=nf, defect_on_colluder=bool(set(nf) & set(mal_rows)),
+               min_pair_cos=float(sub[np.triu_indices(len(mal_rows), 1)].min()),
+               colluder_alpha=[float(out[i]) for i in mal_rows])
+    (state["sim"] if state["in_sim"] else state["real"]).append(rec)
+    return out
+
+
+orig_choose = AD.agr_tailored_choose
+
+
+def choose_wrapper(*a, **k):
+    state["in_sim"] = True; n0 = len(state["sim"])
+    try:
+        M, info = orig_choose(*a, **k)
+    finally:
+        state["in_sim"] = False
+    info = dict(info); info["sim_records"] = state["sim"][n0:]
+    state.setdefault("choose_info", []).append(info)
+    return M, info
+
+
+LD.FoolsGold._alpha = alpha_wrapper
+AD.agr_tailored_choose = choose_wrapper
+
+data = S2.make_dataset(seed=0, n_samples=12000)
+parts = S2.E_._parts(data.y_train, S2.K, "iid", SEED)
+res = S2._run(data, parts, SEED, "foolsgold", "agr_tailored", None, ROUNDS, 1, 0.05)
+
+rounds = []
+for r, info in enumerate(state["choose_info"]):
+    sims = info.pop("sim_records")
+    assert len(sims) == 34, len(sims)
+    ci = names.index(info["choice"])
+    rounds.append(dict(round=r, choice=info["choice"], choice_index=ci, score=info["score"],
+                       chosen_fires_defect=sims[ci]["defect_on_colluder"], chosen_min_pair_cos=sims[ci]["min_pair_cos"],
+                       n_candidates_firing=int(sum(s["defect_on_colluder"] for s in sims)),
+                       share_candidates_firing=float(np.mean([s["defect_on_colluder"] for s in sims])),
+                       real_fires_defect=state["real"][r]["defect_on_colluder"], real_min_pair_cos=state["real"][r]["min_pair_cos"],
+                       real_colluder_alpha=state["real"][r]["colluder_alpha"]))
+summary = dict(seed=SEED, rounds=len(rounds), result=dict(acc=res["acc"], tpr=res["tpr"], fpr=res["fpr"]),
+               share_rounds_chosen_fires=float(np.mean([x["chosen_fires_defect"] for x in rounds])),
+               mean_share_of_34_candidates_firing=float(np.mean([x["share_candidates_firing"] for x in rounds])),
+               share_rounds_real_call_fires=float(np.mean([x["real_fires_defect"] for x in rounds])),
+               chosen_counts={c: sum(1 for x in rounds if x["choice"] == c) for c in sorted({x["choice"] for x in rounds})})
+json.dump(dict(summary=summary, rounds=rounds), open(sys.argv[1], "w"), indent=1)
+print(json.dumps(summary, indent=1))

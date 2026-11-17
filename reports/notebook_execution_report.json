@@ -1,0 +1,86 @@
+[
+ {
+  "notebook": "01_dataset_overview.ipynb",
+  "status": "PASS",
+  "seconds": 4.5,
+  "error": ""
+ },
+ {
+  "notebook": "02_syn_ids_generation.ipynb",
+  "status": "PASS",
+  "seconds": 4.7,
+  "error": ""
+ },
+ {
+  "notebook": "03_real_dataset_preprocessing.ipynb",
+  "status": "PASS",
+  "seconds": 4.4,
+  "error": ""
+ },
+ {
+  "notebook": "04_client_partitioning.ipynb",
+  "status": "PASS",
+  "seconds": 4.8,
+  "error": ""
+ },
+ {
+  "notebook": "05_federated_training.ipynb",
+  "status": "PASS",
+  "seconds": 9.9,
+  "error": ""
+ },
+ {
+  "notebook": "06_secure_aggregation.ipynb",
+  "status": "PASS",
+  "seconds": 4.8,
+  "error": ""
+ },
+ {
+  "notebook": "07_attack_simulation.ipynb",
+  "status": "PASS",
+  "seconds": 8.1,
+  "error": ""
+ },
+ {
+  "notebook": "08_defense_mechanisms.ipynb",
+  "status": "PASS",
+  "seconds": 9.2,
+  "error": ""
+ },
+ {
+  "notebook": "09_hyperparameter_tuning.ipynb",
+  "status": "PASS",
+  "seconds": 11.6,
+  "error": ""
+ },
+ {
+  "notebook": "10_evaluation.ipynb",
+  "status": "PASS",
+  "seconds": 6.8,
+  "error": ""
+ },
+ {
+  "notebook": "11_cross_site_validation.ipynb",
+  "status": "PASS",
+  "seconds": 6.7,
+  "error": ""
+ },
+ {
+  "notebook": "12_ablation_studies.ipynb",
+  "status": "PASS",
+  "seconds": 8.1,
+  "error": ""
+ },
+ {
+  "notebook": "13_reproducibility_check.ipynb",
+  "status": "PASS",
+  "seconds": 4.9,
+  "error": ""
+ },
+ {
+  "notebook": "14_publication_figures.ipynb",
+  "status": "PASS",
+  "seconds": 2.0,
+  "error": ""
+ }
+]

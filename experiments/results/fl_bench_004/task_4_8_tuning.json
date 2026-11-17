@@ -1,0 +1,302 @@
+{
+ "provenance": {
+  "experiment_id": "FL-BENCH-004.8-1eef26728e",
+  "task_id": "FL-BENCH-004.8",
+  "config": {
+   "K": 10,
+   "rounds": 30,
+   "E": 2,
+   "partition": "Dirichlet 0.3",
+   "lr_grid": [
+    0.01,
+    0.03,
+    0.05,
+    0.1,
+    0.2,
+    0.4,
+    0.8
+   ],
+   "mu_grid": [
+    0.001,
+    0.01,
+    0.05,
+    0.1,
+    0.5,
+    1.0
+   ],
+   "default": {
+    "lr": 0.05,
+    "mu": 0.05
+   },
+   "tune_seeds": [
+    100,
+    101,
+    102
+   ],
+   "eval_seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+   ],
+   "selection": "mean validation F1 on 25% of TRAIN; test untouched"
+  },
+  "config_sha256": "1eef26728e76364b47cb5ef77b45b2de0ce2337a052f94479040cf19387b7455",
+  "git_commit": null,
+  "dataset_id": "SYN-IDS-v1",
+  "environment": {
+   "python": "3.13.18",
+   "platform": "Linux-6.18.44-fc-v242-x86_64-with-glibc2.39",
+   "cpu_count": 2,
+   "versions": {
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "scikit-learn": "1.9.1",
+    "torch": "2.15.0",
+    "tenseal": "0.3.18",
+    "phe": "1.5.0",
+    "flwr": "1.43.0",
+    "mlflow": "3.18.0",
+    "opacus": "1.6.0",
+    "cryptography": "50.0.1",
+    "psutil": "7.2.2",
+    "matplotlib": "3.11.2",
+    "pandas": "3.0.5"
+   },
+   "timestamp_utc": "2026-11-06T11:38:39+00:00"
+  },
+  "execution_command": "python -m research_sprint.experiments.run_all --task FL-BENCH-004.8",
+  "result_labels": "MEASURED unless stated; clients are virtual (single machine)"
+ },
+ "tuned": {
+  "fedavg": {
+   "lr": 0.8,
+   "mu": 0.0
+  },
+  "fedprox": {
+   "lr": 0.2,
+   "mu": 0.01
+  },
+  "scaffold": {
+   "lr": 0.05,
+   "mu": 0.0
+  },
+  "fednova": {
+   "lr": 0.1,
+   "mu": 0.0
+  }
+ },
+ "summary": [
+  {
+   "algo": "fedavg",
+   "setting": "default",
+   "lr": 0.05,
+   "mu": 0.05,
+   "acc": 0.8838888888888888,
+   "acc_ci": "[0.8663, 0.9015]",
+   "f1": 0.8430562859002049,
+   "f1_ci": "[0.8124, 0.8737]",
+   "auc": 0.9549655562601409,
+   "auc_ci": "[0.9485, 0.9615]"
+  },
+  {
+   "algo": "fedavg",
+   "setting": "tuned",
+   "lr": 0.8,
+   "mu": 0.0,
+   "acc": 0.8830833333333332,
+   "acc_ci": "[0.8582, 0.9080]",
+   "f1": 0.8480878524455525,
+   "f1_ci": "[0.8128, 0.8834]",
+   "auc": 0.9471852439719445,
+   "auc_ci": "[0.9266, 0.9678]"
+  },
+  {
+   "algo": "fedprox",
+   "setting": "default",
+   "lr": 0.05,
+   "mu": 0.05,
+   "acc": 0.8808333333333334,
+   "acc_ci": "[0.8632, 0.8985]",
+   "f1": 0.8390790786439997,
+   "f1_ci": "[0.8088, 0.8693]",
+   "auc": 0.952612210920331,
+   "auc_ci": "[0.9448, 0.9605]"
+  },
+  {
+   "algo": "fedprox",
+   "setting": "tuned",
+   "lr": 0.2,
+   "mu": 0.01,
+   "acc": 0.8916666666666666,
+   "acc_ci": "[0.8803, 0.9031]",
+   "f1": 0.857368527164596,
+   "f1_ci": "[0.8379, 0.8769]",
+   "auc": 0.957282509909836,
+   "auc_ci": "[0.9535, 0.9611]"
+  },
+  {
+   "algo": "scaffold",
+   "setting": "default",
+   "lr": 0.05,
+   "mu": 0.05,
+   "acc": 0.8985555555555556,
+   "acc_ci": "[0.8868, 0.9103]",
+   "f1": 0.8728665895462212,
+   "f1_ci": "[0.8606, 0.8852]",
+   "auc": 0.9592649103236871,
+   "auc_ci": "[0.9529, 0.9656]"
+  },
+  {
+   "algo": "scaffold",
+   "setting": "tuned",
+   "lr": 0.05,
+   "mu": 0.0,
+   "acc": 0.8985555555555556,
+   "acc_ci": "[0.8868, 0.9103]",
+   "f1": 0.8728665895462212,
+   "f1_ci": "[0.8606, 0.8852]",
+   "auc": 0.9592649103236871,
+   "auc_ci": "[0.9529, 0.9656]"
+  },
+  {
+   "algo": "fednova",
+   "setting": "default",
+   "lr": 0.05,
+   "mu": 0.05,
+   "acc": 0.8948055555555557,
+   "acc_ci": "[0.8836, 0.9060]",
+   "f1": 0.8636926576617594,
+   "f1_ci": "[0.8471, 0.8803]",
+   "auc": 0.9592486078734416,
+   "auc_ci": "[0.9547, 0.9638]"
+  },
+  {
+   "algo": "fednova",
+   "setting": "tuned",
+   "lr": 0.1,
+   "mu": 0.0,
+   "acc": 0.8947777777777779,
+   "acc_ci": "[0.8859, 0.9036]",
+   "f1": 0.8632787026399911,
+   "f1_ci": "[0.8478, 0.8788]",
+   "auc": 0.9608305873759988,
+   "auc_ci": "[0.9577, 0.9639]"
+  }
+ ],
+ "tuned_vs_default": [
+  {
+   "n": 10,
+   "mean_diff": 0.0050315665453475435,
+   "dz": 0.21962872881121048,
+   "wilcoxon_p": 0.193359375,
+   "ttest_p": 0.504884021198749,
+   "algo": "fedavg",
+   "metric": "f1",
+   "note": "tuned - default, paired by seed"
+  },
+  {
+   "n": 10,
+   "mean_diff": 0.018289448520596375,
+   "dz": 0.9900679161234444,
+   "wilcoxon_p": 0.005859375,
+   "ttest_p": 0.012104729435506601,
+   "algo": "fedprox",
+   "metric": "f1",
+   "note": "tuned - default, paired by seed"
+  },
+  {
+   "n": 10,
+   "mean_diff": 0.0,
+   "dz": 0.0,
+   "wilcoxon_p": 1.0,
+   "ttest_p": 1.0,
+   "algo": "scaffold",
+   "metric": "f1",
+   "note": "tuned - default, paired by seed"
+  },
+  {
+   "n": 10,
+   "mean_diff": -0.00041395502176824197,
+   "dz": -0.025599961829131854,
+   "wilcoxon_p": 0.921875,
+   "ttest_p": 0.9372500461173553,
+   "algo": "fednova",
+   "metric": "f1",
+   "note": "tuned - default, paired by seed"
+  }
+ ],
+ "friedman_tuned": {
+  "statistic": 2.759999999999991,
+  "p": 0.4301270276689225
+ },
+ "pairwise_tuned": [
+  {
+   "n": 10,
+   "mean_diff": -0.009280674719043602,
+   "dz": -0.24936733316167498,
+   "wilcoxon_p": 0.921875,
+   "ttest_p": 0.45063529804597924,
+   "a": "fedavg",
+   "b": "fedprox",
+   "holm_p": 1.0
+  },
+  {
+   "n": 10,
+   "mean_diff": -0.024778737100668757,
+   "dz": -0.6131407173642313,
+   "wilcoxon_p": 0.130859375,
+   "ttest_p": 0.08445538919004131,
+   "a": "fedavg",
+   "b": "scaffold",
+   "holm_p": 0.78515625
+  },
+  {
+   "n": 10,
+   "mean_diff": -0.015190850194438643,
+   "dz": -0.44107138774146615,
+   "wilcoxon_p": 0.275390625,
+   "ttest_p": 0.19654330462503097,
+   "a": "fedavg",
+   "b": "fednova",
+   "holm_p": 1.0
+  },
+  {
+   "n": 10,
+   "mean_diff": -0.015498062381625155,
+   "dz": -0.5104194421613732,
+   "wilcoxon_p": 0.375,
+   "ttest_p": 0.1409658119926485,
+   "a": "fedprox",
+   "b": "scaffold",
+   "holm_p": 1.0
+  },
+  {
+   "n": 10,
+   "mean_diff": -0.005910175475395041,
+   "dz": -0.21133870874992783,
+   "wilcoxon_p": 0.6953125,
+   "ttest_p": 0.5207042809410793,
+   "a": "fedprox",
+   "b": "fednova",
+   "holm_p": 1.0
+  },
+  {
+   "n": 10,
+   "mean_diff": 0.009587886906230114,
+   "dz": 0.5586041196871216,
+   "wilcoxon_p": 0.193359375,
+   "ttest_p": 0.11112488901987291,
+   "a": "scaffold",
+   "b": "fednova",
+   "holm_p": 0.966796875
+  }
+ ],
+ "note": "Selection by validation F1; same grid size for every algorithm except FedProx (+mu axis). SCAFFOLD/FedNova have no extra hyper-parameter grid."
+}

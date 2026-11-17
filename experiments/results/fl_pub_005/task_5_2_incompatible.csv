@@ -1,0 +1,4 @@
+combination,reason,status
+SecAgg + median/Krum/trimmed-mean,robust rules need per-client updates; masked updates are uniformly random individually,NOT_RUN (incompatible by construction)
+HE (CKKS) + Krum/median,needs encrypted comparisons/sorting (deep circuits; not provided by additive CKKS aggregation used here),NOT_RUN
+plain + DP + robust (median),composition would need a separate privacy analysis for median sensitivity,NOT_RUN

@@ -1,0 +1,105 @@
+{
+ "provenance": {
+  "experiment_id": "FL-ATTACK-003.6-99bdd61384",
+  "task_id": "FL-ATTACK-003.6",
+  "config": {
+   "sources": "tasks 3.1-3.5 JSON"
+  },
+  "config_sha256": "99bdd613843153b5282e79b9ea2152494211ae10137456c1e52b7b70e059d2f7",
+  "git_commit": null,
+  "dataset_id": "SYN-IDS-v1",
+  "environment": {
+   "python": "3.13.18",
+   "platform": "Linux-6.18.44-fc-v236-x86_64-with-glibc2.39",
+   "cpu_count": 2,
+   "versions": {
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "scikit-learn": "1.9.1",
+    "torch": "2.15.0",
+    "tenseal": "0.3.18",
+    "phe": "1.5.0",
+    "flwr": "1.43.0",
+    "mlflow": "3.18.0",
+    "opacus": "1.6.0",
+    "cryptography": "50.0.1",
+    "psutil": "7.2.2",
+    "matplotlib": "3.11.2",
+    "pandas": "3.0.5"
+   },
+   "timestamp_utc": "2026-11-05T13:23:09+00:00"
+  },
+  "execution_command": "python -m research_sprint.experiments.run_all --task FL-ATTACK-003.6",
+  "result_labels": "MEASURED unless stated; clients are virtual (single machine)"
+ },
+ "risk_matrix": [
+  {
+   "attack": "Backdoor (data poisoning + boosting)",
+   "attacker": "compromised hospital client(s) (20-30%)",
+   "objective": "trigger-activated misclassification of attacks as benign",
+   "assumptions": "attacker controls local data & update; persistent participation; synthetic trigger",
+   "component": "global model / aggregation",
+   "observed_impact": "ASR 1.00 at 'high' vs 0.05 for clean FL (trigger-natural ASR)",
+   "detection": "norm/cosine anomaly filter; SMPC norm bound",
+   "mitigation": "best measured: anomaly_filter -> ASR 0.05",
+   "residual_risk": "HIGH",
+   "evidence": "task_3_1_backdoor.json, task_3_5_countermeasures.json"
+  },
+  {
+   "attack": "Byzantine update manipulation",
+   "attacker": "compromised/colluding clients (10-30%)",
+   "objective": "degrade or steer the global model",
+   "assumptions": "attacker sends arbitrary vectors; scale 5",
+   "component": "aggregation rule / availability",
+   "observed_impact": "sign-flip 30%: mean aggregator acc 0.47",
+   "detection": "median/trimmed mean/Krum, anomaly filter",
+   "mitigation": "best at 30% sign-flip: multi_krum acc 0.78",
+   "residual_risk": "MEDIUM (rules rely on honest majority; not valid under secagg/HE)",
+   "evidence": "task_3_2_byzantine.json"
+  },
+  {
+   "attack": "Membership inference (shadow-model)",
+   "attacker": "black-box observer / honest-but-curious server with the global model",
+   "objective": "infer a patient record's training membership",
+   "assumptions": "attacker has same-distribution shadow data; overfit regime (small training set, 128 hidden)",
+   "component": "global model",
+   "observed_impact": "AUC 0.577 undefended (generalisation gap 0.12)",
+   "detection": "none in protocol",
+   "mitigation": "lowest AUC 0.521 with dp_sigma=1.0 (utility 0.75; eps=48.80169282486775)",
+   "residual_risk": "MEDIUM",
+   "evidence": "task_3_3_membership_inference.json"
+  },
+  {
+   "attack": "Gradient leakage (DLG / analytic)",
+   "attacker": "honest-but-curious server seeing individual plaintext updates",
+   "objective": "reconstruct clinical feature vectors",
+   "assumptions": "small batches, known labels, smooth activation (DLG), first-layer bias (analytic)",
+   "component": "client->server channel",
+   "observed_impact": "B=1 success 1.00; successful (>10%) in 10 of 15 batch/arch settings",
+   "detection": "none",
+   "mitigation": "secure aggregation / HE / SMPC hide individual updates from the server; noise degrades inversion (task 3.4)",
+   "residual_risk": "LOW vs server when secagg/HE/SMPC used; HIGH for plaintext updates",
+   "evidence": "task_3_4_gradient_leakage.json"
+  }
+ ],
+ "kpi": [
+  {
+   "kpi": "Backdoor success rate < 5%",
+   "measured": "0.999 (high, undefended); best defended 0.054",
+   "met": false,
+   "note": "clean-FL ASR of the trigger = 0.046"
+  },
+  {
+   "kpi": "Gradient leakage success < 10%",
+   "measured": "B=1 undefended 1.00; secagg K=10 (B_eff=20) 0.00",
+   "met": false,
+   "note": "NOT met for plaintext small-batch updates; met only when updates are aggregated/noised (see task 3.4)"
+  },
+  {
+   "kpi": "Membership inference AUC < 0.60",
+   "measured": "undefended 0.577; lowest 0.521",
+   "met": true,
+   "note": "evaluated in an overfit regime on synthetic data"
+  }
+ ]
+}

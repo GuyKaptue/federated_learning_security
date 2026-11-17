@@ -1,0 +1,12 @@
+# Federation protocol (keys map onto FLConfig) and client partitioning (consumed by data_partitioning.partition)
+version: 1
+algo: fedavg            # fedavg | fedprox | scaffold | fednova
+rounds: 20
+participation: 1.0
+mu: 0.0                 # FedProx proximal coefficient
+server_lr: 1.0          # SCAFFOLD global step size
+eval_every: 1
+partitioning:
+  strategy: iid         # iid | dirichlet | label_shards | stratified | quantity_skew | site
+  n_clients: 10
+  alpha: 0.5            # dirichlet concentration

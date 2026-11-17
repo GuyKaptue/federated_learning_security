@@ -1,0 +1,192 @@
+{
+ "provenance": {
+  "experiment_id": "FL-BENCH-004.7-1bab0da39d",
+  "task_id": "FL-BENCH-004.7",
+  "config": {
+   "source": "task_4_5_summary",
+   "ranking": "mean rank across 5 dimensions, equal weights, 4 algorithms"
+  },
+  "config_sha256": "1bab0da39d39633a7ce3f222e45ce6393f7f7730e3869f81be3801c07e56815e",
+  "git_commit": null,
+  "dataset_id": "SYN-IDS-v1",
+  "environment": {
+   "python": "3.13.18",
+   "platform": "Linux-6.18.44-fc-v236-x86_64-with-glibc2.39",
+   "cpu_count": 2,
+   "versions": {
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "scikit-learn": "1.9.1",
+    "torch": "2.15.0",
+    "tenseal": "0.3.18",
+    "phe": "1.5.0",
+    "flwr": "1.43.0",
+    "mlflow": "3.18.0",
+    "opacus": "1.6.0",
+    "cryptography": "50.0.1",
+    "psutil": "7.2.2",
+    "matplotlib": "3.11.2",
+    "pandas": "3.0.5"
+   },
+   "timestamp_utc": "2026-11-05T19:42:51+00:00"
+  },
+  "execution_command": "python -m research_sprint.experiments.run_all --task FL-BENCH-004.7",
+  "result_labels": "MEASURED unless stated; clients are virtual (single machine)"
+ },
+ "boards": {
+  "iid": [
+   {
+    "algorithm": "FedAvg",
+    "key": "fedavg",
+    "utility_f1": 0.8840337138246472,
+    "convergence_rounds": 11.8,
+    "communication_mb_to_target": 1.240570068359375,
+    "robustness_acc_under_signflip": 0.6608888888888889,
+    "training_cost_s": 8.272915198499982,
+    "rank_utility_f1": 2,
+    "rank_convergence_rounds": 1,
+    "rank_communication_mb_to_target": 1,
+    "rank_robustness_acc_under_signflip": 2,
+    "rank_training_cost_s": 1,
+    "mean_rank": 1.4
+   },
+   {
+    "algorithm": "SCAFFOLD",
+    "key": "scaffold",
+    "utility_f1": 0.884932781725238,
+    "convergence_rounds": 11.8,
+    "communication_mb_to_target": 2.48114013671875,
+    "robustness_acc_under_signflip": 0.8146666666666667,
+    "training_cost_s": 8.307181770599982,
+    "rank_utility_f1": 1,
+    "rank_convergence_rounds": 2,
+    "rank_communication_mb_to_target": 4,
+    "rank_robustness_acc_under_signflip": 1,
+    "rank_training_cost_s": 2,
+    "mean_rank": 2.0
+   },
+   {
+    "algorithm": "FedNova",
+    "key": "fednova",
+    "utility_f1": 0.8840261880383287,
+    "convergence_rounds": 11.8,
+    "communication_mb_to_target": 1.240570068359375,
+    "robustness_acc_under_signflip": 0.6228888888888889,
+    "training_cost_s": 8.326860644000044,
+    "rank_utility_f1": 3,
+    "rank_convergence_rounds": 3,
+    "rank_communication_mb_to_target": 2,
+    "rank_robustness_acc_under_signflip": 4,
+    "rank_training_cost_s": 3,
+    "mean_rank": 3.0
+   },
+   {
+    "algorithm": "FedProx",
+    "key": "fedprox",
+    "utility_f1": 0.8824444406834602,
+    "convergence_rounds": 12.6,
+    "communication_mb_to_target": 1.324676513671875,
+    "robustness_acc_under_signflip": 0.6585,
+    "training_cost_s": 8.531161122999993,
+    "rank_utility_f1": 4,
+    "rank_convergence_rounds": 4,
+    "rank_communication_mb_to_target": 3,
+    "rank_robustness_acc_under_signflip": 3,
+    "rank_training_cost_s": 4,
+    "mean_rank": 3.6
+   },
+   {
+    "algorithm": "Proposed framework (FedAvg + CKKS HE aggregation)",
+    "key": "proposed",
+    "utility_f1": 0.8840882478056141,
+    "convergence_rounds": 11.8,
+    "communication_mb_to_target": 37.91037335713705,
+    "robustness_acc_under_signflip": null,
+    "training_cost_s": 11.226290631199959,
+    "mean_rank": null,
+    "note": "not ranked: robustness dimension NOT_MEASURED for this row; compare dimension-wise (it is FedAvg + CKKS aggregation)"
+   }
+  ],
+  "dir0.3": [
+   {
+    "algorithm": "FedAvg",
+    "key": "fedavg",
+    "utility_f1": 0.8430562859002049,
+    "convergence_rounds": 16.8,
+    "communication_mb_to_target": 1.7662353515625,
+    "robustness_acc_under_signflip": 0.6608888888888889,
+    "training_cost_s": 7.954341076100059,
+    "rank_utility_f1": 3,
+    "rank_convergence_rounds": 3,
+    "rank_communication_mb_to_target": 2,
+    "rank_robustness_acc_under_signflip": 2,
+    "rank_training_cost_s": 1,
+    "mean_rank": 2.2
+   },
+   {
+    "algorithm": "SCAFFOLD",
+    "key": "scaffold",
+    "utility_f1": 0.8728665895462212,
+    "convergence_rounds": 11.4,
+    "communication_mb_to_target": 2.39703369140625,
+    "robustness_acc_under_signflip": 0.8146666666666667,
+    "training_cost_s": 8.187552065400064,
+    "rank_utility_f1": 1,
+    "rank_convergence_rounds": 1,
+    "rank_communication_mb_to_target": 4,
+    "rank_robustness_acc_under_signflip": 1,
+    "rank_training_cost_s": 4,
+    "mean_rank": 2.2
+   },
+   {
+    "algorithm": "FedNova",
+    "key": "fednova",
+    "utility_f1": 0.8636926576617594,
+    "convergence_rounds": 12.8,
+    "communication_mb_to_target": 1.345703125,
+    "robustness_acc_under_signflip": 0.6228888888888889,
+    "training_cost_s": 8.000343040599933,
+    "rank_utility_f1": 2,
+    "rank_convergence_rounds": 2,
+    "rank_communication_mb_to_target": 1,
+    "rank_robustness_acc_under_signflip": 4,
+    "rank_training_cost_s": 2,
+    "mean_rank": 2.2
+   },
+   {
+    "algorithm": "FedProx",
+    "key": "fedprox",
+    "utility_f1": 0.8390790786439997,
+    "convergence_rounds": 18.0,
+    "communication_mb_to_target": 1.89239501953125,
+    "robustness_acc_under_signflip": 0.6585,
+    "training_cost_s": 8.058981622700003,
+    "rank_utility_f1": 4,
+    "rank_convergence_rounds": 4,
+    "rank_communication_mb_to_target": 3,
+    "rank_robustness_acc_under_signflip": 3,
+    "rank_training_cost_s": 3,
+    "mean_rank": 3.4
+   },
+   {
+    "algorithm": "Proposed framework (FedAvg + CKKS HE aggregation)",
+    "key": "proposed",
+    "utility_f1": 0.8430962222993028,
+    "convergence_rounds": 16.8,
+    "communication_mb_to_target": 53.9808659362793,
+    "robustness_acc_under_signflip": null,
+    "training_cost_s": 11.254937073000088,
+    "mean_rank": null,
+    "note": "not ranked: robustness dimension NOT_MEASURED for this row; compare dimension-wise (it is FedAvg + CKKS aggregation)"
+   }
+  ]
+ },
+ "methodology": [
+  "each dimension ranked over the 4 core algorithms (1=best)",
+  "overall = unweighted mean rank (a different weighting can change the order)",
+  "convergence = mean rounds to reach 85% test accuracy (censored at rounds+1)",
+  "communication = per-round MiB x rounds-to-target",
+  "robustness = accuracy with 1/10 sign-flip attacker (scale 5), label-skew 0.3",
+  "no statistical significance implied by rank; see task 4.6"
+ ]
+}

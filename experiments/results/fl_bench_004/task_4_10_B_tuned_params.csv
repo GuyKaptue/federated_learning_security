@@ -1,0 +1,17 @@
+held_out,algo,lr,mu
+cleveland,fedavg,0.01,0.0
+cleveland,fedprox,0.2,1.0
+cleveland,scaffold,0.03,0.0
+cleveland,fednova,0.01,0.0
+hungary,fedavg,0.05,0.0
+hungary,fedprox,0.05,0.5
+hungary,scaffold,0.03,0.0
+hungary,fednova,0.05,0.0
+switzerland,fedavg,0.03,0.0
+switzerland,fedprox,0.05,1.0
+switzerland,scaffold,0.03,0.0
+switzerland,fednova,0.03,0.0
+va_long_beach,fedavg,0.01,0.0
+va_long_beach,fedprox,0.03,1.0
+va_long_beach,scaffold,0.05,0.0
+va_long_beach,fednova,0.05,0.0

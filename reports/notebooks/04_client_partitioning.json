@@ -1,0 +1,40 @@
+{
+  "partitions": [
+    {
+      "strategy": "iid",
+      "min_size": 420,
+      "max_size": 420,
+      "label_skew": 0.019
+    },
+    {
+      "strategy": "stratified",
+      "min_size": 419,
+      "max_size": 421,
+      "label_skew": 0.0
+    },
+    {
+      "strategy": "dirichlet a=0.5",
+      "min_size": 7,
+      "max_size": 1535,
+      "label_skew": 0.317
+    },
+    {
+      "strategy": "dirichlet a=0.1",
+      "min_size": 5,
+      "max_size": 2424,
+      "label_skew": 0.477
+    },
+    {
+      "strategy": "label_shards",
+      "min_size": 420,
+      "max_size": 420,
+      "label_skew": 0.479
+    },
+    {
+      "strategy": "quantity_skew",
+      "min_size": 36,
+      "max_size": 1501,
+      "label_skew": 0.021
+    }
+  ]
+}

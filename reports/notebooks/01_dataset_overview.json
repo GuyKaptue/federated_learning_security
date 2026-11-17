@@ -1,0 +1,44 @@
+{
+  "datasets": [
+    {
+      "dataset": "SYN-IDS-v1 (synthetic)",
+      "samples": 12000,
+      "features": 40,
+      "positive_rate": 0.402,
+      "license": "n/a (generated)",
+      "setup": "simulated IID / Dirichlet clients"
+    },
+    {
+      "dataset": "Breast Cancer Wisconsin (Diagnostic)",
+      "samples": 569,
+      "features": 30,
+      "positive_rate": 0.627,
+      "license": "CC BY 4.0",
+      "setup": "simulated IID / Dirichlet clients"
+    },
+    {
+      "dataset": "Pima Indians Diabetes Database",
+      "samples": 768,
+      "features": 8,
+      "positive_rate": 0.349,
+      "license": "not verified",
+      "setup": "simulated IID / Dirichlet clients"
+    },
+    {
+      "dataset": "Heart Disease (Cleveland, processed 14-attribute table)",
+      "samples": 302,
+      "features": 13,
+      "positive_rate": 0.543,
+      "license": "CC BY 4.0 (UCI Heart Disease dataset)",
+      "setup": "simulated IID / Dirichlet clients"
+    },
+    {
+      "dataset": "Heart Disease, four collection sites (Cleveland, Hungary, Switzerland, VA Long Beach)",
+      "samples": 920,
+      "features": 10,
+      "positive_rate": null,
+      "license": "CC BY 4.0 (UCI Heart Disease dataset)",
+      "setup": "4 natural site clients"
+    }
+  ]
+}

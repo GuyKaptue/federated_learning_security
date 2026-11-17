@@ -1,0 +1,43 @@
+axis,level,arm,ref,metric,n,mean_diff,dz,cliffs_delta,wilcoxon_p,holm_p,family
+malicious_fraction,0.0,krum,mean,acc,10,-0.00708333333333333,-1.7069685404856383,-0.52,0.001953125,0.005859375,aggregator vs mean
+malicious_fraction,0.0,median,mean,acc,10,-0.00036111111111110096,-0.19305511361504088,-0.01,0.4453125,0.7109375,aggregator vs mean
+malicious_fraction,0.0,trimmed_mean,mean,acc,10,-0.0001666666666666483,-0.2440467650459619,-0.04,0.35546875,0.7109375,aggregator vs mean
+malicious_fraction,0.05,krum,mean,acc,10,0.01597222222222221,2.722534352269986,0.73,0.001953125,0.005859375,aggregator vs mean
+malicious_fraction,0.05,median,mean,acc,10,0.018972222222222213,4.579299784263987,0.88,0.001953125,0.005859375,aggregator vs mean
+malicious_fraction,0.05,trimmed_mean,mean,acc,10,0.01872222222222223,3.8982772562323564,0.82,0.001953125,0.005859375,aggregator vs mean
+malicious_fraction,0.1,krum,mean,acc,10,0.05719444444444444,5.030620707707279,1.0,0.001953125,0.005859375,aggregator vs mean
+malicious_fraction,0.1,median,mean,acc,10,0.057166666666666664,4.204614006105479,1.0,0.001953125,0.005859375,aggregator vs mean
+malicious_fraction,0.1,trimmed_mean,mean,acc,10,0.05580555555555553,4.135762875229777,1.0,0.001953125,0.005859375,aggregator vs mean
+malicious_fraction,0.2,krum,mean,acc,10,0.3249722222222222,3.2664517195036464,1.0,0.001953125,0.005859375,aggregator vs mean
+malicious_fraction,0.2,median,mean,acc,10,0.3195277777777778,3.1911109058751097,1.0,0.001953125,0.005859375,aggregator vs mean
+malicious_fraction,0.2,trimmed_mean,mean,acc,10,0.3174444444444445,3.1779288896065827,1.0,0.001953125,0.005859375,aggregator vs mean
+malicious_fraction,0.3,krum,mean,acc,10,0.33577777777777784,3.615282745379792,1.0,0.001953125,0.005859375,aggregator vs mean
+malicious_fraction,0.3,median,mean,acc,10,0.32069444444444445,3.4136583340839164,1.0,0.001953125,0.005859375,aggregator vs mean
+malicious_fraction,0.3,trimmed_mean,mean,acc,10,0.3190833333333334,3.37547764518037,1.0,0.001953125,0.005859375,aggregator vs mean
+malicious_fraction,0.4,krum,mean,acc,10,0.33325000000000005,3.5984413655840304,1.0,0.001953125,0.005859375,aggregator vs mean
+malicious_fraction,0.4,median,mean,acc,10,0.29900000000000004,3.3469046148500095,1.0,0.001953125,0.005859375,aggregator vs mean
+malicious_fraction,0.4,trimmed_mean,mean,acc,10,0.29900000000000004,3.3469046148500095,1.0,0.001953125,0.005859375,aggregator vs mean
+dirichlet_alpha,0.1,fedavg+median,fedavg,acc,10,-0.17469444444444446,-1.927593075946113,-0.82,0.001953125,0.009765625,strategy vs fedavg
+dirichlet_alpha,0.1,fedavg+trimmed_mean,fedavg,acc,10,-0.08005555555555555,-0.8635240285841101,-0.42,0.037109375,0.1484375,strategy vs fedavg
+dirichlet_alpha,0.1,fednova,fedavg,acc,10,0.028972222222222222,0.48223106027511886,0.16,0.232421875,0.697265625,strategy vs fedavg
+dirichlet_alpha,0.1,fedprox,fedavg,acc,10,-0.0018611111111111246,-0.14437621180472085,-0.1,0.4921875,0.75,strategy vs fedavg
+dirichlet_alpha,0.1,scaffold,fedavg,acc,10,0.031083333333333334,0.2597140767117171,0.44,0.375,0.75,strategy vs fedavg
+dirichlet_alpha,0.3,fedavg+median,fedavg,acc,10,-0.11622222222222223,-2.0205504066638134,-0.88,0.001953125,0.009765625,strategy vs fedavg
+dirichlet_alpha,0.3,fedavg+trimmed_mean,fedavg,acc,10,-0.06322222222222224,-2.2457075982692705,-0.8,0.001953125,0.009765625,strategy vs fedavg
+dirichlet_alpha,0.3,fednova,fedavg,acc,10,0.016694444444444435,0.6338740112384341,0.27,0.0546875,0.109375,strategy vs fedavg
+dirichlet_alpha,0.3,fedprox,fedavg,acc,10,-0.004472222222222211,-1.0104469839417536,-0.18,0.02734375,0.08203125,strategy vs fedavg
+dirichlet_alpha,0.3,scaffold,fedavg,acc,10,0.02102777777777779,0.5644015669489056,0.42,0.10546875,0.109375,strategy vs fedavg
+dirichlet_alpha,0.5,fedavg+median,fedavg,acc,10,-0.0643888888888889,-1.9967793000892942,-0.88,0.001953125,0.009765625,strategy vs fedavg
+dirichlet_alpha,0.5,fedavg+trimmed_mean,fedavg,acc,10,-0.0382777777777778,-2.613024716409787,-0.78,0.001953125,0.009765625,strategy vs fedavg
+dirichlet_alpha,0.5,fednova,fedavg,acc,10,0.006444444444444442,0.7632423223702749,0.18,0.080078125,0.080078125,strategy vs fedavg
+dirichlet_alpha,0.5,fedprox,fedavg,acc,10,-0.004666666666666675,-1.5707109432142,-0.14,0.00390625,0.01171875,strategy vs fedavg
+dirichlet_alpha,0.5,scaffold,fedavg,acc,10,0.018805555555555555,0.9711580098657923,0.59,0.01953125,0.0390625,strategy vs fedavg
+dirichlet_alpha,1.0,fedavg+median,fedavg,acc,10,-0.04222222222222222,-1.0663406987109738,-0.82,0.001953125,0.009765625,strategy vs fedavg
+dirichlet_alpha,1.0,fedavg+trimmed_mean,fedavg,acc,10,-0.01869444444444447,-1.7526662392487518,-0.7,0.001953125,0.009765625,strategy vs fedavg
+dirichlet_alpha,1.0,fednova,fedavg,acc,10,0.0009444444444444367,0.14817819900195417,0.08,0.421875,0.421875,strategy vs fedavg
+dirichlet_alpha,1.0,fedprox,fedavg,acc,10,-0.004999999999999993,-2.6932752074906205,-0.31,0.001953125,0.009765625,strategy vs fedavg
+dirichlet_alpha,1.0,scaffold,fedavg,acc,10,0.012027777777777781,1.0079129553964852,0.52,0.009765625,0.01953125,strategy vs fedavg
+participation,0.1,median_20pct_signflip,mean_clean,acc,10,-0.22741666666666668,-2.4925712974364003,-1.0,0.001953125,0.001953125,attacked median vs clean mean
+participation,0.25,median_20pct_signflip,mean_clean,acc,10,-0.024944444444444457,-1.912823596043497,-0.77,0.001953125,0.001953125,attacked median vs clean mean
+participation,0.5,median_20pct_signflip,mean_clean,acc,10,-0.01608333333333334,-3.3324450090443616,-0.7,0.001953125,0.001953125,attacked median vs clean mean
+participation,1.0,median_20pct_signflip,mean_clean,acc,10,-0.013749999999999995,-3.218767639373636,-0.68,0.001953125,0.001953125,attacked median vs clean mean

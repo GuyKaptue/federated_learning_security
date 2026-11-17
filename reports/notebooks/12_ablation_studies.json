@@ -1,0 +1,24 @@
+{
+  "ablation": [
+    {
+      "configuration": "plain mean",
+      "clean_acc": 0.7756,
+      "sign_flip_acc": 0.3939
+    },
+    {
+      "configuration": "+ secure aggregation",
+      "clean_acc": 0.7756,
+      "sign_flip_acc": 0.3939
+    },
+    {
+      "configuration": "+ clipping",
+      "clean_acc": 0.7756,
+      "sign_flip_acc": 0.4183
+    },
+    {
+      "configuration": "+ coordinate median",
+      "clean_acc": 0.7733,
+      "sign_flip_acc": 0.765
+    }
+  ]
+}

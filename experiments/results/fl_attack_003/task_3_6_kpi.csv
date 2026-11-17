@@ -1,0 +1,4 @@
+kpi,measured,met,note
+Backdoor success rate < 5%,"0.999 (high, undefended); best defended 0.054",False,clean-FL ASR of the trigger = 0.046
+Gradient leakage success < 10%,B=1 undefended 1.00; secagg K=10 (B_eff=20) 0.00,False,NOT met for plaintext small-batch updates; met only when updates are aggregated/noised (see task 3.4)
+Membership inference AUC < 0.60,undefended 0.577; lowest 0.521,True,evaluated in an overfit regime on synthetic data

@@ -1,0 +1,720 @@
+[
+ {
+  "key": "mcmahan2017",
+  "authors": "McMahan, H.B., Moore, E., Ramage, D., Hampson, S., Agüera y Arcas, B.",
+  "title": "Communication-Efficient Learning of Deep Networks from Decentralized Data",
+  "venue": "AISTATS 2017",
+  "identifier": "arXiv:1602.05629",
+  "used_in": [
+   "fl_perf_002",
+   "fl_bench_004",
+   "fl_sec_001"
+  ],
+  "status": "METADATA_VERIFIED_ON_SOURCE_PAGE",
+  "venue_verified": false,
+  "verification_note": "Title, authors and date read on the source page (2026-11-06); content/claims not re-checked against the paper body. Venue: NOT confirmed by the page (cited from knowledge)."
+ },
+ {
+  "key": "li2020fedprox",
+  "authors": "Li, T., Sahu, A.K., Zaheer, M., Sanjabi, M., Talwalkar, A., Smith, V.",
+  "title": "Federated Optimization in Heterogeneous Networks",
+  "venue": "MLSys 2020",
+  "identifier": "arXiv:1812.06127",
+  "used_in": [
+   "fl_bench_004"
+  ],
+  "status": "METADATA_VERIFIED_ON_SOURCE_PAGE",
+  "venue_verified": false,
+  "verification_note": "Title, authors and date read on the source page (2026-11-06); content/claims not re-checked against the paper body. Venue: NOT confirmed by the page (cited from knowledge)."
+ },
+ {
+  "key": "karimireddy2020",
+  "authors": "Karimireddy, S.P., Kale, S., Mohri, M., Reddi, S., Stich, S., Suresh, A.T.",
+  "title": "SCAFFOLD: Stochastic Controlled Averaging for Federated Learning",
+  "venue": "ICML 2020",
+  "identifier": "arXiv:1910.06378",
+  "used_in": [
+   "fl_bench_004"
+  ],
+  "status": "METADATA_VERIFIED_ON_SOURCE_PAGE",
+  "venue_verified": true,
+  "verification_note": "Title, authors and date read on the source page (2026-11-06); content/claims not re-checked against the paper body. Venue: page: ICML 2020/PMLR 119."
+ },
+ {
+  "key": "wang2020fednova",
+  "authors": "Wang, J., Liu, Q., Liang, H., Joshi, G., Poor, H.V.",
+  "title": "Tackling the Objective Inconsistency Problem in Heterogeneous Federated Optimization",
+  "venue": "NeurIPS 2020",
+  "identifier": "arXiv:2007.07481",
+  "used_in": [
+   "fl_bench_004"
+  ],
+  "status": "METADATA_VERIFIED_ON_SOURCE_PAGE",
+  "venue_verified": false,
+  "verification_note": "Title, authors and date read on the source page (2026-11-06); content/claims not re-checked against the paper body. Venue: NOT confirmed by the page (cited from knowledge)."
+ },
+ {
+  "key": "hsu2019",
+  "authors": "Hsu, T.-M.H., Qi, H., Brown, M.",
+  "title": "Measuring the Effects of Non-Identical Data Distribution for Federated Visual Classification",
+  "venue": "arXiv preprint",
+  "identifier": "arXiv:1909.06335",
+  "used_in": [
+   "fl_bench_004"
+  ],
+  "status": "METADATA_VERIFIED_ON_SOURCE_PAGE",
+  "venue_verified": false,
+  "verification_note": "Title, authors and date read on the source page (2026-11-06); content/claims not re-checked against the paper body. Venue: NOT confirmed by the page (cited from knowledge)."
+ },
+ {
+  "key": "li2021niid",
+  "authors": "Li, Q., Diao, Y., Chen, Q., He, B.",
+  "title": "Federated Learning on Non-IID Data Silos: An Experimental Study",
+  "venue": "ICDE 2022",
+  "identifier": "arXiv:2102.02079",
+  "used_in": [
+   "fl_bench_004"
+  ],
+  "status": "METADATA_VERIFIED_ON_SOURCE_PAGE",
+  "venue_verified": false,
+  "verification_note": "Title, authors and date read on the source page (2026-11-06); content/claims not re-checked against the paper body. Venue: NOT confirmed by the page (cited from knowledge)."
+ },
+ {
+  "key": "kairouz2021",
+  "authors": "Kairouz, P., McMahan, H.B., et al.",
+  "title": "Advances and Open Problems in Federated Learning",
+  "venue": "Foundations and Trends in ML 14(1-2), 2021",
+  "identifier": "arXiv:1912.04977",
+  "used_in": [
+   "fl_sec_001",
+   "fl_perf_002",
+   "fl_pub_005"
+  ],
+  "status": "METADATA_VERIFIED_ON_SOURCE_PAGE",
+  "venue_verified": false,
+  "verification_note": "Title, authors and date read on the source page (2026-11-06); content/claims not re-checked against the paper body. Venue: NOT confirmed by the page (cited from knowledge)."
+ },
+ {
+  "key": "li2020challenges",
+  "authors": "Li, T., Sahu, A.K., Talwalkar, A., Smith, V.",
+  "title": "Federated Learning: Challenges, Methods, and Future Directions",
+  "venue": "IEEE Signal Processing Magazine 37(3), 2020",
+  "identifier": "arXiv:1908.07873",
+  "used_in": [
+   "fl_perf_002",
+   "fl_pub_005"
+  ],
+  "status": "METADATA_VERIFIED_ON_SOURCE_PAGE",
+  "venue_verified": true,
+  "verification_note": "Title, authors and date read on the source page (2026-11-06); content/claims not re-checked against the paper body. Venue: DOI 10.1109/MSP.2020.2975749 on arXiv page."
+ },
+ {
+  "key": "rieke2020",
+  "authors": "Rieke, N., Hancox, J., Li, W., et al.",
+  "title": "The future of digital health with federated learning",
+  "venue": "npj Digital Medicine 3, 119 (2020)",
+  "identifier": "arXiv:2003.08119",
+  "used_in": [
+   "fl_sec_001",
+   "fl_pub_005"
+  ],
+  "status": "METADATA_VERIFIED_ON_SOURCE_PAGE",
+  "venue_verified": true,
+  "verification_note": "Title, authors and date read on the source page (2026-11-06); content/claims not re-checked against the paper body. Venue: DOI 10.1038/s41746-020-00323-1 on arXiv page."
+ },
+ {
+  "key": "bonawitz2017",
+  "authors": "Bonawitz, K., Ivanov, V., Kreuter, B., et al.",
+  "title": "Practical Secure Aggregation for Privacy-Preserving Machine Learning",
+  "venue": "ACM CCS 2017",
+  "identifier": "IACR ePrint 2017/281",
+  "used_in": [
+   "fl_sec_001",
+   "fl_perf_002"
+  ],
+  "status": "METADATA_VERIFIED_ON_SOURCE_PAGE",
+  "venue_verified": false,
+  "verification_note": "Title, authors and date read on the source page (2026-11-06); content/claims not re-checked against the paper body. Venue: NOT confirmed by the page (cited from knowledge)."
+ },
+ {
+  "key": "bell2020",
+  "authors": "Bell, J.H., Bonawitz, K.A., Gascón, A., Lepoint, T., Raykova, M.",
+  "title": "Secure Single-Server Aggregation with (Poly)Logarithmic Overhead",
+  "venue": "ACM CCS 2020",
+  "identifier": "IACR ePrint 2020/704",
+  "used_in": [
+   "fl_sec_001",
+   "fl_perf_002"
+  ],
+  "status": "METADATA_VERIFIED_ON_SOURCE_PAGE",
+  "venue_verified": true,
+  "verification_note": "Title, authors and date read on the source page (2026-11-06); content/claims not re-checked against the paper body. Venue: ePrint page: CCS 2020, DOI 10.1145/3372297.3417885."
+ },
+ {
+  "key": "cheon2017",
+  "authors": "Cheon, J.H., Kim, A., Kim, M., Song, Y.",
+  "title": "Homomorphic Encryption for Arithmetic of Approximate Numbers",
+  "venue": "ASIACRYPT 2017",
+  "identifier": "IACR ePrint 2016/421",
+  "used_in": [
+   "fl_sec_001"
+  ],
+  "status": "METADATA_VERIFIED_ON_SOURCE_PAGE",
+  "venue_verified": true,
+  "verification_note": "Title, authors and date read on the source page (2026-11-06); content/claims not re-checked against the paper body. Venue: ePrint page: published in ASIACRYPT 2017."
+ },
+ {
+  "key": "fv2012",
+  "authors": "Fan, J., Vercauteren, F.",
+  "title": "Somewhat Practical Fully Homomorphic Encryption",
+  "venue": "IACR ePrint",
+  "identifier": "IACR ePrint 2012/144",
+  "used_in": [
+   "fl_sec_001"
+  ],
+  "status": "METADATA_VERIFIED_ON_SOURCE_PAGE",
+  "venue_verified": false,
+  "verification_note": "Title, authors and date read on the source page (2026-11-06); content/claims not re-checked against the paper body. Venue: NOT confirmed by the page (cited from knowledge)."
+ },
+ {
+  "key": "paillier1999",
+  "authors": "Paillier, P.",
+  "title": "Public-Key Cryptosystems Based on Composite Degree Residuosity Classes",
+  "venue": "EUROCRYPT 1999",
+  "identifier": "no identifier asserted",
+  "used_in": [
+   "fl_sec_001"
+  ],
+  "status": "METADATA_VERIFIED_ON_SOURCE_PAGE",
+  "venue_verified": true,
+  "verification_note": "Title, authors and date read on the source page (2026-11-06); content/claims not re-checked against the paper body. Venue: bibliographic record (Univ. Utah bib archive): LNCS vol. 1592, 1999, start page 223; EUROCRYPT name not stated on page."
+ },
+ {
+  "key": "damgard2012",
+  "authors": "Damgård, I., Pastro, V., Smart, N., Zakarias, S.",
+  "title": "Multiparty Computation from Somewhat Homomorphic Encryption (SPDZ)",
+  "venue": "CRYPTO 2012",
+  "identifier": "IACR ePrint 2011/535",
+  "used_in": [
+   "fl_sec_001"
+  ],
+  "status": "METADATA_VERIFIED_ON_SOURCE_PAGE",
+  "venue_verified": false,
+  "verification_note": "Title, authors and date read on the source page (2026-11-06); content/claims not re-checked against the paper body. Venue: NOT confirmed by the page (cited from knowledge)."
+ },
+ {
+  "key": "beaver1991",
+  "authors": "Beaver, D.",
+  "title": "Efficient Multiparty Protocols Using Circuit Randomization",
+  "venue": "CRYPTO 1991",
+  "identifier": "no identifier asserted",
+  "used_in": [
+   "fl_sec_001"
+  ],
+  "status": "METADATA_VERIFIED_ON_SOURCE_PAGE",
+  "venue_verified": true,
+  "verification_note": "Title, authors and date read on the source page (2026-11-06); content/claims not re-checked against the paper body. Venue: bibliographic record (Univ. Utah bib archive): LNCS vol. 576, 1991, start page 420; CRYPTO name not stated on page."
+ },
+ {
+  "key": "shamir1979",
+  "authors": "Shamir, A.",
+  "title": "How to Share a Secret",
+  "venue": "Communications of the ACM 22(11), 1979",
+  "identifier": "no identifier asserted",
+  "used_in": [
+   "fl_sec_001"
+  ],
+  "status": "METADATA_VERIFIED_ON_SOURCE_PAGE",
+  "venue_verified": true,
+  "verification_note": "Title, authors and date read on the source page (2026-11-06); content/claims not re-checked against the paper body. Venue: author page (Tau) shows CACM 22(11), Nov 1979."
+ },
+ {
+  "key": "benaloh_tenseal",
+  "authors": "Benaissa, A., Retiat, B., Cebere, B., Belfedhal, A.E.",
+  "title": "TenSEAL: A Library for Encrypted Tensor Operations Using Homomorphic Encryption",
+  "venue": "arXiv preprint",
+  "identifier": "arXiv:2104.03152",
+  "used_in": [
+   "fl_sec_001"
+  ],
+  "status": "METADATA_VERIFIED_ON_SOURCE_PAGE",
+  "venue_verified": false,
+  "verification_note": "Title, authors and date read on the source page (2026-11-06); content/claims not re-checked against the paper body. Venue: NOT confirmed by the page (cited from knowledge)."
+ },
+ {
+  "key": "bagdasaryan2020",
+  "authors": "Bagdasaryan, E., Veit, A., Hua, Y., Estrin, D., Shmatikov, V.",
+  "title": "How To Backdoor Federated Learning",
+  "venue": "AISTATS 2020",
+  "identifier": "arXiv:1807.00459",
+  "used_in": [
+   "fl_attack_003"
+  ],
+  "status": "METADATA_VERIFIED_ON_SOURCE_PAGE",
+  "venue_verified": true,
+  "verification_note": "Title, authors and date read on the source page (2026-11-06); content/claims not re-checked against the paper body. Venue: proceedings.mlr.press v108 page (search result)."
+ },
+ {
+  "key": "sun2019",
+  "authors": "Sun, Z., Kairouz, P., Suresh, A.T., McMahan, H.B.",
+  "title": "Can You Really Backdoor Federated Learning?",
+  "venue": "arXiv preprint",
+  "identifier": "arXiv:1911.07963",
+  "used_in": [
+   "fl_attack_003"
+  ],
+  "status": "METADATA_VERIFIED_ON_SOURCE_PAGE",
+  "venue_verified": false,
+  "verification_note": "Title, authors and date read on the source page (2026-11-06); content/claims not re-checked against the paper body. Venue: NOT confirmed by the page (cited from knowledge)."
+ },
+ {
+  "key": "wang2020tail",
+  "authors": "Wang, H., Sreenivasan, K., et al.",
+  "title": "Attack of the Tails: Yes, You Really Can Backdoor Federated Learning",
+  "venue": "NeurIPS 2020",
+  "identifier": "arXiv:2007.05084",
+  "used_in": [
+   "fl_attack_003"
+  ],
+  "status": "METADATA_VERIFIED_ON_SOURCE_PAGE",
+  "venue_verified": true,
+  "verification_note": "Title, authors and date read on the source page (2026-11-06); content/claims not re-checked against the paper body. Venue: neurips.cc poster page (search result)."
+ },
+ {
+  "key": "blanchard2017",
+  "authors": "Blanchard, P., El Mhamdi, E.M., Guerraoui, R., Stainer, J.",
+  "title": "Machine Learning with Adversaries: Byzantine Tolerant Gradient Descent (Krum)",
+  "venue": "NeurIPS 2017",
+  "identifier": "no identifier asserted",
+  "used_in": [
+   "fl_attack_003"
+  ],
+  "status": "METADATA_VERIFIED_ON_SOURCE_PAGE",
+  "venue_verified": true,
+  "verification_note": "Title, authors and date read on the source page (2026-11-06); content/claims not re-checked against the paper body. Venue: NeurIPS proceedings page: NIPS 2017."
+ },
+ {
+  "key": "yin2018",
+  "authors": "Yin, D., Chen, Y., Ramchandran, K., Bartlett, P.",
+  "title": "Byzantine-Robust Distributed Learning: Towards Optimal Statistical Rates",
+  "venue": "ICML 2018",
+  "identifier": "arXiv:1803.01498",
+  "used_in": [
+   "fl_attack_003"
+  ],
+  "status": "METADATA_VERIFIED_ON_SOURCE_PAGE",
+  "venue_verified": false,
+  "verification_note": "Title, authors and date read on the source page (2026-11-06); content/claims not re-checked against the paper body. Venue: NOT confirmed by the page (cited from knowledge)."
+ },
+ {
+  "key": "fang2020",
+  "authors": "Fang, M., Cao, X., Jia, J., Gong, N.Z.",
+  "title": "Local Model Poisoning Attacks to Byzantine-Robust Federated Learning",
+  "venue": "USENIX Security 2020",
+  "identifier": "arXiv:1911.11815",
+  "used_in": [
+   "fl_attack_003"
+  ],
+  "status": "METADATA_VERIFIED_ON_SOURCE_PAGE",
+  "venue_verified": true,
+  "verification_note": "Title, authors and date read on the source page (2026-11-06); content/claims not re-checked against the paper body. Venue: arXiv PDF header: USENIX Security 2020 (search result)."
+ },
+ {
+  "key": "shokri2017",
+  "authors": "Shokri, R., Stronati, M., Song, C., Shmatikov, V.",
+  "title": "Membership Inference Attacks Against Machine Learning Models",
+  "venue": "IEEE S&P 2017",
+  "identifier": "arXiv:1610.05820",
+  "used_in": [
+   "fl_attack_003"
+  ],
+  "status": "METADATA_VERIFIED_ON_SOURCE_PAGE",
+  "venue_verified": false,
+  "verification_note": "Title, authors and date read on the source page (2026-11-06); content/claims not re-checked against the paper body. Venue: NOT confirmed by the page (cited from knowledge)."
+ },
+ {
+  "key": "nasr2019",
+  "authors": "Nasr, M., Shokri, R., Houmansadr, A.",
+  "title": "Comprehensive Privacy Analysis of Deep Learning: Passive and Active White-box Inference Attacks against Centralized and Federated Learning",
+  "venue": "IEEE S&P 2019",
+  "identifier": "arXiv:1812.00910",
+  "used_in": [
+   "fl_attack_003"
+  ],
+  "status": "METADATA_VERIFIED_ON_SOURCE_PAGE",
+  "venue_verified": true,
+  "verification_note": "Title, authors and date read on the source page (2026-11-06); content/claims not re-checked against the paper body. Venue: DOI 10.1109/SP.2019.00065 on arXiv page."
+ },
+ {
+  "key": "carlini2022",
+  "authors": "Carlini, N., Chien, S., Nasr, M., Song, S., Terzis, A., Tramèr, F.",
+  "title": "Membership Inference Attacks From First Principles",
+  "venue": "IEEE S&P 2022",
+  "identifier": "arXiv:2112.03570",
+  "used_in": [
+   "fl_attack_003"
+  ],
+  "status": "METADATA_VERIFIED_ON_SOURCE_PAGE",
+  "venue_verified": false,
+  "verification_note": "Title, authors and date read on the source page (2026-11-06); content/claims not re-checked against the paper body. Venue: NOT confirmed by the page (cited from knowledge)."
+ },
+ {
+  "key": "zhu2019",
+  "authors": "Zhu, L., Liu, Z., Han, S.",
+  "title": "Deep Leakage from Gradients",
+  "venue": "NeurIPS 2019",
+  "identifier": "arXiv:1906.08935",
+  "used_in": [
+   "fl_attack_003"
+  ],
+  "status": "METADATA_VERIFIED_ON_SOURCE_PAGE",
+  "venue_verified": false,
+  "verification_note": "Title, authors and date read on the source page (2026-11-06); content/claims not re-checked against the paper body. Venue: NOT confirmed by the page (cited from knowledge)."
+ },
+ {
+  "key": "zhao2020",
+  "authors": "Zhao, B., Mopuri, K.R., Bilen, H.",
+  "title": "iDLG: Improved Deep Leakage from Gradients",
+  "venue": "arXiv preprint",
+  "identifier": "arXiv:2001.02610",
+  "used_in": [
+   "fl_attack_003"
+  ],
+  "status": "METADATA_VERIFIED_ON_SOURCE_PAGE",
+  "venue_verified": false,
+  "verification_note": "Title, authors and date read on the source page (2026-11-06); content/claims not re-checked against the paper body. Venue: NOT confirmed by the page (cited from knowledge)."
+ },
+ {
+  "key": "geiping2020",
+  "authors": "Geiping, J., Bauermeister, H., Dröge, H., Moeller, M.",
+  "title": "Inverting Gradients - How easy is it to break privacy in federated learning?",
+  "venue": "NeurIPS 2020",
+  "identifier": "arXiv:2003.14053",
+  "used_in": [
+   "fl_attack_003"
+  ],
+  "status": "METADATA_VERIFIED_ON_SOURCE_PAGE",
+  "venue_verified": false,
+  "verification_note": "Title, authors and date read on the source page (2026-11-06); content/claims not re-checked against the paper body. Venue: NOT confirmed by the page (cited from knowledge)."
+ },
+ {
+  "key": "abadi2016",
+  "authors": "Abadi, M., Chu, A., Goodfellow, I., et al.",
+  "title": "Deep Learning with Differential Privacy",
+  "venue": "ACM CCS 2016",
+  "identifier": "arXiv:1607.00133",
+  "used_in": [
+   "fl_attack_003",
+   "fl_pub_005"
+  ],
+  "status": "METADATA_VERIFIED_ON_SOURCE_PAGE",
+  "venue_verified": true,
+  "verification_note": "Title, authors and date read on the source page (2026-11-06); content/claims not re-checked against the paper body. Venue: DOI 10.1145/2976749.2978318 on arXiv page."
+ },
+ {
+  "key": "mironov2017",
+  "authors": "Mironov, I.",
+  "title": "Rényi Differential Privacy",
+  "venue": "IEEE CSF 2017",
+  "identifier": "arXiv:1702.07476",
+  "used_in": [
+   "fl_attack_003"
+  ],
+  "status": "METADATA_VERIFIED_ON_SOURCE_PAGE",
+  "venue_verified": false,
+  "verification_note": "Title, authors and date read on the source page (2026-11-06); content/claims not re-checked against the paper body. Venue: NOT confirmed by the page (cited from knowledge)."
+ },
+ {
+  "key": "mcmahan2018dp",
+  "authors": "McMahan, H.B., Ramage, D., Talwar, K., Zhang, L.",
+  "title": "Learning Differentially Private Recurrent Language Models",
+  "venue": "ICLR 2018",
+  "identifier": "arXiv:1710.06963",
+  "used_in": [
+   "fl_attack_003"
+  ],
+  "status": "METADATA_VERIFIED_ON_SOURCE_PAGE",
+  "venue_verified": false,
+  "verification_note": "Title, authors and date read on the source page (2026-11-06); content/claims not re-checked against the paper body. Venue: NOT confirmed by the page (cited from knowledge)."
+ },
+ {
+  "key": "demsar2006",
+  "authors": "Demšar, J.",
+  "title": "Statistical Comparisons of Classifiers over Multiple Data Sets",
+  "venue": "JMLR 7, 2006",
+  "identifier": "no identifier asserted",
+  "used_in": [
+   "fl_bench_004"
+  ],
+  "status": "METADATA_VERIFIED_ON_SOURCE_PAGE",
+  "venue_verified": true,
+  "verification_note": "Title, authors and date read on the source page (2026-11-06); content/claims not re-checked against the paper body. Venue: JMLR page: 7(1):1-30, 2006."
+ },
+ {
+  "key": "holm1979",
+  "authors": "Holm, S.",
+  "title": "A Simple Sequentially Rejective Multiple Test Procedure",
+  "venue": "Scandinavian Journal of Statistics 6, 65-70, 1979",
+  "identifier": "no identifier asserted",
+  "used_in": [
+   "fl_bench_004"
+  ],
+  "status": "METADATA_VERIFIED_ON_SOURCE_PAGE",
+  "venue_verified": true,
+  "verification_note": "Title, authors and date read on the source page (2026-11-06); content/claims not re-checked against the paper body. Venue: bibbase record: Scand. J. Statist. 6, 65-70, 1979."
+ },
+ {
+  "key": "wilcoxon1945",
+  "authors": "Wilcoxon, F.",
+  "title": "Individual Comparisons by Ranking Methods",
+  "venue": "Biometrics Bulletin 1(6), 1945",
+  "identifier": "no identifier asserted",
+  "used_in": [
+   "fl_bench_004"
+  ],
+  "status": "EXISTENCE_CONFIRMED_LANDING_PAGE_ONLY",
+  "venue_verified": false,
+  "verification_note": "Springer chapter list shows a reprint 'Individual Comparisons by Ranking Methods' in Breakthroughs in Statistics (DOI 10.1007/978-1-4612-4380-9_16) with Noether's introduction; the original Biometrics Bulletin 1(6) citation (volume/pages) was NOT stated on any page read."
+ },
+ {
+  "key": "pineau2020",
+  "authors": "Pineau, J., Vincent-Lamarre, P., Sinha, K., et al.",
+  "title": "Improving Reproducibility in Machine Learning Research",
+  "venue": "JMLR 22, 2021",
+  "identifier": "arXiv:2003.12206",
+  "used_in": [
+   "fl_pub_005"
+  ],
+  "status": "METADATA_VERIFIED_ON_SOURCE_PAGE",
+  "venue_verified": false,
+  "verification_note": "Title, authors and date read on the source page (2026-11-06); content/claims not re-checked against the paper body. Venue: NOT confirmed by the page (cited from knowledge)."
+ },
+ {
+  "key": "henderson2018",
+  "authors": "Henderson, P., Islam, R., Bachman, P., et al.",
+  "title": "Deep Reinforcement Learning that Matters",
+  "venue": "AAAI 2018",
+  "identifier": "arXiv:1709.06560",
+  "used_in": [
+   "fl_pub_005"
+  ],
+  "status": "METADATA_VERIFIED_ON_SOURCE_PAGE",
+  "venue_verified": true,
+  "verification_note": "Title, authors and date read on the source page (2026-11-06); content/claims not re-checked against the paper body. Venue: ojs.aaai.org page (search result)."
+ },
+ {
+  "key": "gdpr",
+  "authors": "European Parliament and Council",
+  "title": "Regulation (EU) 2016/679 (General Data Protection Regulation), Art. 9 and Art. 32",
+  "venue": "Official Journal of the EU, L 119",
+  "identifier": "EUR-Lex (not fetched)",
+  "used_in": [
+   "fl_pub_005",
+   "fl_sec_001"
+  ],
+  "status": "TEXT_PARTIALLY_READ",
+  "venue_verified": false,
+  "verification_note": "Operative text read on 2026-11-06 from the legislation.gov.uk copy of the as-adopted Regulation (NOT the EUR-Lex Official Journal page, which only rendered recitals): Art. 9(1), 9(2)(a),(h),(i),(j), 9(3), 9(4); Art. 32(1)(a)-(d); key phrases of Art. 25(1), 32(2) and 35(1). Not read: the remaining articles; consolidated/current EU text and national implementation."
+ },
+ {
+  "key": "aiact",
+  "authors": "European Parliament and Council",
+  "title": "Regulation (EU) 2024/1689 (Artificial Intelligence Act)",
+  "venue": "Official Journal of the EU",
+  "identifier": "EUR-Lex (not fetched)",
+  "used_in": [
+   "fl_pub_005"
+  ],
+  "status": "TEXT_PARTIALLY_READ",
+  "venue_verified": false,
+  "verification_note": "Art. 15(1)-(5) read on 2026-11-06 from artificialintelligenceact.eu (an unofficial rendering by the Future of Life Institute, not the Official Journal). Art. 6, Annex III and the rest NOT read; later amendments (e.g. the digital omnibus) may change the text."
+ },
+ {
+  "key": "nis2",
+  "authors": "European Parliament and Council",
+  "title": "Directive (EU) 2022/2555 (NIS2)",
+  "venue": "Official Journal of the EU",
+  "identifier": "EUR-Lex (not fetched)",
+  "used_in": [
+   "fl_pub_005"
+  ],
+  "status": "TEXT_PARTIALLY_READ",
+  "venue_verified": false,
+  "verification_note": "Art. 21(1) and 21(2)(a)-(j) and Annex I sector 5 (health: healthcare providers, EU reference labs, pharma R&D, pharma/medical-device manufacturing) read on 2026-11-06 from the EUR-Lex consolidated text (CELEX 02022L2555-20221227). Rest NOT read; national transposition (e.g. in Germany) NOT read."
+ },
+ {
+  "key": "bdsg",
+  "authors": "Bundesrepublik Deutschland",
+  "title": "Bundesdatenschutzgesetz (BDSG), incl. §22 (processing of special categories of personal data)",
+  "venue": "gesetze-im-internet.de",
+  "identifier": "official text not fetched; section numbers to be re-checked",
+  "used_in": [
+   "fl_pub_005"
+  ],
+  "status": "TEXT_PARTIALLY_READ",
+  "venue_verified": false,
+  "verification_note": "gesetze-im-internet.de/bdsg_2018/__22.html read on 2026-11-06: heading of section 22 and paragraph 1 (Nr. 1 lit. a-d, Nr. 2 lit. a-c) read; paragraph 2 (list of measures) and the rest of the BDSG NOT read."
+ },
+ {
+  "key": "baruch2019",
+  "authors": "Baruch, M., Baruch, G., Goldberg, Y.",
+  "title": "A Little Is Enough: Circumventing Defenses For Distributed Learning",
+  "venue": "NeurIPS 2019",
+  "identifier": "arXiv:1902.06156",
+  "used_in": [
+   "fl_attack_003"
+  ],
+  "status": "METADATA_VERIFIED_ON_SOURCE_PAGE",
+  "venue_verified": false,
+  "verification_note": "Title, authors and date read on the source page (2026-11-06); content/claims not re-checked against the paper body. Venue: NOT confirmed by the page (cited from knowledge)."
+ },
+ {
+  "key": "nguyen2022flame",
+  "authors": "Nguyen, T.D., Rieger, P., Chen, H., Yalame, H., Möllering, H., Fereidooni, H., Marchal, S., Miettinen, M., Mirhoseini, A., Zeitouni, S., Koushanfar, F., Sadeghi, A.-R., Schneider, T.",
+  "title": "FLAME: Taming Backdoors in Federated Learning",
+  "venue": "USENIX Security 2022, pp. 1415-1432",
+  "identifier": "arXiv:2101.02281",
+  "used_in": [
+   "fl_attack_003",
+   "fl_stage2"
+  ],
+  "status": "METADATA_VERIFIED_ON_SOURCE_PAGE",
+  "venue_verified": true,
+  "verification_note": "Title, authors and date read on the source page (2026-11-06); content/claims not re-checked against the paper body. Venue: usenix.org presentation page: 31st USENIX Security Symposium 2022, pp. 1415-1432; arXiv full text read for the algorithm."
+ },
+ {
+  "key": "ozdayi2021rlr",
+  "authors": "Ozdayi, M.S., Kantarcioglu, M., Gel, Y.R.",
+  "title": "Defending against Backdoors in Federated Learning with Robust Learning Rate",
+  "venue": "AAAI 2021, vol. 35(10), pp. 9268-9276",
+  "identifier": "arXiv:2007.03767; doi:10.1609/aaai.v35i10.17118",
+  "used_in": [
+   "fl_attack_003",
+   "fl_stage2"
+  ],
+  "status": "METADATA_VERIFIED_ON_SOURCE_PAGE",
+  "venue_verified": true,
+  "verification_note": "Title, authors and date read on the source page (2026-11-06); content/claims not re-checked against the paper body. Venue: ojs.aaai.org article page: AAAI vol. 35 no. 10, 2021, pp. 9268-9276, DOI 10.1609/aaai.v35i10.17118; arXiv v4 full text read for the algorithm."
+ },
+ {
+  "key": "fung2020foolsgold",
+  "authors": "Fung, C., Yoon, C.J.M., Beschastnikh, I.",
+  "title": "Mitigating Sybils in Federated Learning Poisoning (arXiv title); venue version: The Limitations of Federated Learning in Sybil Settings",
+  "venue": "RAID 2020, pp. 301-316",
+  "identifier": "arXiv:1808.04866",
+  "used_in": [
+   "fl_attack_003",
+   "fl_stage2"
+  ],
+  "status": "METADATA_VERIFIED_ON_SOURCE_PAGE",
+  "venue_verified": true,
+  "verification_note": "Title, authors and date read on the source page (2026-11-06); content/claims not re-checked against the paper body. Venue: usenix.org RAID 2020 page ('The Limitations of Federated Learning in Sybil Settings', pp. 301-316, introduces FoolsGold); the page does not state its relation to arXiv 1808.04866; algorithm read from the arXiv version."
+ },
+ {
+  "key": "xu2022signguard",
+  "authors": "Xu, J., Huang, S.-L., Song, L., Lan, T.",
+  "title": "Byzantine-robust Federated Learning through Collaborative Malicious Gradient Filtering (SignGuard)",
+  "venue": "ICDCS 2022, pp. 1223-1235",
+  "identifier": "arXiv:2109.05872; doi:10.1109/ICDCS54860.2022.00120",
+  "used_in": [
+   "fl_attack_003",
+   "fl_stage2"
+  ],
+  "status": "METADATA_VERIFIED_ON_SOURCE_PAGE",
+  "venue_verified": true,
+  "verification_note": "Title, authors and date read on the source page (2026-11-06); content/claims not re-checked against the paper body. Venue: scholars.cityu.edu.hk record: ICDCS 2022, pp. 1223-1235, DOI 10.1109/ICDCS54860.2022.00120; arXiv v2 full text read for the algorithm."
+ },
+ {
+  "key": "nabavirazavi2023randomization",
+  "authors": "Nabavirazavi, S., Taheri, R., Shojafar, M., Iyengar, S. S.",
+  "title": "Impact of Aggregation Function Randomization against Model Poisoning in Federated Learning",
+  "venue": "IEEE TrustCom 2023, pp. 165-172",
+  "identifier": "doi:10.1109/TrustCom60117.2023.00043",
+  "used_in": [
+   "fl_attack_003",
+   "fl_stage3"
+  ],
+  "status": "METADATA_VERIFIED_ON_SOURCE_PAGE",
+  "venue_verified": true,
+  "verification_note": "Title, authors and date read on the source page (2026-11-06); content/claims not re-checked against the paper body. Venue: researchportal.port.ac.uk record: TrustCom 2023, pp. 165-172, DOI 10.1109/TrustCom60117.2023.00043; only the record was read, not the paper body."
+ },
+ {
+  "key": "yue2024hybrid",
+  "authors": "Yue, K., Jin, R., Wong, C.-W., Dai, H.",
+  "title": "Advancing Hybrid Defense for Byzantine Attacks in Federated Learning",
+  "venue": "arXiv preprint (venue not confirmed)",
+  "identifier": "arXiv:2409.06474",
+  "used_in": [
+   "fl_attack_003",
+   "fl_stage3"
+  ],
+  "status": "METADATA_VERIFIED_ON_SOURCE_PAGE",
+  "venue_verified": false,
+  "verification_note": "Title, authors and date read on the source page (2026-11-06); content/claims not re-checked against the paper body. Venue: NOT confirmed by the page (cited from knowledge)."
+ },
+ {
+  "key": "shejwalkar2021",
+  "authors": "Shejwalkar, V., Houmansadr, A.",
+  "title": "Manipulating the Byzantine: Optimizing Model Poisoning Attacks and Defenses for Federated Learning",
+  "venue": "NDSS 2021",
+  "identifier": "NDSS paper page (no DOI asserted)",
+  "used_in": [
+   "fl_attack_003"
+  ],
+  "status": "METADATA_VERIFIED_ON_SOURCE_PAGE",
+  "venue_verified": false,
+  "verification_note": "Title, authors and date read on the source page (2026-11-06); content/claims not re-checked against the paper body. Venue: NOT confirmed by the page (cited from knowledge)."
+ },
+ {
+  "key": "uci_wdbc",
+  "authors": "Wolberg, W., Mangasarian, O., Street, N., Street, W.",
+  "title": "Breast Cancer Wisconsin (Diagnostic) [Dataset]",
+  "venue": "UCI Machine Learning Repository, 1993/1995",
+  "identifier": "doi:10.24432/C5DW2B (as printed on the UCI page)",
+  "used_in": [
+   "fl_bench_004"
+  ],
+  "status": "METADATA_VERIFIED_ON_SOURCE_PAGE",
+  "venue_verified": true,
+  "verification_note": "Title, authors and date read on the source page (2026-11-06); content/claims not re-checked against the paper body. Venue: UCI page (title, creators, DOI, CC BY 4.0, 569x30 read)."
+ },
+ {
+  "key": "uci_heart",
+  "authors": "Janosi, A., Steinbrunn, W., Pfisterer, M., Detrano, R.",
+  "title": "Heart Disease [Dataset] (Cleveland subset used); cited paper: Detrano et al. 1989, American Journal of Cardiology",
+  "venue": "UCI Machine Learning Repository",
+  "identifier": "UCI dataset 45",
+  "used_in": [
+   "fl_bench_004"
+  ],
+  "status": "METADATA_VERIFIED_ON_SOURCE_PAGE",
+  "venue_verified": true,
+  "verification_note": "Title, authors and date read on the source page (2026-11-06); content/claims not re-checked against the paper body. Venue: UCI page (creators, 303 instances, CC BY 4.0, de-identification note read)."
+ },
+ {
+  "key": "pima_nidd",
+  "authors": "National Institute of Diabetes and Digestive and Kidney Diseases (original owner); donated by V. Sigillito (JHU APL)",
+  "title": "Pima Indians Diabetes Database (pima.names)",
+  "venue": "UCI/MLC++ distribution",
+  "identifier": "mirror page read; original UCI page not read",
+  "used_in": [
+   "fl_bench_004"
+  ],
+  "status": "REFERENCE_NOT_VERIFIED",
+  "venue_verified": false,
+  "verification_note": "Classic non-arXiv reference, no source page reachable/checked; cited from knowledge. Check before submission."
+ },
+ {
+  "key": "smith1988",
+  "authors": "Smith, J.W., Everhart, J.E., Dickson, W.C., Knowler, W.C., Johannes, R.S.",
+  "title": "Using the ADAP learning algorithm to forecast the onset of diabetes mellitus",
+  "venue": "Proc. Annu. Symp. Comput. Appl. Med. Care, 1988",
+  "identifier": "PMC2245318 (page blocked by captcha)",
+  "used_in": [
+   "fl_bench_004"
+  ],
+  "status": "REFERENCE_NOT_VERIFIED",
+  "venue_verified": false,
+  "verification_note": "Classic non-arXiv reference, no source page reachable/checked; cited from knowledge. Check before submission."
+ }
+]

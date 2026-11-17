@@ -1,0 +1,13 @@
+{
+  "pima_missing": {
+    "pregnancies": 0.0,
+    "glucose": 0.006510416666666667,
+    "blood_pressure": 0.045572916666666664,
+    "skin": 0.2955729166666667,
+    "insulin": 0.4869791666666667,
+    "bmi": 0.014322916666666666,
+    "pedigree": 0.0,
+    "age": 0.0
+  },
+  "cleveland_rows": 302
+}

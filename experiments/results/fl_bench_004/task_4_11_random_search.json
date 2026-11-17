@@ -1,0 +1,789 @@
+{
+ "provenance": {
+  "experiment_id": "FL-BENCH-004.11-47a61d5a76",
+  "task_id": "FL-BENCH-004.11",
+  "config": {
+   "search_space": {
+    "lr": "log-uniform [0.005, 0.8]",
+    "mu": "log-uniform [1e-3, 1] (FedProx)",
+    "batch_size": [
+     16,
+     32,
+     64
+    ],
+    "local_epochs": [
+     1,
+     2,
+     3,
+     5
+    ],
+    "hidden": [
+     16,
+     32,
+     64
+    ],
+    "server_lr": "[0.5, 1, 1.5] (SCAFFOLD)"
+   },
+   "n_random_configs": 24,
+   "grid_configs": {
+    "fedavg_like": 7,
+    "fedprox": 42
+   },
+   "rounds": 30,
+   "tune_seeds": [
+    100,
+    101
+   ],
+   "eval_seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+   ],
+   "natural_site_splits": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "selection": "mean validation F1 on 25% of TRAIN; test untouched",
+   "compute_note": "local_epochs and hidden width change per-round compute, so budgets are matched in number of configurations, NOT in FLOPs"
+  },
+  "config_sha256": "47a61d5a76f7ce620ffd131e08d0c4ed6430fb45a9636e9f5ed86cd735d95944",
+  "git_commit": null,
+  "dataset_id": "SYN-IDS-v1",
+  "environment": {
+   "python": "3.13.18",
+   "platform": "Linux-6.18.44-fc-v300-x86_64-with-glibc2.39",
+   "cpu_count": 2,
+   "versions": {
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "scikit-learn": "1.9.1",
+    "torch": "2.15.0",
+    "tenseal": "0.3.18",
+    "phe": "1.5.0",
+    "flwr": "1.43.0",
+    "mlflow": "3.18.0",
+    "opacus": "1.6.0",
+    "cryptography": "50.0.1",
+    "psutil": "7.2.2",
+    "matplotlib": "3.11.2",
+    "pandas": "3.0.5"
+   },
+   "timestamp_utc": "2026-11-06T22:04:21+00:00"
+  },
+  "execution_command": "python -m research_sprint.experiments.run_all --task FL-BENCH-004.11",
+  "result_labels": "MEASURED unless stated; clients are virtual (single machine)"
+ },
+ "summary": [
+  {
+   "dataset": "synthetic",
+   "algo": "fedavg",
+   "setting": "default",
+   "n": 10,
+   "acc": 0.8838888888888888,
+   "acc_ci": "[0.8663, 0.9015]",
+   "f1": 0.8430562859002049,
+   "f1_ci": "[0.8124, 0.8737]",
+   "auc": 0.9549655562601409,
+   "auc_ci": "[0.9485, 0.9615]"
+  },
+  {
+   "dataset": "synthetic",
+   "algo": "fedavg",
+   "setting": "grid",
+   "n": 10,
+   "acc": 0.8830833333333332,
+   "acc_ci": "[0.8582, 0.9080]",
+   "f1": 0.8480878524455525,
+   "f1_ci": "[0.8128, 0.8834]",
+   "auc": 0.9471852439719445,
+   "auc_ci": "[0.9266, 0.9678]"
+  },
+  {
+   "dataset": "synthetic",
+   "algo": "fedavg",
+   "setting": "random",
+   "n": 10,
+   "acc": 0.8909722222222223,
+   "acc_ci": "[0.8823, 0.8996]",
+   "f1": 0.8589240830125465,
+   "f1_ci": "[0.8449, 0.8730]",
+   "auc": 0.9558387803199901,
+   "auc_ci": "[0.9525, 0.9592]"
+  },
+  {
+   "dataset": "synthetic",
+   "algo": "fedprox",
+   "setting": "default",
+   "n": 10,
+   "acc": 0.8808333333333334,
+   "acc_ci": "[0.8632, 0.8985]",
+   "f1": 0.8390790786439997,
+   "f1_ci": "[0.8088, 0.8693]",
+   "auc": 0.952612210920331,
+   "auc_ci": "[0.9448, 0.9605]"
+  },
+  {
+   "dataset": "synthetic",
+   "algo": "fedprox",
+   "setting": "grid",
+   "n": 10,
+   "acc": 0.8914444444444444,
+   "acc_ci": "[0.8822, 0.9006]",
+   "f1": 0.8580549022114535,
+   "f1_ci": "[0.8425, 0.8736]",
+   "auc": 0.9566883529904084,
+   "auc_ci": "[0.9529, 0.9605]"
+  },
+  {
+   "dataset": "synthetic",
+   "algo": "fedprox",
+   "setting": "random",
+   "n": 10,
+   "acc": 0.8892222222222221,
+   "acc_ci": "[0.8838, 0.8946]",
+   "f1": 0.8554282669234444,
+   "f1_ci": "[0.8461, 0.8648]",
+   "auc": 0.955240323147939,
+   "auc_ci": "[0.9532, 0.9573]"
+  },
+  {
+   "dataset": "synthetic",
+   "algo": "scaffold",
+   "setting": "default",
+   "n": 10,
+   "acc": 0.8985555555555556,
+   "acc_ci": "[0.8868, 0.9103]",
+   "f1": 0.8728665895462212,
+   "f1_ci": "[0.8606, 0.8852]",
+   "auc": 0.9592649103236871,
+   "auc_ci": "[0.9529, 0.9656]"
+  },
+  {
+   "dataset": "synthetic",
+   "algo": "scaffold",
+   "setting": "grid",
+   "n": 10,
+   "acc": 0.8225277777777779,
+   "acc_ci": "[0.7256, 0.9194]",
+   "f1": 0.801213325493408,
+   "f1_ci": "[0.7093, 0.8931]",
+   "auc": 0.8683569761650475,
+   "auc_ci": "[0.7586, 0.9782]"
+  },
+  {
+   "dataset": "synthetic",
+   "algo": "scaffold",
+   "setting": "random",
+   "n": 10,
+   "acc": 0.8612777777777778,
+   "acc_ci": "[0.7889, 0.9337]",
+   "f1": 0.8143345169460312,
+   "f1_ci": "[0.6994, 0.9293]",
+   "auc": 0.9006391812062272,
+   "auc_ci": "[0.8044, 0.9968]"
+  },
+  {
+   "dataset": "synthetic",
+   "algo": "fednova",
+   "setting": "default",
+   "n": 10,
+   "acc": 0.8948055555555557,
+   "acc_ci": "[0.8836, 0.9060]",
+   "f1": 0.8636926576617594,
+   "f1_ci": "[0.8471, 0.8803]",
+   "auc": 0.9592486078734416,
+   "auc_ci": "[0.9547, 0.9638]"
+  },
+  {
+   "dataset": "synthetic",
+   "algo": "fednova",
+   "setting": "grid",
+   "n": 10,
+   "acc": 0.885,
+   "acc_ci": "[0.8662, 0.9038]",
+   "f1": 0.8549304098907402,
+   "f1_ci": "[0.8342, 0.8756]",
+   "auc": 0.9586960254112838,
+   "auc_ci": "[0.9558, 0.9616]"
+  },
+  {
+   "dataset": "synthetic",
+   "algo": "fednova",
+   "setting": "random",
+   "n": 10,
+   "acc": 0.9018333333333333,
+   "acc_ci": "[0.8964, 0.9072]",
+   "f1": 0.8733942912146277,
+   "f1_ci": "[0.8642, 0.8826]",
+   "auc": 0.9623095533642093,
+   "auc_ci": "[0.9597, 0.9649]"
+  },
+  {
+   "dataset": "heart-4sites",
+   "algo": "fedavg",
+   "setting": "default",
+   "n": 5,
+   "acc": 0.7862815884476534,
+   "acc_ci": "[0.7619, 0.8107]",
+   "f1": 0.8078346860223174,
+   "f1_ci": "[0.7871, 0.8286]",
+   "auc": 0.8602576285503115,
+   "auc_ci": "[0.8312, 0.8893]"
+  },
+  {
+   "dataset": "heart-4sites",
+   "algo": "fedavg",
+   "setting": "grid",
+   "n": 5,
+   "acc": 0.7841155234657039,
+   "acc_ci": "[0.7559, 0.8124]",
+   "f1": 0.8074548948736784,
+   "f1_ci": "[0.7823, 0.8326]",
+   "auc": 0.8490761271249075,
+   "auc_ci": "[0.8294, 0.8688]"
+  },
+  {
+   "dataset": "heart-4sites",
+   "algo": "fedavg",
+   "setting": "random",
+   "n": 5,
+   "acc": 0.7732851985559567,
+   "acc_ci": "[0.7440, 0.8026]",
+   "f1": 0.7964510141208458,
+   "f1_ci": "[0.7581, 0.8349]",
+   "auc": 0.8515996198923028,
+   "auc_ci": "[0.8274, 0.8758]"
+  },
+  {
+   "dataset": "heart-4sites",
+   "algo": "fedprox",
+   "setting": "default",
+   "n": 5,
+   "acc": 0.7855595667870036,
+   "acc_ci": "[0.7615, 0.8096]",
+   "f1": 0.8072978441486512,
+   "f1_ci": "[0.7867, 0.8279]",
+   "auc": 0.8602259529088798,
+   "auc_ci": "[0.8311, 0.8893]"
+  },
+  {
+   "dataset": "heart-4sites",
+   "algo": "fedprox",
+   "setting": "grid",
+   "n": 5,
+   "acc": 0.7812274368231048,
+   "acc_ci": "[0.7668, 0.7956]",
+   "f1": 0.8045674419825408,
+   "f1_ci": "[0.7954, 0.8137]",
+   "auc": 0.8569950374828423,
+   "auc_ci": "[0.8277, 0.8863]"
+  },
+  {
+   "dataset": "heart-4sites",
+   "algo": "fedprox",
+   "setting": "random",
+   "n": 5,
+   "acc": 0.7870036101083032,
+   "acc_ci": "[0.7641, 0.8099]",
+   "f1": 0.8141170042603563,
+   "f1_ci": "[0.7887, 0.8395]",
+   "auc": 0.8563404075599198,
+   "auc_ci": "[0.8307, 0.8820]"
+  },
+  {
+   "dataset": "heart-4sites",
+   "algo": "scaffold",
+   "setting": "default",
+   "n": 5,
+   "acc": 0.7978339350180506,
+   "acc_ci": "[0.7848, 0.8109]",
+   "f1": 0.8262734907012076,
+   "f1_ci": "[0.8144, 0.8382]",
+   "auc": 0.8600570161545772,
+   "auc_ci": "[0.8314, 0.8887]"
+  },
+  {
+   "dataset": "heart-4sites",
+   "algo": "scaffold",
+   "setting": "grid",
+   "n": 5,
+   "acc": 0.7913357400722021,
+   "acc_ci": "[0.7802, 0.8025]",
+   "f1": 0.8189912128970273,
+   "f1_ci": "[0.8083, 0.8297]",
+   "auc": 0.8536163023967902,
+   "auc_ci": "[0.8255, 0.8817]"
+  },
+  {
+   "dataset": "heart-4sites",
+   "algo": "scaffold",
+   "setting": "random",
+   "n": 5,
+   "acc": 0.7913357400722021,
+   "acc_ci": "[0.7797, 0.8029]",
+   "f1": 0.8195662444372391,
+   "f1_ci": "[0.8059, 0.8333]",
+   "auc": 0.8584732340829901,
+   "auc_ci": "[0.8314, 0.8856]"
+  },
+  {
+   "dataset": "heart-4sites",
+   "algo": "fednova",
+   "setting": "default",
+   "n": 5,
+   "acc": 0.7898916967509025,
+   "acc_ci": "[0.7705, 0.8093]",
+   "f1": 0.815954427133548,
+   "f1_ci": "[0.7995, 0.8324]",
+   "auc": 0.8607749973603631,
+   "auc_ci": "[0.8327, 0.8889]"
+  },
+  {
+   "dataset": "heart-4sites",
+   "algo": "fednova",
+   "setting": "grid",
+   "n": 5,
+   "acc": 0.7812274368231047,
+   "acc_ci": "[0.7623, 0.8001]",
+   "f1": 0.8123690345328501,
+   "f1_ci": "[0.7963, 0.8284]",
+   "auc": 0.8515573857037271,
+   "auc_ci": "[0.8254, 0.8777]"
+  },
+  {
+   "dataset": "heart-4sites",
+   "algo": "fednova",
+   "setting": "random",
+   "n": 5,
+   "acc": 0.7833935018050541,
+   "acc_ci": "[0.7689, 0.7979]",
+   "f1": 0.8149075436061255,
+   "f1_ci": "[0.7967, 0.8332]",
+   "auc": 0.8554006968641115,
+   "auc_ci": "[0.8335, 0.8773]"
+  }
+ ],
+ "tests": [
+  {
+   "n": 10,
+   "mean_diff": 0.010836230566994154,
+   "dz": 0.24338504678283088,
+   "wilcoxon_p": 0.845703125,
+   "ttest_p": 0.46122874224563765,
+   "dataset": "synthetic",
+   "algo": "fedavg",
+   "contrast": "random - grid",
+   "metric": "f1"
+  },
+  {
+   "n": 10,
+   "mean_diff": 0.015867797112341698,
+   "dz": 0.5050121940258312,
+   "wilcoxon_p": 0.16015625,
+   "ttest_p": 0.1447326399234662,
+   "dataset": "synthetic",
+   "algo": "fedavg",
+   "contrast": "random - default",
+   "metric": "f1"
+  },
+  {
+   "n": 10,
+   "mean_diff": 0.0050315665453475435,
+   "dz": 0.21962872881121048,
+   "wilcoxon_p": 0.193359375,
+   "ttest_p": 0.504884021198749,
+   "dataset": "synthetic",
+   "algo": "fedavg",
+   "contrast": "grid - default",
+   "metric": "f1"
+  },
+  {
+   "n": 10,
+   "mean_diff": -0.0026266352880089717,
+   "dz": -0.1600061430142209,
+   "wilcoxon_p": 0.6953125,
+   "ttest_p": 0.6250285146565341,
+   "dataset": "synthetic",
+   "algo": "fedprox",
+   "contrast": "random - grid",
+   "metric": "f1"
+  },
+  {
+   "n": 10,
+   "mean_diff": 0.016349188279444836,
+   "dz": 0.43862298306977543,
+   "wilcoxon_p": 0.16015625,
+   "ttest_p": 0.19881302385088473,
+   "dataset": "synthetic",
+   "algo": "fedprox",
+   "contrast": "random - default",
+   "metric": "f1"
+  },
+  {
+   "n": 10,
+   "mean_diff": 0.01897582356745381,
+   "dz": 0.7646538471136023,
+   "wilcoxon_p": 0.02734375,
+   "ttest_p": 0.03873444385216063,
+   "dataset": "synthetic",
+   "algo": "fedprox",
+   "contrast": "grid - default",
+   "metric": "f1"
+  },
+  {
+   "n": 10,
+   "mean_diff": 0.013121191452623405,
+   "dz": 0.1241973273638471,
+   "wilcoxon_p": 0.193359375,
+   "ttest_p": 0.7036467279636045,
+   "dataset": "synthetic",
+   "algo": "scaffold",
+   "contrast": "random - grid",
+   "metric": "f1"
+  },
+  {
+   "n": 10,
+   "mean_diff": -0.0585320726001899,
+   "dz": -0.3747282774378723,
+   "wilcoxon_p": 0.431640625,
+   "ttest_p": 0.2663654925617327,
+   "dataset": "synthetic",
+   "algo": "scaffold",
+   "contrast": "random - default",
+   "metric": "f1"
+  },
+  {
+   "n": 10,
+   "mean_diff": -0.0716532640528133,
+   "dz": -0.623161988858739,
+   "wilcoxon_p": 0.193359375,
+   "ttest_p": 0.0802631660393515,
+   "dataset": "synthetic",
+   "algo": "scaffold",
+   "contrast": "grid - default",
+   "metric": "f1"
+  },
+  {
+   "n": 10,
+   "mean_diff": 0.018463881323887467,
+   "dz": 0.7190542993334634,
+   "wilcoxon_p": 0.048828125,
+   "ttest_p": 0.04905337406754967,
+   "dataset": "synthetic",
+   "algo": "fednova",
+   "contrast": "random - grid",
+   "metric": "f1"
+  },
+  {
+   "n": 10,
+   "mean_diff": 0.009701633552868415,
+   "dz": 0.7832449044634492,
+   "wilcoxon_p": 0.02734375,
+   "ttest_p": 0.03517345168730772,
+   "dataset": "synthetic",
+   "algo": "fednova",
+   "contrast": "random - default",
+   "metric": "f1"
+  },
+  {
+   "n": 10,
+   "mean_diff": -0.00876224777101905,
+   "dz": -0.30143711518691396,
+   "wilcoxon_p": 0.431640625,
+   "ttest_p": 0.36537290615330537,
+   "dataset": "synthetic",
+   "algo": "fednova",
+   "contrast": "grid - default",
+   "metric": "f1"
+  },
+  {
+   "n": 5,
+   "mean_diff": -0.011003880752832585,
+   "dz": -0.5955133075391534,
+   "wilcoxon_p": 0.1875,
+   "ttest_p": 0.25380467880314295,
+   "dataset": "heart-4sites",
+   "algo": "fedavg",
+   "contrast": "random - grid",
+   "metric": "f1"
+  },
+  {
+   "n": 5,
+   "mean_diff": -0.011383671901471515,
+   "dz": -0.4424105925594572,
+   "wilcoxon_p": 0.4375,
+   "ttest_p": 0.37853664425061734,
+   "dataset": "heart-4sites",
+   "algo": "fedavg",
+   "contrast": "random - default",
+   "metric": "f1"
+  },
+  {
+   "n": 5,
+   "mean_diff": -0.00037979114863893047,
+   "dz": -0.04547272096513991,
+   "wilcoxon_p": 0.875,
+   "ttest_p": 0.9239037425447357,
+   "dataset": "heart-4sites",
+   "algo": "fedavg",
+   "contrast": "grid - default",
+   "metric": "f1"
+  },
+  {
+   "n": 5,
+   "mean_diff": 0.009549562277815449,
+   "dz": 0.5249344947447003,
+   "wilcoxon_p": 0.375,
+   "ttest_p": 0.3055976242637607,
+   "dataset": "heart-4sites",
+   "algo": "fedprox",
+   "contrast": "random - grid",
+   "metric": "f1"
+  },
+  {
+   "n": 5,
+   "mean_diff": 0.006819160111705025,
+   "dz": 0.36623558587147415,
+   "wilcoxon_p": 0.8125,
+   "ttest_p": 0.4588118639957423,
+   "dataset": "heart-4sites",
+   "algo": "fedprox",
+   "contrast": "random - default",
+   "metric": "f1"
+  },
+  {
+   "n": 5,
+   "mean_diff": -0.002730402166110424,
+   "dz": -0.18142896157830776,
+   "wilcoxon_p": 0.625,
+   "ttest_p": 0.705735348913375,
+   "dataset": "heart-4sites",
+   "algo": "fedprox",
+   "contrast": "grid - default",
+   "metric": "f1"
+  },
+  {
+   "n": 5,
+   "mean_diff": 0.0005750315402119011,
+   "dz": 0.14672584656144352,
+   "wilcoxon_p": 0.625,
+   "ttest_p": 0.759299890454743,
+   "dataset": "heart-4sites",
+   "algo": "scaffold",
+   "contrast": "random - grid",
+   "metric": "f1"
+  },
+  {
+   "n": 5,
+   "mean_diff": -0.006707246263968525,
+   "dz": -0.8096193752862368,
+   "wilcoxon_p": 0.3125,
+   "ttest_p": 0.14448613398780216,
+   "dataset": "heart-4sites",
+   "algo": "scaffold",
+   "contrast": "random - default",
+   "metric": "f1"
+  },
+  {
+   "n": 5,
+   "mean_diff": -0.007282277804180426,
+   "dz": -1.0068294510814348,
+   "wilcoxon_p": 0.25,
+   "ttest_p": 0.0875152967470525,
+   "dataset": "heart-4sites",
+   "algo": "scaffold",
+   "contrast": "grid - default",
+   "metric": "f1"
+  },
+  {
+   "n": 5,
+   "mean_diff": 0.0025385090732752413,
+   "dz": 0.20248308090139572,
+   "wilcoxon_p": 0.8125,
+   "ttest_p": 0.6741882191524654,
+   "dataset": "heart-4sites",
+   "algo": "fednova",
+   "contrast": "random - grid",
+   "metric": "f1"
+  },
+  {
+   "n": 5,
+   "mean_diff": -0.001046883527422371,
+   "dz": -0.2859255619631241,
+   "wilcoxon_p": 1.0,
+   "ttest_p": 0.5573741882416161,
+   "dataset": "heart-4sites",
+   "algo": "fednova",
+   "contrast": "random - default",
+   "metric": "f1"
+  },
+  {
+   "n": 5,
+   "mean_diff": -0.003585392600697612,
+   "dz": -0.318605475616562,
+   "wilcoxon_p": 0.625,
+   "ttest_p": 0.5155542656224957,
+   "dataset": "heart-4sites",
+   "algo": "fednova",
+   "contrast": "grid - default",
+   "metric": "f1"
+  }
+ ],
+ "lr_edge": [
+  {
+   "dataset": "synthetic",
+   "algo": "fedavg",
+   "lr": 0.781937554657875,
+   "at_lr_edge": true
+  },
+  {
+   "dataset": "synthetic",
+   "algo": "fedprox",
+   "lr": 0.31497575931669564,
+   "at_lr_edge": false
+  },
+  {
+   "dataset": "synthetic",
+   "algo": "scaffold",
+   "lr": 0.019444240266088614,
+   "at_lr_edge": false
+  },
+  {
+   "dataset": "synthetic",
+   "algo": "fednova",
+   "lr": 0.10779201340895155,
+   "at_lr_edge": false
+  },
+  {
+   "dataset": "heart-4sites",
+   "algo": "fedavg",
+   "lr": 0.285631867796135,
+   "at_lr_edge": false
+  },
+  {
+   "dataset": "heart-4sites",
+   "algo": "fedprox",
+   "lr": 0.285631867796135,
+   "at_lr_edge": false
+  },
+  {
+   "dataset": "heart-4sites",
+   "algo": "scaffold",
+   "lr": 0.046716867673019066,
+   "at_lr_edge": false
+  },
+  {
+   "dataset": "heart-4sites",
+   "algo": "fednova",
+   "lr": 0.12185971707360196,
+   "at_lr_edge": false
+  },
+  {
+   "dataset": "heart-4sites",
+   "algo": "fedavg",
+   "lr": 0.12852375194024546,
+   "at_lr_edge": false
+  },
+  {
+   "dataset": "heart-4sites",
+   "algo": "fedprox",
+   "lr": 0.6049913300196913,
+   "at_lr_edge": false
+  },
+  {
+   "dataset": "heart-4sites",
+   "algo": "scaffold",
+   "lr": 0.04024989518130475,
+   "at_lr_edge": false
+  },
+  {
+   "dataset": "heart-4sites",
+   "algo": "fednova",
+   "lr": 0.013279528016437305,
+   "at_lr_edge": false
+  },
+  {
+   "dataset": "heart-4sites",
+   "algo": "fedavg",
+   "lr": 0.6049913300196913,
+   "at_lr_edge": false
+  },
+  {
+   "dataset": "heart-4sites",
+   "algo": "fedprox",
+   "lr": 0.6049913300196913,
+   "at_lr_edge": false
+  },
+  {
+   "dataset": "heart-4sites",
+   "algo": "scaffold",
+   "lr": 0.6049913300196913,
+   "at_lr_edge": false
+  },
+  {
+   "dataset": "heart-4sites",
+   "algo": "fednova",
+   "lr": 0.12185971707360196,
+   "at_lr_edge": false
+  },
+  {
+   "dataset": "heart-4sites",
+   "algo": "fedavg",
+   "lr": 0.42222179141528554,
+   "at_lr_edge": false
+  },
+  {
+   "dataset": "heart-4sites",
+   "algo": "fedprox",
+   "lr": 0.42222179141528554,
+   "at_lr_edge": false
+  },
+  {
+   "dataset": "heart-4sites",
+   "algo": "scaffold",
+   "lr": 0.053691250828790914,
+   "at_lr_edge": false
+  },
+  {
+   "dataset": "heart-4sites",
+   "algo": "fednova",
+   "lr": 0.42222179141528554,
+   "at_lr_edge": false
+  },
+  {
+   "dataset": "heart-4sites",
+   "algo": "fedavg",
+   "lr": 0.04024989518130475,
+   "at_lr_edge": false
+  },
+  {
+   "dataset": "heart-4sites",
+   "algo": "fedprox",
+   "lr": 0.06579015915346924,
+   "at_lr_edge": false
+  },
+  {
+   "dataset": "heart-4sites",
+   "algo": "scaffold",
+   "lr": 0.032619129794417154,
+   "at_lr_edge": false
+  },
+  {
+   "dataset": "heart-4sites",
+   "algo": "fednova",
+   "lr": 0.06579015915346924,
+   "at_lr_edge": false
+  }
+ ],
+ "caveat": "24 random configurations per algorithm is a small budget; validation-set selection may overfit on small data (heart: 25% of ~640 rows); budgets matched in #configs, not compute"
+}

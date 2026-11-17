@@ -1,0 +1,66 @@
+{
+  "validation": {
+    "passed": true,
+    "checks": [
+      {
+        "name": "shape",
+        "passed": true,
+        "detail": "got (12000, 40)"
+      },
+      {
+        "name": "binary_labels",
+        "passed": true,
+        "detail": "labels [0, 1]"
+      },
+      {
+        "name": "finite",
+        "passed": true,
+        "detail": "no NaN/inf"
+      },
+      {
+        "name": "class_ratio_60_40",
+        "passed": true,
+        "detail": "positive rate 0.402 vs target 0.4 (flip_y noise allowed, tol 0.03)"
+      },
+      {
+        "name": "not_constant_features",
+        "passed": true,
+        "detail": "every feature varies"
+      }
+    ]
+  },
+  "quality": {
+    "n_samples": 12000,
+    "n_features": 40,
+    "all_finite": true,
+    "duplicate_rows": 0,
+    "positive_rate": 0.40225,
+    "max_abs_feature_correlation": 0.5265926863811352,
+    "linear_probe_auc": 0.7799108939350389
+  },
+  "class_balance": {
+    "0": {
+      "count": 7173,
+      "fraction": 0.59775
+    },
+    "1": {
+      "count": 4827,
+      "fraction": 0.40225
+    }
+  },
+  "train_test_psi_max": 0.0072482839297825655,
+  "arrays_sha256": "af1556c0b8b65b3017c759a7db45f411d3131053d52537baa9a5824108d51c96",
+  "config": {
+    "n_samples": 12000,
+    "n_features": 40,
+    "seed": 0,
+    "class_sep": 0.9,
+    "test_frac": 0.3,
+    "weights": [
+      0.6,
+      0.4
+    ],
+    "n_clusters_per_class": 3,
+    "flip_y": 0.02
+  }
+}

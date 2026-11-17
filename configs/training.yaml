@@ -1,0 +1,7 @@
+# Local training + optimisation defaults (keys map 1:1 onto federated_learning.training.config.FLConfig)
+version: 1
+local_epochs: 2
+lr: 0.05
+batch_size: 32
+seed: 0
+hetero_epochs: false

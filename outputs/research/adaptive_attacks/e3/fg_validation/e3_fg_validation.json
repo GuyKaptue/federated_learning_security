@@ -1,0 +1,94 @@
+{
+ "provenance": {
+  "experiment_id": "FL-E3-FGVAL-8159c82491",
+  "task_id": "FL-E3-FGVAL",
+  "config": {
+   "K": 20,
+   "f": 4,
+   "rounds": 15,
+   "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+   ],
+   "arms": [
+    "legacy",
+    "paper_soft",
+    "paper_hard",
+    "allfeat_corrected"
+   ],
+   "scenarios": [
+    "none_clean",
+    "agr_identical",
+    "agr_jitter1.0"
+   ],
+   "partitions": [
+    "iid",
+    "dirichlet0.3"
+   ],
+   "arch": "mlp",
+   "n_params": 1378,
+   "output_layer_weight_index": [
+    1312,
+    1375
+   ],
+   "n_out": 2,
+   "hard_proportion": 0.1,
+   "kappa": 1.0,
+   "importance": "|W_out| per-class max-normalised (adaptation; the paper gives no formula)",
+   "knowledge": "draw",
+   "poison_frac": 0.5,
+   "boost": 3.0,
+   "trigger": "((0, 1), 6.0)",
+   "local_epochs": 1,
+   "lr": 0.05,
+   "new_attacker": false
+  },
+  "config_sha256": "8159c8249112f5fb23a8eeb92b00ceec3a11834773e96030cd3be40db7aa129e",
+  "git_commit": null,
+  "dataset_id": "SYN-IDS-v1",
+  "environment": {
+   "python": "3.13.18",
+   "platform": "Linux-6.18.44-fc-v470-x86_64-with-glibc2.39",
+   "cpu_count": 2,
+   "versions": {
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "scikit-learn": "1.9.1",
+    "torch": "2.15.0",
+    "tenseal": "0.3.18",
+    "phe": "1.5.0",
+    "flwr": "1.43.0",
+    "mlflow": "3.18.0",
+    "opacus": "1.6.0",
+    "cryptography": "50.0.1",
+    "psutil": "7.2.2",
+    "matplotlib": "3.11.2",
+    "pandas": "3.0.5"
+   },
+   "timestamp_utc": "2026-11-14T07:25:18+00:00"
+  },
+  "execution_command": "python -m federated_learning.pipelines.experiments.run_all --task FL-E3-FGVAL",
+  "result_labels": "MEASURED unless stated; clients are virtual (single machine)"
+ },
+ "reproduction_checks": {
+  "vs_e3_baseline_iid": {
+   "n_pairs": 20,
+   "max_abs_diff": 9.71445146547012e-17,
+   "n_exact": 20
+  },
+  "vs_s3_002_jitter_iid": {
+   "n_pairs": 5,
+   "max_abs_diff": 1.1102230246251565e-16,
+   "n_exact": 5
+  }
+ },
+ "total_runtime_s": 237.2
+}

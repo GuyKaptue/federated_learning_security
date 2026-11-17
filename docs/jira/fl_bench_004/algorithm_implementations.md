@@ -1,0 +1,2 @@
+# Algorithm implementations
+FedAvg, FedProx (proximal term), SCAFFOLD (option II control variates, 2x communication), FedNova (normalised averaging) are implemented in `src/federated_learning/fl.py` from the original papers (see per-entry reference status) and validated by the identity tests listed in `results_and_discussion.md` and `tests/research_sprint/algorithms/`. No third-party FL library implements these here; Flower was not used for training.

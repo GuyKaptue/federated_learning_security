@@ -1,0 +1,6 @@
+algorithm,key,utility_f1,convergence_rounds,communication_mb_to_target,robustness_acc_under_signflip,training_cost_s,rank_utility_f1,rank_convergence_rounds,rank_communication_mb_to_target,rank_robustness_acc_under_signflip,rank_training_cost_s,mean_rank,note
+FedAvg,fedavg,0.8430562859002049,16.8,1.7662353515625,0.6608888888888889,7.954341076100059,3,3,2,2,1,2.2,
+SCAFFOLD,scaffold,0.8728665895462212,11.4,2.39703369140625,0.8146666666666667,8.187552065400064,1,1,4,1,4,2.2,
+FedNova,fednova,0.8636926576617594,12.8,1.345703125,0.6228888888888889,8.000343040599933,2,2,1,4,2,2.2,
+FedProx,fedprox,0.8390790786439997,18.0,1.89239501953125,0.6585,8.058981622700003,4,4,3,3,3,3.4,
+Proposed framework (FedAvg + CKKS HE aggregation),proposed,0.8430962222993028,16.8,53.9808659362793,,11.254937073000088,,,,,,,not ranked: robustness dimension NOT_MEASURED for this row; compare dimension-wise (it is FedAvg + CKKS aggregation)

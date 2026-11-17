@@ -1,0 +1,11 @@
+stage,drop_fraction,trials,completed,aborted,max_abs_err,threshold_frac,n
+before_masking,0.0,5,5,0,3.697243372569048e-09,0.67,20
+before_masking,0.1,5,5,0,3.762476885604826e-09,0.67,20
+before_masking,0.2,5,5,0,3.7224537896562993e-09,0.67,20
+before_masking,0.3,5,5,0,3.905180956387255e-09,0.67,20
+before_masking,0.4,5,0,5,,0.67,20
+before_unmask,0.0,5,5,0,3.697243372569048e-09,0.67,20
+before_unmask,0.1,5,5,0,3.697243372569048e-09,0.67,20
+before_unmask,0.2,5,5,0,3.697243372569048e-09,0.67,20
+before_unmask,0.3,5,5,0,3.697243372569048e-09,0.67,20
+before_unmask,0.4,5,0,5,,0.67,20

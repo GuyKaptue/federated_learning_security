@@ -1,0 +1,13 @@
+{
+  "quality": {
+    "n_samples": 12000,
+    "n_features": 40,
+    "all_finite": true,
+    "duplicate_rows": 0,
+    "positive_rate": 0.40225,
+    "max_abs_feature_correlation": 0.5265926863811352,
+    "linear_probe_auc": 0.7799108939350389
+  },
+  "arrays_sha256": "af1556c0b8b65b3017c759a7db45f411d3131053d52537baa9a5824108d51c96",
+  "train_test_psi_max": 0.0072482839297825655
+}

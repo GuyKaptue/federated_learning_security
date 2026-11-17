@@ -1,0 +1,17 @@
+# References – fl_bench_004
+
+Per-entry status below (`METADATA_VERIFIED_ON_SOURCE_PAGE`, `TEXT_PARTIALLY_READ`, `EXISTENCE_CONFIRMED_LANDING_PAGE_ONLY`, `REFERENCE_NOT_VERIFIED`); see docs/references/references_master.md.
+
+- **[mcmahan2017]** McMahan, H.B., Moore, E., Ramage, D., Hampson, S., Agüera y Arcas, B.. *Communication-Efficient Learning of Deep Networks from Decentralized Data*. AISTATS 2017 (venue verified: no). arXiv:1602.05629. — `METADATA_VERIFIED_ON_SOURCE_PAGE`
+- **[li2020fedprox]** Li, T., Sahu, A.K., Zaheer, M., Sanjabi, M., Talwalkar, A., Smith, V.. *Federated Optimization in Heterogeneous Networks*. MLSys 2020 (venue verified: no). arXiv:1812.06127. — `METADATA_VERIFIED_ON_SOURCE_PAGE`
+- **[karimireddy2020]** Karimireddy, S.P., Kale, S., Mohri, M., Reddi, S., Stich, S., Suresh, A.T.. *SCAFFOLD: Stochastic Controlled Averaging for Federated Learning*. ICML 2020 (venue verified: yes). arXiv:1910.06378. — `METADATA_VERIFIED_ON_SOURCE_PAGE`
+- **[wang2020fednova]** Wang, J., Liu, Q., Liang, H., Joshi, G., Poor, H.V.. *Tackling the Objective Inconsistency Problem in Heterogeneous Federated Optimization*. NeurIPS 2020 (venue verified: no). arXiv:2007.07481. — `METADATA_VERIFIED_ON_SOURCE_PAGE`
+- **[hsu2019]** Hsu, T.-M.H., Qi, H., Brown, M.. *Measuring the Effects of Non-Identical Data Distribution for Federated Visual Classification*. arXiv preprint (venue verified: no). arXiv:1909.06335. — `METADATA_VERIFIED_ON_SOURCE_PAGE`
+- **[li2021niid]** Li, Q., Diao, Y., Chen, Q., He, B.. *Federated Learning on Non-IID Data Silos: An Experimental Study*. ICDE 2022 (venue verified: no). arXiv:2102.02079. — `METADATA_VERIFIED_ON_SOURCE_PAGE`
+- **[demsar2006]** Demšar, J.. *Statistical Comparisons of Classifiers over Multiple Data Sets*. JMLR 7, 2006 (venue verified: yes). no identifier asserted. — `METADATA_VERIFIED_ON_SOURCE_PAGE`
+- **[holm1979]** Holm, S.. *A Simple Sequentially Rejective Multiple Test Procedure*. Scandinavian Journal of Statistics 6, 65-70, 1979 (venue verified: yes). no identifier asserted. — `METADATA_VERIFIED_ON_SOURCE_PAGE`
+- **[wilcoxon1945]** Wilcoxon, F.. *Individual Comparisons by Ranking Methods*. Biometrics Bulletin 1(6), 1945 (venue verified: no). no identifier asserted. — `EXISTENCE_CONFIRMED_LANDING_PAGE_ONLY`
+- **[uci_wdbc]** Wolberg, W., Mangasarian, O., Street, N., Street, W.. *Breast Cancer Wisconsin (Diagnostic) [Dataset]*. UCI Machine Learning Repository, 1993/1995 (venue verified: yes). doi:10.24432/C5DW2B (as printed on the UCI page). — `METADATA_VERIFIED_ON_SOURCE_PAGE`
+- **[uci_heart]** Janosi, A., Steinbrunn, W., Pfisterer, M., Detrano, R.. *Heart Disease [Dataset] (Cleveland subset used); cited paper: Detrano et al. 1989, American Journal of Cardiology*. UCI Machine Learning Repository (venue verified: yes). UCI dataset 45. — `METADATA_VERIFIED_ON_SOURCE_PAGE`
+- **[pima_nidd]** National Institute of Diabetes and Digestive and Kidney Diseases (original owner); donated by V. Sigillito (JHU APL). *Pima Indians Diabetes Database (pima.names)*. UCI/MLC++ distribution (venue verified: no). mirror page read; original UCI page not read. — `REFERENCE_NOT_VERIFIED`
+- **[smith1988]** Smith, J.W., Everhart, J.E., Dickson, W.C., Knowler, W.C., Johannes, R.S.. *Using the ADAP learning algorithm to forecast the onset of diabetes mellitus*. Proc. Annu. Symp. Comput. Appl. Med. Care, 1988 (venue verified: no). PMC2245318 (page blocked by captcha). — `REFERENCE_NOT_VERIFIED`

@@ -1,0 +1,142 @@
+attack,defense,seed,metric,value,clean_acc
+backdoor-medium,none(mean),0,asr,0.9965469613259669,0.7408333333333333
+backdoor-medium,none(mean),1,asr,0.9972375690607734,0.7422222222222222
+backdoor-medium,none(mean),2,asr,0.9979281767955801,0.7413888888888889
+backdoor-medium,clip(C=median norm),0,asr,0.93853591160221,0.7630555555555556
+backdoor-medium,clip(C=median norm),1,asr,0.7928176795580111,0.7613888888888889
+backdoor-medium,clip(C=median norm),2,asr,0.886049723756906,0.7591666666666667
+backdoor-medium,clip+noise(sigma=0.5),0,asr,0.9488950276243094,0.7647222222222222
+backdoor-medium,clip+noise(sigma=0.5),1,asr,0.7755524861878453,0.7536111111111111
+backdoor-medium,clip+noise(sigma=0.5),2,asr,0.7852209944751382,0.7591666666666667
+backdoor-medium,median,0,asr,0.27002762430939226,0.7783333333333333
+backdoor-medium,median,1,asr,0.057320441988950276,0.7786111111111111
+backdoor-medium,median,2,asr,0.07320441988950276,0.7772222222222223
+backdoor-medium,trimmed_mean(0.3),0,asr,0.2921270718232044,0.7783333333333333
+backdoor-medium,trimmed_mean(0.3),1,asr,0.06146408839779006,0.7777777777777778
+backdoor-medium,trimmed_mean(0.3),2,asr,0.0856353591160221,0.7755555555555556
+backdoor-medium,multi-krum,0,asr,0.1111878453038674,0.7797222222222222
+backdoor-medium,multi-krum,1,asr,0.012430939226519336,0.7794444444444445
+backdoor-medium,multi-krum,2,asr,0.013812154696132596,0.7791666666666667
+backdoor-medium,anomaly_filter,0,asr,0.11187845303867404,0.7802777777777777
+backdoor-medium,anomaly_filter,1,asr,0.012430939226519336,0.78
+backdoor-medium,anomaly_filter,2,asr,0.013812154696132596,0.7791666666666667
+backdoor-medium,smpc_norm_bound(2x median),0,asr,0.1111878453038674,0.7797222222222222
+backdoor-medium,smpc_norm_bound(2x median),1,asr,0.012430939226519336,0.7794444444444445
+backdoor-medium,smpc_norm_bound(2x median),2,asr,0.013812154696132596,0.7791666666666667
+backdoor-medium,secagg(mean),0,asr,0.9965469613259669,0.7408333333333333
+backdoor-medium,secagg(mean),1,asr,0.9972375690607734,0.7422222222222222
+backdoor-medium,secagg(mean),2,asr,0.9979281767955801,0.7413888888888889
+backdoor-medium,he_ckks(mean),0,asr,0.9965469613259669,0.7408333333333333
+backdoor-medium,he_ckks(mean),1,asr,0.9972375690607734,0.7422222222222222
+backdoor-medium,he_ckks(mean),2,asr,0.9979281767955801,0.7413888888888889
+backdoor-high,none(mean),0,asr,0.9993093922651933,0.6938888888888889
+backdoor-high,none(mean),1,asr,0.9986187845303868,0.6880555555555555
+backdoor-high,none(mean),2,asr,1.0,0.6886111111111111
+backdoor-high,clip(C=median norm),0,asr,0.9903314917127072,0.7433333333333333
+backdoor-high,clip(C=median norm),1,asr,0.9779005524861878,0.7472222222222222
+backdoor-high,clip(C=median norm),2,asr,0.9848066298342542,0.7463888888888889
+backdoor-high,clip+noise(sigma=0.5),0,asr,0.9930939226519337,0.745
+backdoor-high,clip+noise(sigma=0.5),1,asr,0.9737569060773481,0.7397222222222222
+backdoor-high,clip+noise(sigma=0.5),2,asr,0.9709944751381215,0.7427777777777778
+backdoor-high,median,0,asr,0.5179558011049724,0.7702777777777777
+backdoor-high,median,1,asr,0.13604972375690608,0.7747222222222222
+backdoor-high,median,2,asr,0.2451657458563536,0.7727777777777778
+backdoor-high,trimmed_mean(0.3),0,asr,0.6215469613259669,0.7655555555555555
+backdoor-high,trimmed_mean(0.3),1,asr,0.20027624309392264,0.7727777777777778
+backdoor-high,trimmed_mean(0.3),2,asr,0.32113259668508287,0.7702777777777777
+backdoor-high,multi-krum,0,asr,0.12638121546961326,0.7816666666666666
+backdoor-high,multi-krum,1,asr,0.016574585635359115,0.7780555555555555
+backdoor-high,multi-krum,2,asr,0.017955801104972375,0.7811111111111111
+backdoor-high,anomaly_filter,0,asr,0.12638121546961326,0.7816666666666666
+backdoor-high,anomaly_filter,1,asr,0.016574585635359115,0.7780555555555555
+backdoor-high,anomaly_filter,2,asr,0.017955801104972375,0.7811111111111111
+backdoor-high,smpc_norm_bound(2x median),0,asr,0.1270718232044199,0.7816666666666666
+backdoor-high,smpc_norm_bound(2x median),1,asr,0.016574585635359115,0.7777777777777778
+backdoor-high,smpc_norm_bound(2x median),2,asr,0.017955801104972375,0.7811111111111111
+backdoor-high,secagg(mean),0,asr,0.9993093922651933,0.6938888888888889
+backdoor-high,secagg(mean),1,asr,0.9986187845303868,0.6880555555555555
+backdoor-high,secagg(mean),2,asr,1.0,0.6886111111111111
+backdoor-high,he_ckks(mean),0,asr,0.9993093922651933,0.6938888888888889
+backdoor-high,he_ckks(mean),1,asr,0.9986187845303868,0.6880555555555555
+backdoor-high,he_ckks(mean),2,asr,1.0,0.6886111111111111
+byzantine-sign_flip-20%,none(mean),0,acc,0.4,0.4
+byzantine-sign_flip-20%,none(mean),1,acc,0.35694444444444445,0.35694444444444445
+byzantine-sign_flip-20%,none(mean),2,acc,0.5977777777777777,0.5977777777777777
+byzantine-sign_flip-20%,clip(C=median norm),0,acc,0.7347222222222223,0.7347222222222223
+byzantine-sign_flip-20%,clip(C=median norm),1,acc,0.7488888888888889,0.7488888888888889
+byzantine-sign_flip-20%,clip(C=median norm),2,acc,0.7477777777777778,0.7477777777777778
+byzantine-sign_flip-20%,median,0,acc,0.765,0.765
+byzantine-sign_flip-20%,median,1,acc,0.7680555555555556,0.7680555555555556
+byzantine-sign_flip-20%,median,2,acc,0.7711111111111111,0.7711111111111111
+byzantine-sign_flip-20%,trimmed_mean(0.3),0,acc,0.7644444444444445,0.7644444444444445
+byzantine-sign_flip-20%,trimmed_mean(0.3),1,acc,0.7666666666666667,0.7666666666666667
+byzantine-sign_flip-20%,trimmed_mean(0.3),2,acc,0.7677777777777778,0.7677777777777778
+byzantine-sign_flip-20%,multi-krum,0,acc,0.7797222222222222,0.7797222222222222
+byzantine-sign_flip-20%,multi-krum,1,acc,0.7794444444444445,0.7794444444444445
+byzantine-sign_flip-20%,multi-krum,2,acc,0.7791666666666667,0.7791666666666667
+byzantine-sign_flip-20%,anomaly_filter,0,acc,0.7802777777777777,0.7802777777777777
+byzantine-sign_flip-20%,anomaly_filter,1,acc,0.78,0.78
+byzantine-sign_flip-20%,anomaly_filter,2,acc,0.7791666666666667,0.7791666666666667
+byzantine-sign_flip-20%,smpc_norm_bound(2x median),0,acc,0.7797222222222222,0.7797222222222222
+byzantine-sign_flip-20%,smpc_norm_bound(2x median),1,acc,0.7794444444444445,0.7794444444444445
+byzantine-sign_flip-20%,smpc_norm_bound(2x median),2,acc,0.7791666666666667,0.7791666666666667
+byzantine-sign_flip-20%,secagg(mean),0,acc,0.4,0.4
+byzantine-sign_flip-20%,secagg(mean),1,acc,0.35694444444444445,0.35694444444444445
+byzantine-sign_flip-20%,secagg(mean),2,acc,0.5977777777777777,0.5977777777777777
+byzantine-sign_flip-20%,he_ckks(mean),0,acc,0.4,0.4
+byzantine-sign_flip-20%,he_ckks(mean),1,acc,0.35694444444444445,0.35694444444444445
+byzantine-sign_flip-20%,he_ckks(mean),2,acc,0.5977777777777777,0.5977777777777777
+byzantine-scale-20%,none(mean),0,acc,0.8266666666666667,0.8266666666666667
+byzantine-scale-20%,none(mean),1,acc,0.8286111111111111,0.8286111111111111
+byzantine-scale-20%,none(mean),2,acc,0.8297222222222222,0.8297222222222222
+byzantine-scale-20%,clip(C=median norm),0,acc,0.7822222222222223,0.7822222222222223
+byzantine-scale-20%,clip(C=median norm),1,acc,0.7869444444444444,0.7869444444444444
+byzantine-scale-20%,clip(C=median norm),2,acc,0.7880555555555555,0.7880555555555555
+byzantine-scale-20%,median,0,acc,0.7852777777777777,0.7852777777777777
+byzantine-scale-20%,median,1,acc,0.7880555555555555,0.7880555555555555
+byzantine-scale-20%,median,2,acc,0.7911111111111111,0.7911111111111111
+byzantine-scale-20%,trimmed_mean(0.3),0,acc,0.7852777777777777,0.7852777777777777
+byzantine-scale-20%,trimmed_mean(0.3),1,acc,0.7897222222222222,0.7897222222222222
+byzantine-scale-20%,trimmed_mean(0.3),2,acc,0.7916666666666666,0.7916666666666666
+byzantine-scale-20%,multi-krum,0,acc,0.7797222222222222,0.7797222222222222
+byzantine-scale-20%,multi-krum,1,acc,0.7794444444444445,0.7794444444444445
+byzantine-scale-20%,multi-krum,2,acc,0.7791666666666667,0.7791666666666667
+byzantine-scale-20%,anomaly_filter,0,acc,0.7802777777777777,0.7802777777777777
+byzantine-scale-20%,anomaly_filter,1,acc,0.78,0.78
+byzantine-scale-20%,anomaly_filter,2,acc,0.7791666666666667,0.7791666666666667
+byzantine-scale-20%,smpc_norm_bound(2x median),0,acc,0.7797222222222222,0.7797222222222222
+byzantine-scale-20%,smpc_norm_bound(2x median),1,acc,0.7794444444444445,0.7794444444444445
+byzantine-scale-20%,smpc_norm_bound(2x median),2,acc,0.7791666666666667,0.7791666666666667
+byzantine-scale-20%,secagg(mean),0,acc,0.8266666666666667,0.8266666666666667
+byzantine-scale-20%,secagg(mean),1,acc,0.8286111111111111,0.8286111111111111
+byzantine-scale-20%,secagg(mean),2,acc,0.8297222222222222,0.8297222222222222
+byzantine-scale-20%,he_ckks(mean),0,acc,0.8266666666666667,0.8266666666666667
+byzantine-scale-20%,he_ckks(mean),1,acc,0.8286111111111111,0.8286111111111111
+byzantine-scale-20%,he_ckks(mean),2,acc,0.8297222222222222,0.8297222222222222
+byzantine-random-20%,none(mean),0,acc,0.7677777777777778,0.7677777777777778
+byzantine-random-20%,none(mean),1,acc,0.765,0.765
+byzantine-random-20%,none(mean),2,acc,0.7697222222222222,0.7697222222222222
+byzantine-random-20%,clip(C=median norm),0,acc,0.7663888888888889,0.7663888888888889
+byzantine-random-20%,clip(C=median norm),1,acc,0.7647222222222222,0.7647222222222222
+byzantine-random-20%,clip(C=median norm),2,acc,0.7691666666666667,0.7691666666666667
+byzantine-random-20%,median,0,acc,0.7766666666666666,0.7766666666666666
+byzantine-random-20%,median,1,acc,0.7777777777777778,0.7777777777777778
+byzantine-random-20%,median,2,acc,0.7788888888888889,0.7788888888888889
+byzantine-random-20%,trimmed_mean(0.3),0,acc,0.7761111111111111,0.7761111111111111
+byzantine-random-20%,trimmed_mean(0.3),1,acc,0.7777777777777778,0.7777777777777778
+byzantine-random-20%,trimmed_mean(0.3),2,acc,0.7788888888888889,0.7788888888888889
+byzantine-random-20%,multi-krum,0,acc,0.7797222222222222,0.7797222222222222
+byzantine-random-20%,multi-krum,1,acc,0.7794444444444445,0.7794444444444445
+byzantine-random-20%,multi-krum,2,acc,0.7791666666666667,0.7791666666666667
+byzantine-random-20%,anomaly_filter,0,acc,0.7802777777777777,0.7802777777777777
+byzantine-random-20%,anomaly_filter,1,acc,0.78,0.78
+byzantine-random-20%,anomaly_filter,2,acc,0.7791666666666667,0.7791666666666667
+byzantine-random-20%,smpc_norm_bound(2x median),0,acc,0.7797222222222222,0.7797222222222222
+byzantine-random-20%,smpc_norm_bound(2x median),1,acc,0.7794444444444445,0.7794444444444445
+byzantine-random-20%,smpc_norm_bound(2x median),2,acc,0.7791666666666667,0.7791666666666667
+byzantine-random-20%,secagg(mean),0,acc,0.7677777777777778,0.7677777777777778
+byzantine-random-20%,secagg(mean),1,acc,0.765,0.765
+byzantine-random-20%,secagg(mean),2,acc,0.7697222222222222,0.7697222222222222
+byzantine-random-20%,he_ckks(mean),0,acc,0.7677777777777778,0.7677777777777778
+byzantine-random-20%,he_ckks(mean),1,acc,0.765,0.765
+byzantine-random-20%,he_ckks(mean),2,acc,0.7697222222222222,0.7697222222222222

@@ -1,0 +1,49 @@
+dataset,algo,method,lr,mu,local_epochs,batch_size,hidden,server_lr,split
+synthetic,fedavg,"grid(lr,mu)",0.8,0.0,2,,,,
+synthetic,fedavg,random(6 params),0.781937554657875,0.0,3,64,32,1.0,
+synthetic,fedprox,"grid(lr,mu)",0.4,0.01,2,,,,
+synthetic,fedprox,random(6 params),0.31497575931669564,0.013751134016186021,5,32,32,1.0,
+synthetic,scaffold,"grid(lr,mu)",0.1,0.0,2,,,,
+synthetic,scaffold,random(6 params),0.019444240266088614,0.0,3,16,64,1.5,
+synthetic,fednova,"grid(lr,mu)",0.8,0.0,2,,,,
+synthetic,fednova,random(6 params),0.10779201340895155,0.0,3,32,64,1.0,
+heart-4sites,fedavg,"grid(lr,mu)",0.1,0.0,,,,,0
+heart-4sites,fedavg,random(6 params),0.285631867796135,0.0,2,64,32,1.0,0
+heart-4sites,fedprox,"grid(lr,mu)",0.2,0.05,,,,,0
+heart-4sites,fedprox,random(6 params),0.285631867796135,0.02533989777442649,2,64,32,1.0,0
+heart-4sites,scaffold,"grid(lr,mu)",0.05,0.0,,,,,0
+heart-4sites,scaffold,random(6 params),0.046716867673019066,0.0,2,16,64,0.5,0
+heart-4sites,fednova,"grid(lr,mu)",0.2,0.0,,,,,0
+heart-4sites,fednova,random(6 params),0.12185971707360196,0.0,2,16,32,1.0,0
+heart-4sites,fedavg,"grid(lr,mu)",0.05,0.0,,,,,1
+heart-4sites,fedavg,random(6 params),0.12852375194024546,0.0,1,32,16,1.0,1
+heart-4sites,fedprox,"grid(lr,mu)",0.2,1.0,,,,,1
+heart-4sites,fedprox,random(6 params),0.6049913300196913,0.5149325727643835,3,64,16,1.0,1
+heart-4sites,scaffold,"grid(lr,mu)",0.2,0.0,,,,,1
+heart-4sites,scaffold,random(6 params),0.04024989518130475,0.0,1,64,64,1.5,1
+heart-4sites,fednova,"grid(lr,mu)",0.1,0.0,,,,,1
+heart-4sites,fednova,random(6 params),0.013279528016437305,0.0,3,16,16,1.0,1
+heart-4sites,fedavg,"grid(lr,mu)",0.4,0.0,,,,,2
+heart-4sites,fedavg,random(6 params),0.6049913300196913,0.0,3,64,16,1.0,2
+heart-4sites,fedprox,"grid(lr,mu)",0.4,0.5,,,,,2
+heart-4sites,fedprox,random(6 params),0.6049913300196913,0.5149325727643835,3,64,16,1.0,2
+heart-4sites,scaffold,"grid(lr,mu)",0.8,0.0,,,,,2
+heart-4sites,scaffold,random(6 params),0.6049913300196913,0.0,3,64,16,0.5,2
+heart-4sites,fednova,"grid(lr,mu)",0.4,0.0,,,,,2
+heart-4sites,fednova,random(6 params),0.12185971707360196,0.0,2,16,32,1.0,2
+heart-4sites,fedavg,"grid(lr,mu)",0.4,0.0,,,,,3
+heart-4sites,fedavg,random(6 params),0.42222179141528554,0.0,1,32,64,1.0,3
+heart-4sites,fedprox,"grid(lr,mu)",0.8,1.0,,,,,3
+heart-4sites,fedprox,random(6 params),0.42222179141528554,0.09697152266018182,1,32,64,1.0,3
+heart-4sites,scaffold,"grid(lr,mu)",0.1,0.0,,,,,3
+heart-4sites,scaffold,random(6 params),0.053691250828790914,0.0,2,32,32,1.5,3
+heart-4sites,fednova,"grid(lr,mu)",0.2,0.0,,,,,3
+heart-4sites,fednova,random(6 params),0.42222179141528554,0.0,1,32,64,1.0,3
+heart-4sites,fedavg,"grid(lr,mu)",0.01,0.0,,,,,4
+heart-4sites,fedavg,random(6 params),0.04024989518130475,0.0,1,64,64,1.0,4
+heart-4sites,fedprox,"grid(lr,mu)",0.01,0.001,,,,,4
+heart-4sites,fedprox,random(6 params),0.06579015915346924,0.41116688533911694,2,64,32,1.0,4
+heart-4sites,scaffold,"grid(lr,mu)",0.05,0.0,,,,,4
+heart-4sites,scaffold,random(6 params),0.032619129794417154,0.0,5,32,32,0.5,4
+heart-4sites,fednova,"grid(lr,mu)",0.05,0.0,,,,,4
+heart-4sites,fednova,random(6 params),0.06579015915346924,0.0,2,64,32,1.0,4

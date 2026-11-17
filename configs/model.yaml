@@ -1,0 +1,4 @@
+# Model architecture (keys map onto FLConfig.hidden / FLConfig.act)
+version: 1
+hidden: 32
+act: relu

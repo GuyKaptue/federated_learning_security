@@ -1,0 +1,89 @@
+{
+ "syn": [
+  "1c6c96c3eb5da69f",
+  "3a69fe57f3f924dc",
+  "73ddfa80240c175d"
+ ],
+ "dir": [
+  "7f9339e7547b836c"
+ ],
+ "iid": [
+  "9a43eaf37793f3a7"
+ ],
+ "fl_fedavg": [
+  "17c6a544a565ab3c",
+  0.6,
+  82680,
+  82680
+ ],
+ "fl_fedprox": [
+  "aeb5d40ee5228076",
+  0.6022222222222222,
+  82680,
+  82680
+ ],
+ "fl_scaffold": [
+  "28bdf1d70f3845ff",
+  0.5555555555555556,
+  165360,
+  165360
+ ],
+ "fl_fednova": [
+  "aab5d9bd5f2b1a0c",
+  0.7,
+  82680,
+  82680
+ ],
+ "fl_het_part": [
+  "e49e6f8aafc914b7",
+  49608
+ ],
+ "agg_krum": [
+  "9b3d79aa874c1bd4",
+  55120
+ ],
+ "agg_median": [
+  "e6e17f22f2df95de",
+  55120
+ ],
+ "agg_trim": [
+  "a5b7e63e153d38b1",
+  55120
+ ],
+ "agg_secagg": [
+  "1f522047f0dca27e",
+  121080
+ ],
+ "central": [
+  0.76
+ ],
+ "real_wdbc": [
+  "3ffbb4d5b7483a46",
+  "60ecc6e4e133e168",
+  "1d20d30b9fe6892d"
+ ],
+ "real_pima": [
+  "5eb6bf57f34e3e02",
+  "309db2144723bdda",
+  "0f1c7cd365770bb6"
+ ],
+ "real_heart": [
+  "2eb4d7d3f9b396a2",
+  "bea180e225a89d01",
+  "790c02a4374e99a6"
+ ],
+ "sites_A": [
+  "5af2e542f8c2c04c",
+  "4594eb6e6e180b90",
+  [
+   212,
+   205,
+   86,
+   140
+  ]
+ ],
+ "sites_B": [
+  "f4e11ef1052d0731",
+  "bfb6fa558d3f1c70"
+ ]
+}

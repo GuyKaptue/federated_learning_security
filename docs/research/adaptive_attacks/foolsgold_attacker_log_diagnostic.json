@@ -1,0 +1,382 @@
+{
+ "summary": {
+  "seed": 0,
+  "rounds": 20,
+  "result": {
+   "acc": 0.4022222222222222,
+   "tpr": 0.0,
+   "fpr": 0.03125
+  },
+  "share_rounds_chosen_fires": 1.0,
+  "mean_share_of_34_candidates_firing": 0.6058823529411764,
+  "share_rounds_real_call_fires": 1.0,
+  "chosen_counts": {
+   "inv_sign*64.0": 5,
+   "inv_unit*16.0": 1,
+   "inv_unit*32.0": 1,
+   "inv_unit*64.0": 13
+  }
+ },
+ "rounds": [
+  {
+   "round": 0,
+   "choice": "inv_unit*64.0",
+   "choice_index": 9,
+   "score": -2.8504245059066893,
+   "chosen_fires_defect": true,
+   "chosen_min_pair_cos": 1.0000000000000002,
+   "n_candidates_firing": 25,
+   "share_candidates_firing": 0.7352941176470589,
+   "real_fires_defect": true,
+   "real_min_pair_cos": 1.0000000000000002,
+   "real_colluder_alpha": [
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "round": 1,
+   "choice": "inv_sign*64.0",
+   "choice_index": 29,
+   "score": -7.938378237177841,
+   "chosen_fires_defect": true,
+   "chosen_min_pair_cos": 1.0,
+   "n_candidates_firing": 20,
+   "share_candidates_firing": 0.5882352941176471,
+   "real_fires_defect": true,
+   "real_min_pair_cos": 1.0,
+   "real_colluder_alpha": [
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "round": 2,
+   "choice": "inv_unit*64.0",
+   "choice_index": 9,
+   "score": -64.76344384996075,
+   "chosen_fires_defect": true,
+   "chosen_min_pair_cos": 1.0000000000000002,
+   "n_candidates_firing": 22,
+   "share_candidates_firing": 0.6470588235294118,
+   "real_fires_defect": true,
+   "real_min_pair_cos": 1.0000000000000002,
+   "real_colluder_alpha": [
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "round": 3,
+   "choice": "inv_sign*64.0",
+   "choice_index": 29,
+   "score": -251.16663044846678,
+   "chosen_fires_defect": true,
+   "chosen_min_pair_cos": 1.0000000000000002,
+   "n_candidates_firing": 25,
+   "share_candidates_firing": 0.7352941176470589,
+   "real_fires_defect": true,
+   "real_min_pair_cos": 1.0000000000000002,
+   "real_colluder_alpha": [
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "round": 4,
+   "choice": "inv_unit*16.0",
+   "choice_index": 7,
+   "score": -317.3245802817221,
+   "chosen_fires_defect": true,
+   "chosen_min_pair_cos": 1.0,
+   "n_candidates_firing": 19,
+   "share_candidates_firing": 0.5588235294117647,
+   "real_fires_defect": true,
+   "real_min_pair_cos": 1.0,
+   "real_colluder_alpha": [
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "round": 5,
+   "choice": "inv_unit*64.0",
+   "choice_index": 9,
+   "score": -3031.620407740197,
+   "chosen_fires_defect": true,
+   "chosen_min_pair_cos": 1.0000000000000004,
+   "n_candidates_firing": 14,
+   "share_candidates_firing": 0.4117647058823529,
+   "real_fires_defect": true,
+   "real_min_pair_cos": 1.0000000000000004,
+   "real_colluder_alpha": [
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "round": 6,
+   "choice": "inv_sign*64.0",
+   "choice_index": 29,
+   "score": -9959.537750487794,
+   "chosen_fires_defect": true,
+   "chosen_min_pair_cos": 1.0000000000000002,
+   "n_candidates_firing": 22,
+   "share_candidates_firing": 0.6470588235294118,
+   "real_fires_defect": true,
+   "real_min_pair_cos": 1.0000000000000002,
+   "real_colluder_alpha": [
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "round": 7,
+   "choice": "inv_unit*32.0",
+   "choice_index": 8,
+   "score": -31847.681333968118,
+   "chosen_fires_defect": true,
+   "chosen_min_pair_cos": 1.0,
+   "n_candidates_firing": 21,
+   "share_candidates_firing": 0.6176470588235294,
+   "real_fires_defect": true,
+   "real_min_pair_cos": 1.0,
+   "real_colluder_alpha": [
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "round": 8,
+   "choice": "inv_unit*64.0",
+   "choice_index": 9,
+   "score": -243263.3222483184,
+   "chosen_fires_defect": true,
+   "chosen_min_pair_cos": 1.0000000000000004,
+   "n_candidates_firing": 27,
+   "share_candidates_firing": 0.7941176470588235,
+   "real_fires_defect": true,
+   "real_min_pair_cos": 1.0000000000000004,
+   "real_colluder_alpha": [
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "round": 9,
+   "choice": "inv_unit*64.0",
+   "choice_index": 9,
+   "score": -1718866.1055831301,
+   "chosen_fires_defect": true,
+   "chosen_min_pair_cos": 1.0000000000000004,
+   "n_candidates_firing": 21,
+   "share_candidates_firing": 0.6176470588235294,
+   "real_fires_defect": true,
+   "real_min_pair_cos": 1.0000000000000004,
+   "real_colluder_alpha": [
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "round": 10,
+   "choice": "inv_sign*64.0",
+   "choice_index": 29,
+   "score": -6881740.046767876,
+   "chosen_fires_defect": true,
+   "chosen_min_pair_cos": 1.0000000000000004,
+   "n_candidates_firing": 17,
+   "share_candidates_firing": 0.5,
+   "real_fires_defect": true,
+   "real_min_pair_cos": 1.0000000000000004,
+   "real_colluder_alpha": [
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "round": 11,
+   "choice": "inv_unit*64.0",
+   "choice_index": 9,
+   "score": -50819067.015991494,
+   "chosen_fires_defect": true,
+   "chosen_min_pair_cos": 1.0,
+   "n_candidates_firing": 19,
+   "share_candidates_firing": 0.5588235294117647,
+   "real_fires_defect": true,
+   "real_min_pair_cos": 1.0,
+   "real_colluder_alpha": [
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "round": 12,
+   "choice": "inv_unit*64.0",
+   "choice_index": 9,
+   "score": -294245448.12941253,
+   "chosen_fires_defect": true,
+   "chosen_min_pair_cos": 1.0000000000000004,
+   "n_candidates_firing": 16,
+   "share_candidates_firing": 0.47058823529411764,
+   "real_fires_defect": true,
+   "real_min_pair_cos": 1.0000000000000004,
+   "real_colluder_alpha": [
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "round": 13,
+   "choice": "inv_sign*64.0",
+   "choice_index": 29,
+   "score": -435892733.31373537,
+   "chosen_fires_defect": true,
+   "chosen_min_pair_cos": 1.0000000000000002,
+   "n_candidates_firing": 19,
+   "share_candidates_firing": 0.5588235294117647,
+   "real_fires_defect": true,
+   "real_min_pair_cos": 1.0000000000000002,
+   "real_colluder_alpha": [
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "round": 14,
+   "choice": "inv_unit*64.0",
+   "choice_index": 9,
+   "score": -4356155864.46932,
+   "chosen_fires_defect": true,
+   "chosen_min_pair_cos": 1.0,
+   "n_candidates_firing": 18,
+   "share_candidates_firing": 0.5294117647058824,
+   "real_fires_defect": true,
+   "real_min_pair_cos": 1.0,
+   "real_colluder_alpha": [
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "round": 15,
+   "choice": "inv_unit*64.0",
+   "choice_index": 9,
+   "score": -27627233328.53186,
+   "chosen_fires_defect": true,
+   "chosen_min_pair_cos": 1.0000000000000002,
+   "n_candidates_firing": 23,
+   "share_candidates_firing": 0.6764705882352942,
+   "real_fires_defect": true,
+   "real_min_pair_cos": 1.0000000000000002,
+   "real_colluder_alpha": [
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "round": 16,
+   "choice": "inv_unit*64.0",
+   "choice_index": 9,
+   "score": -149669577342.82422,
+   "chosen_fires_defect": true,
+   "chosen_min_pair_cos": 1.0000000000000004,
+   "n_candidates_firing": 22,
+   "share_candidates_firing": 0.6470588235294118,
+   "real_fires_defect": true,
+   "real_min_pair_cos": 1.0000000000000004,
+   "real_colluder_alpha": [
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "round": 17,
+   "choice": "inv_unit*64.0",
+   "choice_index": 9,
+   "score": -911177939630.1316,
+   "chosen_fires_defect": true,
+   "chosen_min_pair_cos": 1.0000000000000007,
+   "n_candidates_firing": 17,
+   "share_candidates_firing": 0.5,
+   "real_fires_defect": true,
+   "real_min_pair_cos": 1.0000000000000007,
+   "real_colluder_alpha": [
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "round": 18,
+   "choice": "inv_unit*64.0",
+   "choice_index": 9,
+   "score": -4524999594754.607,
+   "chosen_fires_defect": true,
+   "chosen_min_pair_cos": 1.0000000000000009,
+   "n_candidates_firing": 21,
+   "share_candidates_firing": 0.6176470588235294,
+   "real_fires_defect": true,
+   "real_min_pair_cos": 1.0000000000000009,
+   "real_colluder_alpha": [
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "round": 19,
+   "choice": "inv_unit*64.0",
+   "choice_index": 9,
+   "score": -26603449198844.867,
+   "chosen_fires_defect": true,
+   "chosen_min_pair_cos": 1.0000000000000002,
+   "n_candidates_firing": 24,
+   "share_candidates_firing": 0.7058823529411765,
+   "real_fires_defect": true,
+   "real_min_pair_cos": 1.0000000000000002,
+   "real_colluder_alpha": [
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ]
+  }
+ ]
+}

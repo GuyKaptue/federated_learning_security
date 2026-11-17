@@ -1,0 +1,16 @@
+{
+ "server_view_corr_with_plain": 0.010039652932196342,
+ "server_view_high_bit_fraction": 0.5072765072765073,
+ "shamir_t_shares_recover": true,
+ "shamir_t_minus_1_shares_recover": false,
+ "abort_below_threshold": "aborted as designed: client 0: only 3 shares available, need 7",
+ "tampered_share_detected": true,
+ "flower_version": "1.43.0",
+ "flower_secaggplus_mod_present": true,
+ "flower_end_to_end_run": "NOT_RUN (requires SuperLink/SuperNode runtime; this protocol is a from-scratch implementation of the same design)",
+ "fl_integration": {
+  "final_acc": 0.7644444444444445,
+  "max_agg_error": 1.862645149230957e-09,
+  "rounds": 8
+ }
+}

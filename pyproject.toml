@@ -1,0 +1,60 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "federated-learning-security"
+version = "1.0.0"
+description = "Simulated federated-learning research platform: strategies, secure aggregation, attacks, defences, reproducible data pipelines."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+authors = [{ name = "Guy M. Kaptue T.", email = "guykaptue24@gmail.com" }]
+keywords = ["federated-learning", "secure-aggregation", "privacy", "robust-aggregation", "healthcare-ai", "reproducibility"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Intended Audience :: Science/Research",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+  "numpy>=1.26", "scipy>=1.11", "scikit-learn>=1.4", "pandas>=2.1", "torch>=2.2", "pyyaml>=6.0", "cryptography>=42",
+]
+
+[project.optional-dependencies]
+he = ["tenseal>=0.3.14", "phe>=1.5"]
+tracking = ["mlflow>=2.12"]
+flower = ["flwr>=1.8"]
+dp = ["opacus>=1.4"]
+notebooks = ["matplotlib>=3.8", "ipykernel", "nbformat", "nbclient", "psutil"]
+dev = ["pytest>=8", "ruff>=0.5", "bandit>=1.7", "pip-audit>=2.7", "build>=1.2", "twine>=5"]
+
+[project.urls]
+Homepage = "https://github.com/GuyKaptue/"
+Repository = "https://github.com/GuyKaptue/"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+filterwarnings = ["ignore::DeprecationWarning"]
+
+[tool.ruff]
+line-length = 140
+target-version = "py310"
+src = ["src", "tests", "scripts"]
+extend-exclude = ["latex", "notebooks", "experiments", "data"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B"]
+ignore = ["E501", "E701", "E702", "E731", "E741", "B008", "B905"]
+
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = ["F401"]
+"tests/*" = ["B011", "B017", "E402", "B023"]
+"scripts/generate_manuscript.py" = ["F403", "F405"]   # report generator uses a star-import helper module
+"scripts/*.py" = ["E402"]
+
+[tool.bandit]
+exclude_dirs = ["tests", "notebooks", "latex"]

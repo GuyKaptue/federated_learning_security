@@ -1,0 +1,49 @@
+{
+ "K": 20,
+ "f": 4,
+ "rounds": 15,
+ "seeds": [
+  0,
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9
+ ],
+ "arms": [
+  "legacy",
+  "paper_soft",
+  "paper_hard",
+  "allfeat_corrected"
+ ],
+ "scenarios": [
+  "none_clean",
+  "agr_identical",
+  "agr_jitter1.0"
+ ],
+ "partitions": [
+  "iid",
+  "dirichlet0.3"
+ ],
+ "arch": "mlp",
+ "n_params": 1378,
+ "output_layer_weight_index": [
+  1312,
+  1375
+ ],
+ "n_out": 2,
+ "hard_proportion": 0.1,
+ "kappa": 1.0,
+ "importance": "|W_out| per-class max-normalised (adaptation; the paper gives no formula)",
+ "knowledge": "draw",
+ "poison_frac": 0.5,
+ "boost": 3.0,
+ "trigger": "((0, 1), 6.0)",
+ "local_epochs": 1,
+ "lr": 0.05,
+ "new_attacker": false
+}

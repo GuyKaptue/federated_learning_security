@@ -1,0 +1,440 @@
+{
+ "provenance": {
+  "experiment_id": "FL-PUB-005.1-057e67db4c",
+  "task_id": "FL-PUB-005.1",
+  "config": {
+   "checks": "determinism, re-execution, provenance, metric consistency, artifact hashes, notebooks"
+  },
+  "config_sha256": "057e67db4c43dfcaa73bd430fd6cc8cb0e675e1e95d91c098170ecf163c2ce26",
+  "git_commit": null,
+  "dataset_id": "SYN-IDS-v1",
+  "environment": {
+   "python": "3.13.18",
+   "platform": "Linux-6.18.44-fc-v378-x86_64-with-glibc2.39",
+   "cpu_count": 2,
+   "versions": {
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "scikit-learn": "1.9.1",
+    "torch": "2.15.0",
+    "tenseal": "0.3.18",
+    "phe": "1.5.0",
+    "flwr": "1.43.0",
+    "mlflow": "3.18.0",
+    "opacus": "1.6.0",
+    "cryptography": "50.0.1",
+    "psutil": "7.2.2",
+    "matplotlib": "3.11.2",
+    "pandas": "3.0.5"
+   },
+   "timestamp_utc": "2026-11-12T07:13:03+00:00"
+  },
+  "execution_command": "python -m federated_learning.pipelines.experiments.run_all --task FL-PUB-005.1",
+  "result_labels": "MEASURED unless stated; clients are virtual (single machine)"
+ },
+ "checks": [
+  {
+   "check": "same seed => bit-identical global model",
+   "passed": true,
+   "detail": "max|diff|=0.0"
+  },
+  {
+   "check": "different seed => different model",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "dataset generation deterministic",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "stored FedProx run re-executes to the stored accuracy",
+   "passed": true,
+   "detail": "stored=0.885278 re-run=0.885278"
+  },
+  {
+   "check": "provenance present and config hash recomputes",
+   "passed": true,
+   "detail": "36 result files; inconsistent=[]"
+  },
+  {
+   "check": "no result file unreadable",
+   "passed": true,
+   "detail": "[]"
+  },
+  {
+   "check": "git commit identifier available",
+   "passed": false,
+   "detail": "workspace is not a git repository => commit recorded as null; SHA-256 manifest used instead"
+  },
+  {
+   "check": "fl_sec_001: summary mean == mean of raw runs (acc)",
+   "passed": true,
+   "detail": "gap=1.11e-16"
+  },
+  {
+   "check": "fl_bench_004: summary mean == mean of raw runs (f1)",
+   "passed": true,
+   "detail": "gap=2.22e-16"
+  },
+  {
+   "check": "notebooks present",
+   "passed": true,
+   "detail": "48 notebooks, 48 with stored outputs"
+  },
+  {
+   "check": "environment frozen",
+   "passed": true,
+   "detail": "306 packages in pip_freeze.txt"
+  }
+ ],
+ "provenance_table": [
+  {
+   "file": "experiments/results/fl_attack_003/task_3_1_backdoor.json",
+   "experiment_id": "FL-ATTACK-003.1-67e801189e",
+   "config_sha256": "67e801189eb8",
+   "consistent": true,
+   "git_commit": null,
+   "python": "3.13.18",
+   "dataset": "SYN-IDS-v1"
+  },
+  {
+   "file": "experiments/results/fl_attack_003/task_3_2_byzantine.json",
+   "experiment_id": "FL-ATTACK-003.2-a0660a4011",
+   "config_sha256": "a0660a4011bc",
+   "consistent": true,
+   "git_commit": null,
+   "python": "3.13.18",
+   "dataset": "SYN-IDS-v1"
+  },
+  {
+   "file": "experiments/results/fl_attack_003/task_3_3_membership_inference.json",
+   "experiment_id": "FL-ATTACK-003.3-857e942214",
+   "config_sha256": "857e94221463",
+   "consistent": true,
+   "git_commit": null,
+   "python": "3.13.18",
+   "dataset": "SYN-IDS-v1"
+  },
+  {
+   "file": "experiments/results/fl_attack_003/task_3_4_gradient_leakage.json",
+   "experiment_id": "FL-ATTACK-003.4-5d6124635f",
+   "config_sha256": "5d6124635f1a",
+   "consistent": true,
+   "git_commit": null,
+   "python": "3.13.18",
+   "dataset": "SYN-IDS-v1"
+  },
+  {
+   "file": "experiments/results/fl_attack_003/task_3_5_countermeasures.json",
+   "experiment_id": "FL-ATTACK-003.5-59f16278e4",
+   "config_sha256": "59f16278e428",
+   "consistent": true,
+   "git_commit": null,
+   "python": "3.13.18",
+   "dataset": "SYN-IDS-v1"
+  },
+  {
+   "file": "experiments/results/fl_attack_003/task_3_6_risk.json",
+   "experiment_id": "FL-ATTACK-003.6-99bdd61384",
+   "config_sha256": "99bdd6138431",
+   "consistent": true,
+   "git_commit": null,
+   "python": "3.13.18",
+   "dataset": "SYN-IDS-v1"
+  },
+  {
+   "file": "experiments/results/fl_attack_003/task_3_7_adaptive_attacks.json",
+   "experiment_id": "FL-ATTACK-003.7-7b01a948ae",
+   "config_sha256": "7b01a948aed8",
+   "consistent": true,
+   "git_commit": null,
+   "python": "3.13.18",
+   "dataset": "SYN-IDS-v1"
+  },
+  {
+   "file": "experiments/results/fl_attack_003/task_3_8_stronger_adaptive.json",
+   "experiment_id": "FL-ATTACK-003.8-f2e3b7f60f",
+   "config_sha256": "f2e3b7f60fd8",
+   "consistent": true,
+   "git_commit": null,
+   "python": "3.13.18",
+   "dataset": "SYN-IDS-v1"
+  },
+  {
+   "file": "experiments/results/fl_bench_004/task_4_10_natural_sites.json",
+   "experiment_id": "FL-BENCH-004.10-76a5bd7747",
+   "config_sha256": "76a5bd7747ea",
+   "consistent": true,
+   "git_commit": null,
+   "python": "3.13.18",
+   "dataset": "SYN-IDS-v1"
+  },
+  {
+   "file": "experiments/results/fl_bench_004/task_4_11_random_search.json",
+   "experiment_id": "FL-BENCH-004.11-47a61d5a76",
+   "config_sha256": "47a61d5a76f7",
+   "consistent": true,
+   "git_commit": null,
+   "python": "3.13.18",
+   "dataset": "SYN-IDS-v1"
+  },
+  {
+   "file": "experiments/results/fl_bench_004/task_4_1_fedavg.json",
+   "experiment_id": "FL-BENCH-004.1-1c14e39f50",
+   "config_sha256": "1c14e39f509b",
+   "consistent": true,
+   "git_commit": null,
+   "python": "3.13.18",
+   "dataset": "SYN-IDS-v1"
+  },
+  {
+   "file": "experiments/results/fl_bench_004/task_4_2_fedprox.json",
+   "experiment_id": "FL-BENCH-004.2-eb32bfc4ab",
+   "config_sha256": "eb32bfc4ab5c",
+   "consistent": true,
+   "git_commit": null,
+   "python": "3.13.18",
+   "dataset": "SYN-IDS-v1"
+  },
+  {
+   "file": "experiments/results/fl_bench_004/task_4_3_scaffold.json",
+   "experiment_id": "FL-BENCH-004.3-2377e2616d",
+   "config_sha256": "2377e2616df8",
+   "consistent": true,
+   "git_commit": null,
+   "python": "3.13.18",
+   "dataset": "SYN-IDS-v1"
+  },
+  {
+   "file": "experiments/results/fl_bench_004/task_4_4_fednova.json",
+   "experiment_id": "FL-BENCH-004.4-1d4ac6cc66",
+   "config_sha256": "1d4ac6cc662c",
+   "consistent": true,
+   "git_commit": null,
+   "python": "3.13.18",
+   "dataset": "SYN-IDS-v1"
+  },
+  {
+   "file": "experiments/results/fl_bench_004/task_4_5_comparison.json",
+   "experiment_id": "FL-BENCH-004.5-e5bee1d203",
+   "config_sha256": "e5bee1d20342",
+   "consistent": true,
+   "git_commit": null,
+   "python": "3.13.18",
+   "dataset": "SYN-IDS-v1"
+  },
+  {
+   "file": "experiments/results/fl_bench_004/task_4_6_statistics.json",
+   "experiment_id": "FL-BENCH-004.6-fd81aaa7c3",
+   "config_sha256": "fd81aaa7c32b",
+   "consistent": true,
+   "git_commit": null,
+   "python": "3.13.18",
+   "dataset": "SYN-IDS-v1"
+  },
+  {
+   "file": "experiments/results/fl_bench_004/task_4_7_leaderboard.json",
+   "experiment_id": "FL-BENCH-004.7-1bab0da39d",
+   "config_sha256": "1bab0da39d39",
+   "consistent": true,
+   "git_commit": null,
+   "python": "3.13.18",
+   "dataset": "SYN-IDS-v1"
+  },
+  {
+   "file": "experiments/results/fl_bench_004/task_4_8_tuning.json",
+   "experiment_id": "FL-BENCH-004.8-1eef26728e",
+   "config_sha256": "1eef26728e76",
+   "consistent": true,
+   "git_commit": null,
+   "python": "3.13.18",
+   "dataset": "SYN-IDS-v1"
+  },
+  {
+   "file": "experiments/results/fl_bench_004/task_4_9_real_data.json",
+   "experiment_id": "FL-BENCH-004.9-c5b942c0de",
+   "config_sha256": "c5b942c0de79",
+   "consistent": true,
+   "git_commit": null,
+   "python": "3.13.18",
+   "dataset": "SYN-IDS-v1"
+  },
+  {
+   "file": "experiments/results/fl_perf_002/fl_perf_002.2.json",
+   "experiment_id": "FL-PERF-002.2-77fae99731",
+   "config_sha256": "77fae9973124",
+   "consistent": true,
+   "git_commit": null,
+   "python": "3.13.18",
+   "dataset": "SYN-IDS-v1"
+  },
+  {
+   "file": "experiments/results/fl_perf_002/fl_perf_002.3.json",
+   "experiment_id": "FL-PERF-002.3-6f998acec0",
+   "config_sha256": "6f998acec0ac",
+   "consistent": true,
+   "git_commit": null,
+   "python": "3.13.18",
+   "dataset": "SYN-IDS-v1"
+  },
+  {
+   "file": "experiments/results/fl_perf_002/fl_perf_002.4a.json",
+   "experiment_id": "FL-PERF-002.4a-35042ca060",
+   "config_sha256": "35042ca0603d",
+   "consistent": true,
+   "git_commit": null,
+   "python": "3.13.18",
+   "dataset": "SYN-IDS-v1"
+  },
+  {
+   "file": "experiments/results/fl_perf_002/fl_perf_002.4b.json",
+   "experiment_id": "FL-PERF-002.4b-006877df89",
+   "config_sha256": "006877df8986",
+   "consistent": true,
+   "git_commit": null,
+   "python": "3.13.18",
+   "dataset": "SYN-IDS-v1"
+  },
+  {
+   "file": "experiments/results/fl_perf_002/task_2_1_monitoring.json",
+   "experiment_id": "FL-PERF-002.1-125ac7c13f",
+   "config_sha256": "125ac7c13f2d",
+   "consistent": true,
+   "git_commit": null,
+   "python": "3.13.18",
+   "dataset": "SYN-IDS-v1"
+  },
+  {
+   "file": "experiments/results/fl_perf_002/task_2_4_summary.json",
+   "experiment_id": "FL-PERF-002.4a-35042ca060",
+   "config_sha256": "35042ca0603d",
+   "consistent": true,
+   "git_commit": null,
+   "python": "3.13.18",
+   "dataset": "SYN-IDS-v1"
+  },
+  {
+   "file": "experiments/results/fl_perf_002/task_2_5_scalability_analysis.json",
+   "experiment_id": "FL-PERF-002.5-0c603cb43b",
+   "config_sha256": "0c603cb43b76",
+   "consistent": true,
+   "git_commit": null,
+   "python": "3.13.18",
+   "dataset": "SYN-IDS-v1"
+  },
+  {
+   "file": "experiments/results/fl_pub_005/task_5_1_reproducibility.json",
+   "experiment_id": "FL-PUB-005.1-057e67db4c",
+   "config_sha256": "057e67db4c43",
+   "consistent": true,
+   "git_commit": null,
+   "python": "3.13.18",
+   "dataset": "SYN-IDS-v1"
+  },
+  {
+   "file": "experiments/results/fl_pub_005/task_5_2_ablation.json",
+   "experiment_id": "FL-PUB-005.2-71efb82a51",
+   "config_sha256": "71efb82a513e",
+   "consistent": true,
+   "git_commit": null,
+   "python": "3.13.18",
+   "dataset": "SYN-IDS-v1"
+  },
+  {
+   "file": "experiments/results/fl_sec_001/task_1_1_decision_matrix.json",
+   "experiment_id": "FL-SEC-001.1-287fe5268c",
+   "config_sha256": "287fe5268c9b",
+   "consistent": true,
+   "git_commit": null,
+   "python": "3.13.18",
+   "dataset": "SYN-IDS-v1"
+  },
+  {
+   "file": "experiments/results/fl_sec_001/task_1_2_he.json",
+   "experiment_id": "FL-SEC-001.2-946ad0b88f",
+   "config_sha256": "946ad0b88f54",
+   "consistent": true,
+   "git_commit": null,
+   "python": "3.13.18",
+   "dataset": "SYN-IDS-v1"
+  },
+  {
+   "file": "experiments/results/fl_sec_001/task_1_3_secagg.json",
+   "experiment_id": "FL-SEC-001.3-84445b08ad",
+   "config_sha256": "84445b08ad31",
+   "consistent": true,
+   "git_commit": null,
+   "python": "3.13.18",
+   "dataset": "SYN-IDS-v1"
+  },
+  {
+   "file": "experiments/results/fl_sec_001/task_1_4_smpc.json",
+   "experiment_id": "FL-SEC-001.4-314389cf06",
+   "config_sha256": "314389cf0679",
+   "consistent": true,
+   "git_commit": null,
+   "python": "3.13.18",
+   "dataset": "SYN-IDS-v1"
+  },
+  {
+   "file": "experiments/results/fl_sec_001/task_1_5_comparison.json",
+   "experiment_id": "FL-SEC-001.5-27eeb8f6f0",
+   "config_sha256": "27eeb8f6f0d8",
+   "consistent": true,
+   "git_commit": null,
+   "python": "3.13.18",
+   "dataset": "SYN-IDS-v1"
+  },
+  {
+   "file": "experiments/results/fl_stage1/s1_1_federated_preprocessing.json",
+   "experiment_id": "FL-S1-001-74226cba4a",
+   "config_sha256": "74226cba4acb",
+   "consistent": true,
+   "git_commit": null,
+   "python": "3.13.18",
+   "dataset": "SYN-IDS-v1"
+  },
+  {
+   "file": "experiments/results/fl_stage1/s1_2_calibration.json",
+   "experiment_id": "FL-S1-002-a72aeefbf9",
+   "config_sha256": "a72aeefbf994",
+   "consistent": true,
+   "git_commit": null,
+   "python": "3.13.18",
+   "dataset": "SYN-IDS-v1"
+  },
+  {
+   "file": "experiments/results/fl_stage1/s1_3_ablation_grids.json",
+   "experiment_id": "FL-S1-003-6984af905b",
+   "config_sha256": "6984af905b96",
+   "consistent": true,
+   "git_commit": null,
+   "python": "3.13.18",
+   "dataset": "SYN-IDS-v1"
+  }
+ ],
+ "consistency": [
+  {
+   "story": "fl_sec_001",
+   "metric": "acc",
+   "max_abs_gap": 1.1102230246251565e-16
+  },
+  {
+   "story": "fl_bench_004",
+   "metric": "f1",
+   "max_abs_gap": 2.220446049250313e-16
+  }
+ ],
+ "n_artifacts_hashed": 184,
+ "passed": 10,
+ "failed": [
+  {
+   "check": "git commit identifier available",
+   "passed": false,
+   "detail": "workspace is not a git repository => commit recorded as null; SHA-256 manifest used instead"
+  }
+ ],
+ "scope_note": "Reproducibility here = same machine & software versions. Cross-platform bitwise identity is NOT claimed (BLAS/OpenSSL builds differ)."
+}

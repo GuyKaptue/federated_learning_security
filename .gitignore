@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+# Data (raw/processed/external are never committed; fully synthetic data under data/synthetic IS committed)
+data/raw/*/*
+!data/raw/*/README.md
+data/processed/*
+!data/processed/.gitkeep
+data/external/*
+!data/external/.gitkeep
+# Models, logs, tracking
+models/*
+!models/.gitkeep
+!models/README.md
+logs/*
+!logs/.gitkeep
+mlruns/
+mlflow.db
+experiments/mlruns/
+# LaTeX build products and the (unshipped) IEEEtran class
+latex/vendor/
+latex/*.aux
+latex/*.bbl
+latex/*.blg
+latex/*.log
+latex/*.out
+# Secrets / local
+.env
+*.key

@@ -1,0 +1,30 @@
+name: ci
+on:
+  push:
+    branches: [main]
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install "ruff>=0.5"
+      - run: ruff check .
+  unit-tests:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.11", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "${{ matrix.python-version }}", cache: pip }
+      - run: pip install -r requirements.txt -r requirements-dev.txt
+      - run: PYTHONPATH=src RS_QUICK=1 python -m pytest tests/unit tests/integration tests/end_to_end --junitxml=reports/pytest_junit.xml
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with: { name: "junit-${{ matrix.python-version }}", path: reports/pytest_junit.xml }

@@ -1,0 +1,13 @@
+# Privacy / security mechanism defaults used by the experiments (documentation of the values, not a compliance claim)
+version: 1
+differential_privacy:
+  clip_norm: 1.0
+  noise_multiplier: 0.5
+secure_aggregation:
+  scheme: bonawitz_style_masking
+  dropout_threshold: 0.5
+homomorphic_encryption:
+  schemes: [ckks, bfv, paillier]
+robust_aggregation:
+  default: median
+  trim_fraction: 0.2

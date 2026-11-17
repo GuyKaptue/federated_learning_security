@@ -1,0 +1,56 @@
+{
+  "search": [
+    {
+      "lr": 0.139,
+      "mu": 0.0661,
+      "local_epochs": 3,
+      "val_acc": 0.88
+    },
+    {
+      "lr": 0.093,
+      "mu": 0.001,
+      "local_epochs": 2,
+      "val_acc": 0.82
+    },
+    {
+      "lr": 0.0301,
+      "mu": 0.6386,
+      "local_epochs": 3,
+      "val_acc": 0.7495
+    },
+    {
+      "lr": 0.0443,
+      "mu": 0.0064,
+      "local_epochs": 1,
+      "val_acc": 0.7267
+    },
+    {
+      "lr": 0.011,
+      "mu": 0.0185,
+      "local_epochs": 2,
+      "val_acc": 0.6638
+    },
+    {
+      "lr": 0.0036,
+      "mu": 0.1545,
+      "local_epochs": 3,
+      "val_acc": 0.6162
+    },
+    {
+      "lr": 0.0065,
+      "mu": 0.3886,
+      "local_epochs": 1,
+      "val_acc": 0.6057
+    },
+    {
+      "lr": 0.0034,
+      "mu": 0.2753,
+      "local_epochs": 1,
+      "val_acc": 0.5676
+    }
+  ],
+  "test": {
+    "tuned": 0.9183333333333333,
+    "default": 0.8555555555555555
+  }
+}
